@@ -3,7 +3,17 @@
 Thanks for being willing to contribute!
 
 **Working on your first Pull Request?** You can learn how from this _free_
-series [How to Contribute to an Open Source Project on GitHub][egghead]
+series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
+
+## License
+
+By contributing to this project, you agree that your contributions will be licensed under its MIT license.
+
+## Code of Conduct
+
+This project has adopted the [Contributor Covenant](https://www.contributor-covenant.org/) as its Code of Conduct, and we expect project participants to adhere to it. Please read [the full text](https://github.com/katawaredev/config/blob/master/CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+
+Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests.
 
 ## Project setup
 
@@ -26,13 +36,39 @@ series [How to Contribute to an Open Source Project on GitHub][egghead]
 > can make all of your pull request branches based on this `master` branch.
 > Whenever you want to update your version of `master`, do a regular `git pull`.
 
-## Help needed
+## Git Commit Guidelines
 
-Please checkout the [the open issues][issues]
+In order to have **more readable messages** that are easy to follow when looking through the **project history**, this project follows [conventional commits](https://www.conventionalcommits.org/) specification. Improperly formatted commit messages may result in your change not appearing in the changelog.
 
-Also, please watch the repo and respond to questions/bug reports/feature
-requests! Thanks!
+## Issues
 
-[egghead]:
-  https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
-[issues]: https://github.com/katawaredev/config/issues
+### Issue Labeling
+
+We encourage using [StandardIssueLabels](https://github.com/wagenet/StandardIssueLabels) when creating your issues.
+
+### Where to Find Known Issues
+
+Please checkout the [the open issues](https://github.com/katawaredev/config/issues)
+
+### Reporting New Issues
+
+1. Update to the most recent master release if possible. We may have already fixed your bug.
+2. Search for similar issues. It's possible somebody has encountered this problem already.
+3. Make sure you provide very specific steps to reproduce the error. If we cannot reproduce it, we will close the ticket.
+4. If possible, submit a Pull Request with a failing test.
+5. If you decide to fix an issue, please be sure to check the comment thread in case somebody is already working on a fix. If nobody is working on it at the moment, please leave a comment stating that you intend to work on it so other people don't accidentally duplicate your effort. If somebody claims an issue but doesn't follow up for more than two weeks, it's fine to take it over but you should still leave a comment.
+6. The more information you provide, the easier it is for us to validate that there is a bug and the faster we'll be able to take action.
+
+### Security Bugs
+
+If you find a security vulnerability, do NOT open an issue. Email [support@kataware.dev](mailto:support@kataware.dev) instead.
+
+### Proposing a Change
+
+If you find yourself wishing for a feature that doesn't exist, you are probably not alone. There are bound to be others out there with similar needs. Open an issue on our issues list on GitHub which describes the feature you would like to see, why you need it, and how it should work.
+
+If you're only fixing a bug, it's fine to submit a pull request right away but we still recommend to file an issue detailing what you're fixing. This is helpful in case we don't accept that specific fix but want to keep track of the issue.
+
+### Help wanted
+
+This is an open source project and we love to receive contributions from our community — you! There are many ways to contribute, from writing tutorials or blog posts, improving the documentation, submitting bug reports and feature requests or writing code which can be incorporated into future versions.
