@@ -15,6 +15,21 @@ This project has adopted the [Contributor Covenant](https://www.contributor-cove
 
 Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests.
 
+## System Requirements
+
+- [git](https://git-scm.com/) v2 or greater
+- [NodeJS](https://nodejs.org) v8 or greater
+- [npm](https://www.npmjs.com/) v6 or greater
+
+All of these must be available in your `PATH`. To verify things are set up
+properly, you can run this:
+
+```shell
+git --version
+node --version
+npm --version
+```
+
 ## Project setup
 
 1. Fork and clone the repo
@@ -24,7 +39,7 @@ Following these guidelines helps to communicate that you respect the time of the
 > Tip: Keep your `master` branch pointing at the original repository and make
 > pull requests from branches on your fork. To do this, run:
 >
-> ```bash
+> ```shell
 > git remote add upstream https://github.com/katawaredev/config.git
 > git fetch upstream
 > git branch --set-upstream-to=upstream/master master
@@ -41,10 +56,6 @@ Following these guidelines helps to communicate that you respect the time of the
 In order to have **more readable messages** that are easy to follow when looking through the **project history**, this project follows [conventional commits](https://www.conventionalcommits.org/) specification. Improperly formatted commit messages may result in your change not appearing in the changelog.
 
 ## Issues
-
-### Issue Labeling
-
-We encourage using [StandardIssueLabels](https://github.com/wagenet/StandardIssueLabels) when creating your issues.
 
 ### Where to Find Known Issues
 
@@ -68,6 +79,10 @@ If you find a security vulnerability, do NOT open an issue. Email [support@kataw
 If you find yourself wishing for a feature that doesn't exist, you are probably not alone. There are bound to be others out there with similar needs. Open an issue on our issues list on GitHub which describes the feature you would like to see, why you need it, and how it should work.
 
 If you're only fixing a bug, it's fine to submit a pull request right away but we still recommend to file an issue detailing what you're fixing. This is helpful in case we don't accept that specific fix but want to keep track of the issue.
+
+### Issue Labeling
+
+Issues are labeled according to [StandardIssueLabels](https://github.com/wagenet/StandardIssueLabels).
 
 ### Help wanted
 
