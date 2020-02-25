@@ -74,16 +74,20 @@ Please checkout the [the open issues](https://github.com/katawaredev/config/issu
 
 If you find a security vulnerability, do NOT open an issue. Email [support@kataware.dev](mailto:support@kataware.dev) instead.
 
-### Proposing a Change
-
-If you find yourself wishing for a feature that doesn't exist, you are probably not alone. There are bound to be others out there with similar needs. Open an issue on our issues list on GitHub which describes the feature you would like to see, why you need it, and how it should work.
-
-If you're only fixing a bug, it's fine to submit a pull request right away but we still recommend to file an issue detailing what you're fixing. This is helpful in case we don't accept that specific fix but want to keep track of the issue.
-
 ### Issue Labeling
 
 Issues are labeled according to [StandardIssueLabels](https://github.com/wagenet/StandardIssueLabels).
 
-### Help wanted
+### Proposing a Change
+
+If you find yourself wishing for a feature that doesn't exist, you are probably not alone. There are bound to be others out there with similar needs. Open an issue on our issues list on GitHub which describes the feature you would like to see, why you need it, and how it should work.
+
+You can show your support for (or against!) features by using GitHub reactions or by adding meaningful details which help the feature definition become more clear.
+
+## Fixing bugs
+
+If you're only fixing a bug, it's fine to submit a pull request right away but we still recommend to file an issue detailing what you're fixing. This is helpful in case we don't accept that specific fix but want to keep track of the issue.
+
+## Help wanted
 
 This is an open source project and we love to receive contributions from our community — you! There are many ways to contribute, from writing tutorials or blog posts, improving the documentation, submitting bug reports and feature requests or writing code which can be incorporated into future versions.
