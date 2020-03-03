@@ -24,13 +24,19 @@
   "husky": {
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
     }
   },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*.{js,json,md,yaml}": "prettier --write"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -40,6 +46,7 @@
     "eslint": "^6.8.0",
     "husky": "^4.2.3",
     "lerna": "^3.20.2",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
     "stylelint": "^13.2.0"
   }
