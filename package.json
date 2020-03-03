@@ -1,0 +1,25 @@
+{
+  "name": "config",
+  "description": "Developer's toolbox",
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/katawaredev/config.git"
+  },
+  "keywords": [
+    "eslint",
+    "stylelint",
+    "rollup"
+  ],
+  "author": "Nikolay Stoynov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/katawaredev/config/issues"
+  },
+  "homepage": "https://github.com/katawaredev/config#readme",
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}
