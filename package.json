@@ -34,9 +34,12 @@
     ]
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.css": "stylelint --fix",
-    "*.{js,json,md,yaml}": "prettier --write"
+    "*.{js,jsx,ts,tsx,mjs}": "eslint --cache --fix",
+    "*.{css,less,scss}": "stylelint --fix",
+    "*.{js,jsx,ts,tsx,mjs,vue,json,css,less,scss,graphql,yaml}": "prettier --write"
+  },
+  "scripts": {
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,mjs,vue,json,css,less,scss,md,mdx,graphql,yaml}'"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
