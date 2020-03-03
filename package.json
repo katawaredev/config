@@ -39,6 +39,8 @@
     "*.{js,jsx,ts,tsx,mjs,vue,json,css,less,scss,md,mdx,graphql,yaml}": "prettier --write"
   },
   "scripts": {
+    "postinstall": "npm run lerna bootstrap",
+    "lerna": "lerna",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,mjs,vue,json,css,less,scss,md,mdx,graphql,yaml}'"
   },
   "devDependencies": {
