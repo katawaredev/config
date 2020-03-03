@@ -1,0 +1,16 @@
+name: Continuous Integration
+
+on: [pull_request]
+
+jobs:
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Format
+        run: npm run format
