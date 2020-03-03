@@ -110,7 +110,7 @@ Most typical setup is:
 }
 ```
 
-### JacaScript
+### JavaScript
 
 Absolute imports should be handled by default for everything in `src` directory. If this is not the case, see [import resolvers](https://github.com/benmosher/eslint-plugin-import#resolvers).
 
