@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "./packages/stylelint-config-permissive",
+    "./packages/stylelint-config-permissive/css-in-js"
+  ]
+}
