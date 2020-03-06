@@ -11,8 +11,7 @@
 ## Supported languages
 
 - CSS
-- CSS-in-JS (opt-in, with caveats)
-- SCSS, Sass, Less and SugarSS (no specific rules)
+- CSS-in-JS, SCSS, Sass, Less and SugarSS (no specific rules)
 
 ## Install
 
@@ -66,7 +65,6 @@ Enable fixing on save:
 - `stylelint-config-permissive/native` - Allow only styles that are supported on Android / iOS.
 - `stylelint-config-permissive/no-vendor` - Warn against using vendor prefixes.
 - `stylelint-config-permissive/meticulous` - More opinionated. This won't make the code any better, just more consistent.
-- `stylelint-config-permissive/css-in-js` - Enables CSS-in-JS support. Does not work with `--fix`.
 
 ### Example usage
 
@@ -82,13 +80,4 @@ Enable fixing on save:
 
 ## Caveats
 
-Because of [this issue](https://github.com/stylelint/stylelint/issues/3128) and the fact that css preprocesors does not support autofixing, `css-in-js` is not enabled by default. When enabled, it blocks autofixing normal css files. One workaround would be to add two separate scripts in `package.json`:
-
-```json
-{
-  "scripts": {
-    "lint:styles": "stylelint --fix '**/*.{css,less,scss}'",
-    "lint:code-styles": "stylelint '**/*.{js,jsx,tsx}' --config { extends: ['stylelint-config-permissive', 'stylelint-config-permissive/css-in-js'] }"
-  }
-}
-```
+CSS-in-JS support is not complete. The issue is tracked [here](https://github.com/stylelint/stylelint/issues/4574).

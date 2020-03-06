@@ -17,7 +17,6 @@
     "stylelint-high-performance-animation": "^1.5.0",
     "stylelint-no-unsupported-browser-features": "^4.0.0",
     "stylelint-order": "^4.0.0",
-    "stylelint-processor-styled-components": "^1.10.0",
     "stylelint-react-native": "^2.1.1"
   },
   "peerDependencies": {

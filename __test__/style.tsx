@@ -1,5 +1,7 @@
+/* eslint-disable */
+
 /* https://bootstrapcreative.com/resources/css-cheat-sheet-reference-pdf/ */
-a {
+const Button = styled.a`
   position: static;
   top: auto;
   right: auto;
@@ -147,4 +149,4 @@ a {
   text-decoration-line: none;
   text-decoration-style: solid;
   widows: 0;
-}
+`;
