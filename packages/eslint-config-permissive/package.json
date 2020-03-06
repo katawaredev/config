@@ -7,7 +7,7 @@
   "files": [
     "src",
     "base.js",
-    "extra.js",
+    "protracted.js",
     "meticulous.js",
     "naming.js",
     "prefer-macro.js",

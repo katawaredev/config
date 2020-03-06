@@ -78,7 +78,7 @@ Enable fixing on save:
 
 ## Additional configurations
 
-- `permissive/extra` - Checks that might take longer to complete.
+- `permissive/protracted` - Checks that might take longer to complete.
 - `permissive/prefer-macro` - Suggests using the macros version of some libraries (see [babel-macros](https://github.com/kentcdodds/babel-plugin-macros)).
 - `permissive/meticulous` - More opinionated. This won't make the code any better, just more consistent.
 - `permissive/naming` - Enforces naming conventions. Could increase the linting time.
