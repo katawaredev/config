@@ -55,8 +55,7 @@
     ]
   },
   "scripts": {
-    "postinstall": "npm run lerna bootstrap",
-    "lerna": "lerna",
+    "postinstall": "npx lerna bootstrap",
     "lint:code": "eslint . --cache --fix --ext js,jsx,ts,tsx,mjs",
     "lint:styles": "stylelint --cache --fix '**/*.{css,less,scss}'",
     "lint:code-styles": "stylelint --cache '**/*.{js,jsx,tsx}' --config .stylelintrc.json",
