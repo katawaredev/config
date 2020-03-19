@@ -1,24 +1,7 @@
 module.exports = {
   overrides: [
     {
-      files: [
-        "*.test.ts",
-        "*.test.tsx",
-        "*.test.js",
-        "*.test.jsx",
-        "test.ts",
-        "test.tsx",
-        "test.js",
-        "test.jsx",
-        "*.spec.ts",
-        "*.spec.tsx",
-        "*.spec.js",
-        "*.spec.jsx",
-        "spec.ts",
-        "spec.tsx",
-        "spec.js",
-        "spec.jsx"
-      ],
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"],
       plugins: ["jest"],
       env: {
         "jest/globals": true

@@ -1,7 +1,7 @@
 module.exports = {
   overrides: [
     {
-      files: ["*-spec.ts", "*-spec.js"],
+      files: ["*-spec.[tj]s"],
       plugins: ["cypress"],
       env: {
         "cypress/globals": true

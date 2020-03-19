@@ -1,16 +1,7 @@
 module.exports = {
   overrides: [
     {
-      files: [
-        "*.test.ts",
-        "*.test.tsx",
-        "*.test.js",
-        "*.test.jsx",
-        "*.spec.ts",
-        "*.spec.tsx",
-        "*.spec.js",
-        "*.spec.jsx"
-      ],
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"],
       plugins: ["testing-library"],
 
       // https://github.com/testing-library/eslint-plugin-testing-library#supported-rules

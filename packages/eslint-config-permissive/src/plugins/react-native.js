@@ -1,21 +1,7 @@
 module.exports = {
   overrides: [
     {
-      files: [
-        "*.js",
-        "*.jsx",
-        "*.tsx",
-        "*.mdx",
-        "*.native.tsx",
-        "*.native.js",
-        "*.native.jsx",
-        "*.ios.tsx",
-        "*.ios.js",
-        "*.ios.jsx",
-        "*.android.tsx",
-        "*.android.js",
-        "*.android.jsx"
-      ],
+      files: ["*.js", "*.jsx", "*.tsx", "*.mdx"],
 
       plugins: ["react-native"],
 
@@ -49,21 +35,11 @@ module.exports = {
       }
     },
     {
-      files: [
-        "*.native.tsx",
-        "*.native.js",
-        "*.native.jsx",
-        "*.ios.tsx",
-        "*.ios.js",
-        "*.ios.jsx",
-        "*.android.tsx",
-        "*.android.js",
-        "*.android.jsx"
-      ],
+      files: ["**/?(*.)+(native|ios|android).[tj]s?(x)"],
 
       rules: {
         // https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/no-raw-text.md
-        "react-native/no-raw-text": "warn",
+        "react-native/no-raw-text": "error",
 
         // https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/no-single-element-style-arrays.md
         "react-native/no-single-element-style-arrays": "warn"
