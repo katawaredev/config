@@ -62,6 +62,18 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md
         "@typescript-eslint/no-unnecessary-type-assertion": "warn",
 
+        // Disallows calling an any type value [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-call.md
+        "@typescript-eslint/no-unsafe-call": "warn",
+
+        // Disallows member access on any typed variables [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-member-access.md
+        "@typescript-eslint/no-unsafe-member-access": "warn",
+
+        // Disallows returning any from a function [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-return.md
+        "@typescript-eslint/no-unsafe-return": "warn",
+
         // Disallow unused variables and arguments [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars-experimental.md
         "@typescript-eslint/no-unused-vars-experimental": "warn",
