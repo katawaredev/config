@@ -7,8 +7,8 @@ module.exports = {
       true,
       {
         "border-in-box-model": false,
-        "empty-line-between-groups": false
-      }
-    ]
-  }
+        "empty-line-between-groups": false,
+      },
+    ],
+  },
 };

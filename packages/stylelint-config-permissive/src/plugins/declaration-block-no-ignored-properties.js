@@ -7,7 +7,7 @@ module.exports = {
     // https://github.com/stylelint/stylelint/tree/7.13.0/lib/rules/declaration-block-no-ignored-properties
     "plugin/declaration-block-no-ignored-properties": [
       true,
-      { severity: "warning" }
-    ]
-  }
+      { severity: "warning" },
+    ],
+  },
 };

@@ -6,8 +6,8 @@ module.exports = {
 
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
-        }
+          jsx: true,
+        },
       },
 
       // https://github.com/evcohen/eslint-plugin-jsx-a11y#supported-rules
@@ -68,7 +68,7 @@ module.exports = {
               "input",
               "textarea",
               "tr",
-              "video"
+              "video",
             ],
             ignoreRoles: [
               "grid",
@@ -80,10 +80,10 @@ module.exports = {
               "tablist",
               "toolbar",
               "tree",
-              "treegrid"
+              "treegrid",
             ],
-            includeRoles: ["alert", "dialog"]
-          }
+            includeRoles: ["alert", "dialog"],
+          },
         ],
 
         // Enforce heading (h1, h2, etc) elements contain accessible content.
@@ -114,9 +114,9 @@ module.exports = {
               "searchbox",
               "spinbutton",
               "switch",
-              "textbox"
-            ]
-          }
+              "textbox",
+            ],
+          },
         ],
 
         // Enforce that a label tag has a text label and an associated control.
@@ -152,8 +152,8 @@ module.exports = {
         "jsx-a11y/no-interactive-element-to-noninteractive-role": [
           "warn",
           {
-            tr: ["none", "presentation"]
-          }
+            tr: ["none", "presentation"],
+          },
         ],
 
         // Non-interactive elements should not be assigned mouse or keyboard event listeners.
@@ -169,14 +169,14 @@ module.exports = {
               "onMouseUp",
               "onKeyPress",
               "onKeyDown",
-              "onKeyUp"
+              "onKeyUp",
             ],
             alert: ["onKeyUp", "onKeyDown", "onKeyPress"],
             body: ["onError", "onLoad"],
             dialog: ["onKeyUp", "onKeyDown", "onKeyPress"],
             iframe: ["onError", "onLoad"],
-            img: ["onError", "onLoad"]
-          }
+            img: ["onError", "onLoad"],
+          },
         ],
 
         // Non-interactive elements should not be assigned interactive roles.
@@ -191,7 +191,7 @@ module.exports = {
               "radiogroup",
               "tablist",
               "tree",
-              "treegrid"
+              "treegrid",
             ],
             ol: [
               "listbox",
@@ -200,12 +200,12 @@ module.exports = {
               "radiogroup",
               "tablist",
               "tree",
-              "treegrid"
+              "treegrid",
             ],
             li: ["menuitem", "option", "row", "tab", "treeitem"],
             table: ["grid"],
-            td: ["gridcell"]
-          }
+            td: ["gridcell"],
+          },
         ],
 
         // tabIndex should only be declared on interactive elements.
@@ -215,8 +215,8 @@ module.exports = {
           {
             tags: [],
             roles: ["tabpanel"],
-            allowExpressionValues: true
-          }
+            allowExpressionValues: true,
+          },
         ],
 
         // Enforce usage of onBlur over onChange on select menus for accessibility.
@@ -239,9 +239,9 @@ module.exports = {
               "onMouseUp",
               "onKeyPress",
               "onKeyDown",
-              "onKeyUp"
-            ]
-          }
+              "onKeyUp",
+            ],
+          },
         ],
 
         // Enforce that elements with ARIA roles must have all required attributes for that role.
@@ -258,8 +258,8 @@ module.exports = {
 
         // Enforce tabIndex value is not greater than zero.
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/tabindex-no-positive.md
-        "jsx-a11y/tabindex-no-positive": "warn"
-      }
-    }
-  ]
+        "jsx-a11y/tabindex-no-positive": "warn",
+      },
+    },
+  ],
 };

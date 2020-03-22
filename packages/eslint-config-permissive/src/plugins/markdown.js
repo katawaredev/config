@@ -6,8 +6,8 @@ module.exports = {
 
       parserOptions: {
         ecmaFeatures: {
-          impliedStrict: true
-        }
+          impliedStrict: true,
+        },
       },
 
       // https://github.com/mdx-js/eslint-mdx/tree/master/packages/eslint-plugin-mdx#rules
@@ -16,21 +16,21 @@ module.exports = {
         "eol-last": "off",
         "unicode-bom": "off",
         "no-undef": "off",
-        "no-unused-vars": "off"
-      }
+        "no-unused-vars": "off",
+      },
     },
     {
       files: ["*.mdx"],
       plugins: ["markdown", "mdx"],
       parser: "eslint-mdx",
       globals: {
-        React: "false"
+        React: "false",
       },
 
       parserOptions: {
         ecmaFeatures: {
-          impliedStrict: true
-        }
+          impliedStrict: true,
+        },
       },
 
       // https://github.com/mdx-js/eslint-mdx/tree/master/packages/eslint-plugin-mdx#rules
@@ -53,8 +53,8 @@ module.exports = {
           {
             allowShortCircuit: true,
             allowTernary: true,
-            allowTaggedTemplates: true
-          }
+            allowTaggedTemplates: true,
+          },
         ],
 
         // Integration with remark-lint plugins
@@ -62,8 +62,8 @@ module.exports = {
 
         "lines-between-class-members": "off", // FIXME: See https://github.com/mdx-js/mdx/issues/195
         "react/jsx-no-undef": ["error", { allowGlobals: true }],
-        "react/react-in-jsx-scope": "off"
-      }
-    }
-  ]
+        "react/react-in-jsx-scope": "off",
+      },
+    },
+  ],
 };

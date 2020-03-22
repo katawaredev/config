@@ -7,8 +7,8 @@ module.exports = {
 
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
-        }
+          jsx: true,
+        },
       },
 
       rules: {
@@ -19,7 +19,7 @@ module.exports = {
         // "react-native/sort-styles": "off",
 
         // https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/split-platform-components.md
-        "react-native/split-platform-components": "error"
+        "react-native/split-platform-components": "error",
 
         // https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/no-inline-styles.md
         // "react-native/no-inline-styles": "off",
@@ -32,7 +32,7 @@ module.exports = {
 
         // https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/no-single-element-style-arrays.md
         // "react-native/no-single-element-style-arrays": "warn"
-      }
+      },
     },
     {
       files: ["**/?(*.)+(native|ios|android).[tj]s?(x)"],
@@ -42,8 +42,8 @@ module.exports = {
         "react-native/no-raw-text": "error",
 
         // https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/no-single-element-style-arrays.md
-        "react-native/no-single-element-style-arrays": "warn"
-      }
-    }
-  ]
+        "react-native/no-single-element-style-arrays": "warn",
+      },
+    },
+  ],
 };

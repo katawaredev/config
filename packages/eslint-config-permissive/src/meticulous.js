@@ -19,9 +19,9 @@ module.exports = {
           "componentDidUpdate",
           "componentWillUnmount",
           "componentDidCatch",
-          "getSnapshotBeforeUpdate"
-        ]
-      }
+          "getSnapshotBeforeUpdate",
+        ],
+      },
     ],
 
     // require `return` statements to either always or never specify values
@@ -106,7 +106,7 @@ module.exports = {
 
     // Enforce stateless components to be written as a pure function
     // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
-    "react/prefer-stateless-function": "warn"
+    "react/prefer-stateless-function": "warn",
   },
   overrides: [
     {
@@ -153,8 +153,8 @@ module.exports = {
 
         // Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md
-        "@typescript-eslint/unified-signatures": "warn"
-      }
+        "@typescript-eslint/unified-signatures": "warn",
+      },
     },
     {
       files: [
@@ -173,7 +173,7 @@ module.exports = {
         "spec.ts",
         "spec.tsx",
         "spec.js",
-        "spec.jsx"
+        "spec.jsx",
       ],
       // https://github.com/jest-community/eslint-plugin-jest#rules
       rules: {
@@ -207,8 +207,8 @@ module.exports = {
 
         // Suggest using explicit assertions rather than just getBy* queries
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/prefer-explicit-assert.md
-        "testing-library/prefer-explicit-assert": "warn"
-      }
-    }
-  ]
+        "testing-library/prefer-explicit-assert": "warn",
+      },
+    },
+  ],
 };

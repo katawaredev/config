@@ -21,6 +21,6 @@
   },
   "peerDependencies": {
     "stylelint": ">=13.2.0",
-    "prettier": "^1.19.0"
+    "prettier": "^2.0.0"
   }
 }

@@ -49,6 +49,6 @@ module.exports = {
 
     // Require or disallow a pseudo-element to the selectors with :hover [recommended] [autofix]
     // https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/selector-pseudo-class-focus/README.md
-    "a11y/selector-pseudo-class-focus": [true, { severity: "warning" }]
-  }
+    "a11y/selector-pseudo-class-focus": [true, { severity: "warning" }],
+  },
 };

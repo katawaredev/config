@@ -7,15 +7,15 @@ module.exports = {
   env: {
     browser: true,
     es2020: true,
-    node: true
+    node: true,
   },
   parser: "babel-eslint",
   parserOptions: {
-    sourceType: "module"
+    sourceType: "module",
   },
   globals: {
     Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+    SharedArrayBuffer: "readonly",
   },
 
   // https://eslint.org/docs/rules/
@@ -173,7 +173,7 @@ module.exports = {
     // https://eslint.org/docs/rules/use-isnan
     "use-isnan": [
       "warn",
-      { enforceForSwitchCase: true, enforceForIndexOf: true }
+      { enforceForSwitchCase: true, enforceForIndexOf: true },
     ],
 
     // enforce comparing `typeof` expressions against valid strings [recommended]
@@ -389,13 +389,13 @@ module.exports = {
       {
         object: "require",
         property: "ensure",
-        message: "Use import() instead."
+        message: "Use import() instead.",
       },
       {
         object: "System",
         property: "import",
-        message: "Use import() instead."
-      }
+        message: "Use import() instead.",
+      },
     ],
 
     // disallow assignment operators in `return` statements
@@ -437,8 +437,8 @@ module.exports = {
       {
         allowShortCircuit: true,
         allowTernary: true,
-        allowTaggedTemplates: true
-      }
+        allowTaggedTemplates: true,
+      },
     ],
 
     // disallow unused labels [recommended] [autofix]
@@ -564,8 +564,8 @@ module.exports = {
       {
         args: "all",
         ignoreRestSiblings: true,
-        argsIgnorePattern: "^_"
-      }
+        argsIgnorePattern: "^_",
+      },
     ],
 
     // disallow the use of variables before they are defined
@@ -575,8 +575,8 @@ module.exports = {
       {
         functions: false,
         classes: false,
-        variables: true
-      }
+        variables: true,
+      },
     ],
     // #endregion Variables
 
@@ -712,7 +712,7 @@ module.exports = {
     "prefer-destructuring": [
       "warn",
       { array: false, object: true },
-      { enforceForRenamedProperties: false }
+      { enforceForRenamedProperties: false },
     ],
 
     // disallow `parseInt()` and `Number.parseInt()` in favor of binary, octal, and hexadecimal literals [autofix]
@@ -823,8 +823,8 @@ module.exports = {
       "warn",
       "as-needed",
       {
-        generators: "as-needed"
-      }
+        generators: "as-needed",
+      },
     ],
 
     // enforce the consistent use of either `function` declarations or expressions
@@ -1133,7 +1133,7 @@ module.exports = {
 
     // require parenthesis around regex literals [autofix] [prettier]
     // https://eslint.org/docs/rules/wrap-regex
-    "wrap-regex": "off"
+    "wrap-regex": "off",
     // #endregion Stylistic Issues
-  }
+  },
 };

@@ -10,11 +10,11 @@ module.exports = {
         ecmaVersion: 2020,
         sourceType: "module",
         ecmaFeatures: {
-          jsx: true
+          jsx: true,
         },
 
         // typescript-eslint specific options
-        warnOnUnsupportedTypeScriptVersion: true
+        warnOnUnsupportedTypeScriptVersion: true,
       },
 
       // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
@@ -343,8 +343,8 @@ module.exports = {
           {
             allowShortCircuit: true,
             allowTernary: true,
-            allowTaggedTemplates: true
-          }
+            allowTaggedTemplates: true,
+          },
         ],
 
         // Disallow unused variables [recommended]
@@ -355,8 +355,8 @@ module.exports = {
           {
             args: "all",
             ignoreRestSiblings: true,
-            argsIgnorePattern: "^_"
-          }
+            argsIgnorePattern: "^_",
+          },
         ],
 
         // Disallow the use of variables before they are defined [recommended]
@@ -367,8 +367,8 @@ module.exports = {
           {
             functions: false,
             classes: false,
-            variables: true
-          }
+            variables: true,
+          },
         ],
 
         // Disallow unnecessary constructors
@@ -399,9 +399,9 @@ module.exports = {
         // Enforces consistent spacing before function parenthesis [autofix] [prettier]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-function-paren.md
         "space-before-function-paren": "off",
-        "@typescript-eslint/space-before-function-paren": "off"
+        "@typescript-eslint/space-before-function-paren": "off",
         // #endregion Extension Rules
-      }
-    }
-  ]
+      },
+    },
+  ],
 };

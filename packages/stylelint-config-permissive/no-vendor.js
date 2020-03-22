@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["./src/no-vendor.js"]
+  extends: ["./src/no-vendor.js"],
 };

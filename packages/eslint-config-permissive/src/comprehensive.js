@@ -2,7 +2,7 @@ module.exports = {
   rules: {
     // Forbid a module from importing a module with a dependency path back to itself
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md
-    "import/no-cycle": "error"
+    "import/no-cycle": "error",
   },
 
   overrides: [
@@ -114,7 +114,7 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands.md
         "@typescript-eslint/restrict-plus-operands": [
           "warn",
-          { checkCompoundAssignments: true }
+          { checkCompoundAssignments: true },
         ],
 
         // Enforce template literal expressions to be of string type [types]
@@ -136,8 +136,8 @@ module.exports = {
         // Disallow async functions which have no await expression [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
         "require-await": "off",
-        "@typescript-eslint/require-await": "warn"
-      }
-    }
-  ]
+        "@typescript-eslint/require-await": "warn",
+      },
+    },
+  ],
 };

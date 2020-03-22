@@ -11,11 +11,11 @@ module.exports = {
     // https://github.com/kristerkari/stylelint-react-native/blob/master/src/rules/font-weight-no-ignored-values/README.md
     "react-native/font-weight-no-ignored-values": [
       true,
-      { severity: "warning" }
+      { severity: "warning" },
     ],
 
     // Disallow unknown React Native Style properties.
     // https://github.com/kristerkari/stylelint-react-native/blob/master/src/rules/style-property-no-unknown/README.md
-    "react-native/style-property-no-unknown": [true, { severity: "warning" }]
-  }
+    "react-native/style-property-no-unknown": [true, { severity: "warning" }],
+  },
 };

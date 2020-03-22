@@ -15,7 +15,7 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/font-family-no-missing-generic-family-keyword
     "font-family-no-missing-generic-family-keyword": [
       true,
-      { severity: "warning" }
+      { severity: "warning" },
     ],
 
     // Disallow an invalid expression within calc functions. [recommended]
@@ -30,7 +30,7 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/function-linear-gradient-no-nonstandard-direction
     "function-linear-gradient-no-nonstandard-direction": [
       true,
-      { severity: "error" }
+      { severity: "error" },
     ],
 
     // Disallow (unescaped) newlines in strings. [recommended]
@@ -53,14 +53,14 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties
     "declaration-block-no-duplicate-properties": [
       true,
-      { severity: "warning", ignore: ["consecutive-duplicates"] }
+      { severity: "warning", ignore: ["consecutive-duplicates"] },
     ],
 
     // Disallow shorthand properties that override related longhand properties. [recommended]
     // https://stylelint.io/user-guide/rules/declaration-block-no-shorthand-property-overrides
     "declaration-block-no-shorthand-property-overrides": [
       true,
-      { severity: "warning" }
+      { severity: "warning" },
     ],
 
     // Disallow empty blocks. [recommended]
@@ -211,9 +211,9 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/declaration-property-value-blacklist
     "declaration-property-value-blacklist": [
       {
-        "/^transition/": ["/all/"]
+        "/^transition/": ["/all/"],
       },
-      { severity: "warning" }
+      { severity: "warning" },
     ],
 
     // Specify a whitelist of allowed property and value pairs within declarations.
@@ -410,8 +410,8 @@ module.exports = {
       "lower",
       {
         severity: "warning",
-        ignoreFunctions: "/^DXImageTransform.Microsoft.*$/"
-      }
+        ignoreFunctions: "/^DXImageTransform.Microsoft.*$/",
+      },
     ],
 
     // Require a newline or disallow whitespace on the inside of the parentheses of functions. [autofix] [prettier]
@@ -606,7 +606,7 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/selector-pseudo-element-colon-notation
     "selector-pseudo-element-colon-notation": [
       "double",
-      { severity: "warning" }
+      { severity: "warning" },
     ],
 
     // Specify lowercase or uppercase for type selectors. [autofix] [prettier]
@@ -653,14 +653,14 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/media-feature-range-operator-space-after
     "media-feature-range-operator-space-after": [
       "always",
-      { severity: "warning" }
+      { severity: "warning" },
     ],
 
     // Require a single space or disallow whitespace before the range operator in media features. [autofix]
     // https://stylelint.io/user-guide/rules/media-feature-range-operator-space-before
     "media-feature-range-operator-space-before": [
       "always",
-      { severity: "warning" }
+      { severity: "warning" },
     ],
 
     // Require a newline or disallow whitespace after the commas of media query lists. [autofix] [prettier]
@@ -741,6 +741,6 @@ module.exports = {
 
     // Require or disallow Unicode BOM. [prettier]
     // https://stylelint.io/user-guide/rules/unicode-bom
-    "unicode-bom": null
-  }
+    "unicode-bom": null,
+  },
 };

@@ -11,6 +11,6 @@ module.exports = {
     "./plugins/react-native.js",
     "./plugins/jest.js",
     "./plugins/testing-library.js",
-    "./plugins/cypress.js"
-  ]
+    "./plugins/cypress.js",
+  ],
 };

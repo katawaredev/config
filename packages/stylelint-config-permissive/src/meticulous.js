@@ -12,14 +12,14 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties
     "declaration-block-no-redundant-longhand-properties": [
       true,
-      { severity: "warning" }
+      { severity: "warning" },
     ],
 
     //  Specify whether or not quotation marks should be used around font family names.
     // https://stylelint.io/user-guide/rules/font-family-name-quotes
     "font-family-name-quotes": [
       "always-where-recommended",
-      { severity: "warning" }
+      { severity: "warning" },
     ],
 
     //  Require numeric or named (where possible)
@@ -28,6 +28,6 @@ module.exports = {
 
     // Require or disallow quotes for urls.
     // https://stylelint.io/user-guide/rules/function-url-quotes
-    "function-url-quotes": ["always", { severity: "warning" }]
-  }
+    "function-url-quotes": ["always", { severity: "warning" }],
+  },
 };

@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["./src/meticulous.js"]
+  extends: ["./src/meticulous.js"],
 };

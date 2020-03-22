@@ -29,7 +29,7 @@ module.exports = {
 
     // disallow unused eslint-enable comments [recommended]
     // https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-unused-enable.html
-    "eslint-comments/no-unused-enable": "warn"
+    "eslint-comments/no-unused-enable": "warn",
     // #endregion Best Practices
 
     // #region Stylistic Issues
@@ -41,5 +41,5 @@ module.exports = {
     // https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-use.html
     // "eslint-comments/no-use": "off"
     // #endregion Stylistic Issues
-  }
+  },
 };

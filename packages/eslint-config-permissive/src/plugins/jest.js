@@ -4,7 +4,7 @@ module.exports = {
       files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"],
       plugins: ["jest"],
       env: {
-        "jest/globals": true
+        "jest/globals": true,
       },
 
       // https://github.com/jest-community/eslint-plugin-jest#rules
@@ -163,12 +163,12 @@ module.exports = {
 
         // Enforce valid expect() usage [recommended]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-expect.md
-        "jest/valid-expect": "warn"
+        "jest/valid-expect": "warn",
 
         // Enforce valid titles for jest blocks
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-title.md
         // "jest/valid-title": "off"
-      }
-    }
-  ]
+      },
+    },
+  ],
 };

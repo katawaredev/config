@@ -4,9 +4,9 @@ module.exports = {
   settings: {
     "import/resolver": {
       node: {
-        paths: ["src"]
-      }
-    }
+        paths: ["src"],
+      },
+    },
   },
 
   // https://github.com/benmosher/eslint-plugin-import#rules
@@ -68,7 +68,7 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
     "import/no-unused-modules": [
       "warn",
-      { unusedExports: true, missingExports: false }
+      { unusedExports: true, missingExports: false },
     ],
     // #endregion Static analysis
 
@@ -175,7 +175,7 @@ module.exports = {
 
     // Forbid anonymous values as default exports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
-    "import/no-anonymous-default-export": "warn"
+    "import/no-anonymous-default-export": "warn",
 
     // Prefer named exports to be grouped together in a single export declaration
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/group-exports.md
@@ -185,5 +185,5 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/dynamic-import-chunkname.md
     // "import/dynamic-import-chunkname": "off"
     // #endregion Style guide
-  }
+  },
 };

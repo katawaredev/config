@@ -5,6 +5,6 @@ module.exports = {
     "./plugins/order.js",
     "./plugins/no-unsupported-browser-features.js",
     "./plugins/a11y.js",
-    "./plugins/high-performance-animation.js"
-  ]
+    "./plugins/high-performance-animation.js",
+  ],
 };

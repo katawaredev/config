@@ -18,6 +18,6 @@ module.exports = {
 
     //  Disallow vendor prefixes for values.
     // https://stylelint.io/user-guide/rules/value-no-vendor-prefix
-    "value-no-vendor-prefix": [true, { severity: "warning" }]
-  }
+    "value-no-vendor-prefix": [true, { severity: "warning" }],
+  },
 };

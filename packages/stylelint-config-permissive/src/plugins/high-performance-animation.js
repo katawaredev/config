@@ -8,7 +8,7 @@ module.exports = {
     // Prevent the use of low performance animation and transition properties.
     "plugin/no-low-performance-animation-properties": [
       true,
-      { severity: "warning" }
-    ]
-  }
+      { severity: "warning" },
+    ],
+  },
 };

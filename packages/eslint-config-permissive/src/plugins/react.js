@@ -6,8 +6,8 @@ module.exports = {
 
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
-        }
+          jsx: true,
+        },
       },
 
       // https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
@@ -355,9 +355,9 @@ module.exports = {
 
         // Prevent missing parentheses around multilines JSX [autofix] [prettier]
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
-        "react/jsx-wrap-multilines": "off"
+        "react/jsx-wrap-multilines": "off",
         // #endregion JSX-specific rules
-      }
-    }
-  ]
+      },
+    },
+  ],
 };

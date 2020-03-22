@@ -4,7 +4,7 @@ module.exports = {
       files: ["*-spec.[tj]s"],
       plugins: ["cypress"],
       env: {
-        "cypress/globals": true
+        "cypress/globals": true,
       },
 
       // https://github.com/cypress-io/eslint-plugin-cypress#rules
@@ -23,12 +23,12 @@ module.exports = {
 
         // 	Ensure screenshots are preceded by an assertion
         // https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/assertion-before-screenshot.md
-        "cypress/assertion-before-screenshot": "warn"
+        "cypress/assertion-before-screenshot": "warn",
 
         // 	Only allow data-* attribute selectors (require-data-selectors)
         // https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/require-data-selectors.md
         // "cypress/require-data-selectors": "off"
-      }
-    }
-  ]
+      },
+    },
+  ],
 };

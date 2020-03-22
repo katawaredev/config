@@ -36,7 +36,7 @@ module.exports = {
 
         // Disallow the use of getBy* queries when checking elements are not present
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-get-by-for-checking-element-not-present.md
-        "testing-library/no-get-by-for-checking-element-not-present": "warn"
+        "testing-library/no-get-by-for-checking-element-not-present": "warn",
 
         // Disallow the use of cleanup
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-manual-cleanup.md
@@ -45,7 +45,7 @@ module.exports = {
         // Suggest using explicit assertions rather than just getBy* queries
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/prefer-explicit-assert.md
         // "testing-library/prefer-explicit-assert": "off"
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
