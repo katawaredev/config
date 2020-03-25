@@ -34,8 +34,8 @@
     ]
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,mjs}": "eslint --cache --fix",
-    "*.{js,jsx,tsx,css,less,scss}": "stylelint --cache --fix",
+    "*.{js,jsx,ts,tsx,mjs}": "eslint --fix",
+    "*.{js,jsx,tsx,css,less,scss}": "stylelint --fix",
     "*.{md}": "markdownlint --fix",
     "*.{js,jsx,ts,tsx,mjs,vue,json,css,less,scss,md,mdx,graphql,yaml}": "prettier --write"
   },
@@ -62,8 +62,8 @@
   ],
   "scripts": {
     "postinstall": "npx lerna bootstrap",
-    "lint:code": "eslint . --fix --ext js,jsx,ts,tsx,mjs",
-    "lint:styles": "stylelint --fix '**/*.{js,jsx,tsx,css,less,scss}'",
+    "lint:code": "eslint --cache . --fix --ext js,jsx,ts,tsx,mjs",
+    "lint:styles": "stylelint --cache --fix '**/*.{js,jsx,tsx,css,less,scss}'",
     "lint:markdown": "markdownlint --fix '**/*.md'",
     "lint": "run-s -c lint:code lint:styles lint:markdown",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,mjs,vue,json,css,less,scss,md,mdx,graphql,yaml}'"
