@@ -39,6 +39,10 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
         "@typescript-eslint/ban-types": "warn",
 
+        // Ensures that literals on classes are exposed in a consistent style
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/class-literal-property-style.md
+        "@typescript-eslint/class-literal-property-style": "warn",
+
         // Enforces consistent usage of type assertions [recommended]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-assertions.md
         // "@typescript-eslint/consistent-type-assertions": "warn",

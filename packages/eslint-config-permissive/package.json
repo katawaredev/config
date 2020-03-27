@@ -12,8 +12,8 @@
     "prefer-macro.js"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.24.0",
-    "@typescript-eslint/parser": "^2.24.0",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
     "babel-eslint": "^10.1.0",
     "confusing-browser-globals": "^1.0.9",
     "eslint": "^6.8.0",
@@ -25,7 +25,7 @@
     "eslint-plugin-markdown": "^1.0.2",
     "eslint-plugin-mdx": "^1.6.8",
     "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.5.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
     "eslint-plugin-react-native": "^3.8.1",
     "eslint-plugin-testing-library": "^2.2.3",
     "typescript": "^3.8.3"
