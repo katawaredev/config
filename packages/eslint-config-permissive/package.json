@@ -6,13 +6,10 @@
   "main": "src",
   "files": [
     "src",
-    "base.js",
-    "protracted.js",
+    "comprehensive.js",
     "meticulous.js",
     "naming.js",
-    "prefer-macro.js",
-    "react.js",
-    "testing.js"
+    "prefer-macro.js"
   ],
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.24.0",
