@@ -23,8 +23,6 @@ npm install --dev babel-preset-permissive
 
 ### Plugins
 
-#### Proposal
-
 - [`@babel/plugin-proposal-decorators`](https://babeljs.io/docs/en/babel-plugin-proposal-decorators)
 - [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties)
 - [`@babel/plugin-proposal-numeric-separator`](https://babeljs.io/docs/en/babel-plugin-proposal-numeric-separator)
