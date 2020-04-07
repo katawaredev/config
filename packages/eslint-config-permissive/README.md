@@ -46,7 +46,7 @@ Config:
 // package.json
 {
   "scripts": {
-    "lint": "eslint . --ext js,jsx,ts,tsx,md,mdx"
+    "lint": "eslint --ext js,jsx,ts,tsx,mjs,md,mdx --fix ."
   }
 }
 ```

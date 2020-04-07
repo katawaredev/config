@@ -1,0 +1,8 @@
+{
+  "settings": {
+    "react": {
+      "version": "16.13.0"
+    }
+  },
+  "extends": ["permissive"]
+}

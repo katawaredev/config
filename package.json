@@ -2,7 +2,7 @@
   "name": "config",
   "description": "Developer's toolbox",
   "license": "MIT",
-  "author": "Nikolay Stoynov",
+  "author": "Kataware <contact@kataware.dev>",
   "repository": {
     "type": "git",
     "url": "https://github.com/katawaredev/config.git"
@@ -21,49 +21,10 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,mjs}": "eslint --fix",
-    "*.{js,jsx,tsx,css,less,scss}": "stylelint --fix",
-    "*.{md}": "markdownlint --fix",
-    "*.{js,jsx,ts,tsx,mjs,vue,json,css,less,scss,md,mdx,graphql,yaml}": "prettier --write"
-  },
-  "eslintConfig": {
-    "settings": {
-      "react": {
-        "version": "16.13.0"
-      }
-    },
-    "extends": [
-      "./packages/eslint-config-permissive"
-    ]
-  },
-  "stylelint": {
-    "extends": [
-      "./packages/stylelint-config-permissive"
-    ]
-  },
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "not IE_Mob 11",
-    "maintained node versions"
-  ],
   "scripts": {
     "postinstall": "npx lerna bootstrap",
-    "lint:code": "eslint --cache . --fix --ext js,jsx,ts,tsx,mjs",
-    "lint:styles": "stylelint --cache --fix '**/*.{js,jsx,tsx,css,less,scss}'",
+    "lint:code": "eslint --fix --ext js,jsx,ts,tsx,mjs,md,mdx .",
+    "lint:styles": "stylelint --fix '**/*.{js,jsx,tsx,css,less,scss}'",
     "lint:markdown": "markdownlint --fix '**/*.md'",
     "lint": "run-s -c lint:code lint:styles lint:markdown",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,mjs,vue,json,css,less,scss,md,mdx,graphql,yaml}'"
@@ -71,18 +32,22 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "babel-preset-permissive": "file:packages/babel-preset-permissive",
     "commitizen": "^4.0.3",
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^6.8.0",
+    "eslint-config-permissive": "file:packages/eslint-config-permissive",
     "husky": "^4.2.3",
     "lerna": "^3.20.2",
     "lint-staged": "^10.0.9",
     "markdownlint": "^0.19.0",
     "markdownlint-cli": "^0.22.0",
+    "markdownlint-config-permissive": "file:packages/markdownlint-config-permissive",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.2",
     "stylelint": "^13.2.1",
+    "stylelint-config-permissive": "file:packages/stylelint-config-permissive",
     "typescript": "^3.8.3"
   }
 }
