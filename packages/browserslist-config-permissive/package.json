@@ -1,0 +1,22 @@
+{
+  "name": "browserslist-config-permissive",
+  "version": "0.1.0",
+  "author": "Kataware <contact@kataware.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/katawaredev/config.git",
+    "directory": "packages/browserslist-config-permissive"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "main": "src",
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "browserslist": "^4.11.1"
+  }
+}
