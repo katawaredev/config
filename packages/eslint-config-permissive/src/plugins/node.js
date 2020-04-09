@@ -164,6 +164,8 @@ module.exports = {
     {
       files: ["*.md", "*.mdx"],
       rules: {
+        "node/no-extraneous-import": "off",
+        "node/no-extraneous-require": "off",
         "node/no-missing-require": "off",
       },
     },

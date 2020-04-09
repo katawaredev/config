@@ -16,6 +16,7 @@ module.exports = {
         "eol-last": "off",
         "unicode-bom": "off",
         "no-undef": "off",
+        "no-unused-expressions": "off",
         "no-unused-vars": "off",
       },
     },
@@ -47,7 +48,7 @@ module.exports = {
         "react/no-unescaped-entities": "off",
         "mdx/no-unescaped-entities": "warn",
 
-        "no-unused-expressions": "warn",
+        "no-unused-expressions": "off",
         "mdx/no-unused-expressions": [
           "error",
           {
