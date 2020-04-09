@@ -603,27 +603,27 @@ module.exports = {
 
     // disallow `new` operators with calls to `require`
     // https://eslint.org/docs/rules/no-new-require
-    "no-new-require": "warn",
+    // "no-new-require": "off",
 
     // disallow string concatenation with `__dirname` and `__filename`
     // https://eslint.org/docs/rules/no-path-concat
-    "no-path-concat": "warn",
+    // "no-path-concat": "off",
 
     // disallow the use of `process.env`
     // https://eslint.org/docs/rules/no-process-env
-    "no-process-env": "off",
+    // "no-process-env": "off",
 
     // disallow the use of `process.exit()`
     // https://eslint.org/docs/rules/no-process-exit
-    "no-process-exit": "off",
+    // "no-process-exit": "off",
 
     // disallow specified modules when loaded by `require`
     // https://eslint.org/docs/rules/no-restricted-modules
     // "no-restricted-modules": "off",
 
-    // disallow synchronous methods [performance]
+    // disallow synchronous methods
     // https://eslint.org/docs/rules/no-sync
-    "no-sync": "warn",
+    // "no-sync": "warn",
     // #endregion Node.js and CommonJS
 
     // #region ECMAScript 6

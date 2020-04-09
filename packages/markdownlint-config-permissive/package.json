@@ -8,6 +8,10 @@
     "url": "https://github.com/katawaredev/config.git",
     "directory": "packages/markdownlint-config-permissive"
   },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=10.13.0"
+  },
   "main": "index.json",
   "files": [
     "index.json"

@@ -96,9 +96,6 @@ module.exports = {
     // Forbid the use of mutable exports with var or let.
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
     "import/no-mutable-exports": "warn",
-
-    // Report modules without exports, or exports without matching import in another module
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
     // #endregion Helpful warnings
 
     // #region Module systems

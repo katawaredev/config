@@ -10,9 +10,17 @@
   "bugs": {
     "url": "https://github.com/katawaredev/config/issues"
   },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=10.13.0"
+  },
   "homepage": "https://github.com/katawaredev/config#readme",
   "keywords": [
+    "babel",
+    "browserslist",
+    "git",
     "eslint",
+    "markdownlint",
     "stylelint",
     "rollup"
   ],

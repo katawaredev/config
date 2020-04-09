@@ -4,5 +4,5 @@
       "version": "16.13.0"
     }
   },
-  "extends": ["permissive"]
+  "extends": ["permissive", "permissive/node", "permissive/node-async"]
 }
