@@ -20,9 +20,11 @@
     "browserslist",
     "git",
     "eslint",
+    "jest",
     "markdownlint",
+    "rollup",
     "stylelint",
-    "rollup"
+    "typescript"
   ],
   "config": {
     "commitizen": {
