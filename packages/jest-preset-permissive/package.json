@@ -6,7 +6,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/katawaredev/config.git",
-    "directory": "packages/markdownlint-config-permissive"
+    "directory": "packages/jest-preset-permissive"
   },
   "type": "commonjs",
   "engines": {
