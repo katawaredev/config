@@ -13,7 +13,6 @@
     "node": ">=10.13.0"
   },
   "main": "src",
-  "types": "./jest-preset-permissive.d.ts",
   "files": [
     "src",
     "jest-preset.js",

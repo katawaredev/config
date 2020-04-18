@@ -7,7 +7,7 @@
 
   // Specifies an array of filenames or patterns to include in the program.
   // https://www.typescriptlang.org/v2/en/tsconfig#include
-  "include": ["src"],
+  // "include": [],
 
   // Specifies an array of filenames or patterns that should be skipped when resolving include.
   // https://www.typescriptlang.org/v2/en/tsconfig#exclude
@@ -105,8 +105,9 @@
     // "downlevelIteration": false,
 
     // Transpile each file as a separate module (similar to 'ts.transpileModule').
+    // NOTE: This disallows features that require cross-file information for emit. (babel)
     // https://www.typescriptlang.org/v2/en/tsconfig#isolatedModules
-    // "isolatedModules": false,
+    "isolatedModules": true,
 
     // List of language service plugins to run inside the editor.
     // https://www.typescriptlang.org/v2/en/tsconfig#plugins

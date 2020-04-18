@@ -13,8 +13,10 @@
     "node": ">=10.13.0"
   },
   "main": "tsconfig.json",
+  "types": "types/index.d.ts",
   "files": [
-    "tsconfig.json"
+    "tsconfig.json",
+    "types"
   ],
   "peerDependencies": {
     "tslib": "^1.11.0",
