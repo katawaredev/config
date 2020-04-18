@@ -15,7 +15,7 @@ npx install-peerdeps --dev typescript-config-permissive
 Config:
 
 ```json
-// tsconfig.js
+// tsconfig.json
 {
   "extends": "typescript-config-permissive"
 }
