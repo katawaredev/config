@@ -76,6 +76,10 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md
         // "@typescript-eslint/member-ordering": "off",
 
+        // Enforces using a particular method signature syntax. [autofix]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/method-signature-style.md
+        "@typescript-eslint/method-signature-style": "warn",
+
         // Enforces naming conventions for everything across a codebase [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
         // "@typescript-eslint/naming-convention": "off",
@@ -172,6 +176,10 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md
         // "@typescript-eslint/no-unnecessary-type-assertion": "warn",
 
+        // Disallows assigning any to variables and properties [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-assignment.md
+        // "@typescript-eslint/no-unsafe-assignment": "off",
+
         // Disallows calling an any type value [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-call.md
         // "@typescript-eslint/no-unsafe-call": "warn",
@@ -228,6 +236,10 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-readonly-parameter-types.md
         // "@typescript-eslint/prefer-readonly-parameter-types": "warn",
 
+        // Prefer using type parameter when calling Array#reduce instead of casting [autofix] [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-reduce-type-parameter.md
+        // "@typescript-eslint/prefer-reduce-type-parameter": "warn",
+
         // Enforce that RegExp#exec is used instead of String#match if no global flag is provided [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
         // "@typescript-eslint/prefer-regexp-exec": "warn",
@@ -235,6 +247,10 @@ module.exports = {
         // Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings [recommended] [autofix] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md
         // "@typescript-eslint/prefer-string-starts-ends-with": "warn",
+
+        // Recommends using // @ts-expect-error over // @ts-ignore [autofix]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-ts-expect-error.md
+        // "@typescript-eslint/prefer-ts-expect-error": "warn", // TODO: Enable for TypeScript 3.9
 
         // Requires any function or method that returns a Promise to be marked async [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/promise-function-async.md

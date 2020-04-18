@@ -34,17 +34,29 @@ module.exports = {
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-dom-import.md
         "testing-library/no-dom-import": "warn",
 
-        // Disallow the use of getBy* queries when checking elements are not present
-        // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-get-by-for-checking-element-not-present.md
-        "testing-library/no-get-by-for-checking-element-not-present": "warn",
-
         // Disallow the use of cleanup
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-manual-cleanup.md
         // "testing-library/no-manual-cleanup": "off",
 
+        // Disallow empty callbacks for waitFor and waitForElementToBeRemoved
+        // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-wait-for-empty-callback.md
+        // "testing-library/no-wait-for-empty-callback": "warn",
+
         // Suggest using explicit assertions rather than just getBy* queries
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/prefer-explicit-assert.md
-        // "testing-library/prefer-explicit-assert": "off"
+        // "testing-library/prefer-explicit-assert": "off",
+
+        // Enforce specific queries when checking element is present or not
+        // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/prefer-presence-queries.md
+        "testing-library/prefer-presence-queries": "warn",
+
+        // Suggest using screen while using queries
+        // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/prefer-screen-queries.md
+        // "testing-library/prefer-screen-queries": "off",
+
+        // Use waitFor instead of deprecated wait methods [autofix]
+        // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/prefer-wait-for.md
+        "testing-library/prefer-wait-for": "warn",
       },
     },
   ],

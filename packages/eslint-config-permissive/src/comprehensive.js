@@ -62,6 +62,10 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md
         "@typescript-eslint/no-unnecessary-type-assertion": "warn",
 
+        // Disallows assigning any to variables and properties [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-assignment.md
+        // "@typescript-eslint/no-unsafe-assignment": "off",
+
         // Disallows calling an any type value [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-call.md
         "@typescript-eslint/no-unsafe-call": "warn",
@@ -93,6 +97,10 @@ module.exports = {
         // Requires that function parameters are typed as readonly to prevent accidental mutation of inputs [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-readonly-parameter-types.md
         // "@typescript-eslint/prefer-readonly-parameter-types": "warn",
+
+        // Prefer using type parameter when calling Array#reduce instead of casting [autofix] [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-reduce-type-parameter.md
+        "@typescript-eslint/prefer-reduce-type-parameter": "warn",
 
         // Enforce that RegExp#exec is used instead of String#match if no global flag is provided [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
