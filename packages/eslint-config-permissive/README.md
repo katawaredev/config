@@ -25,6 +25,7 @@
   - [a11y](https://a11yproject.com/)
   - [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro)
 - [Jest](https://jestjs.io/)
+  - [Jest DOM](https://github.com/testing-library/eslint-plugin-jest-dom)
 - [Cypress](https://www.cypress.io/)
 
 ## Install
@@ -151,7 +152,7 @@ For monorepository with absolute imports, placing this configuration in each pac
 Because of [this issue](https://github.com/eslint/eslint/issues/3458), `eslint` is unable to use any config without having to install all plugins included. In some cases it can be fine not to include them, but if `eslint` complains, just install the dependencies needed for this project:
 
 ```shell
-npm install --save-dev @typescript-eslint/eslint-plugin@2.x @typescript-eslint/parser@2.x babel-eslint@10.x eslint-plugin-eslint-comments@3.x eslint-plugin-cypress@2.x eslint-plugin-import@2.x eslint-plugin-jest@23.x eslint-plugin-jsx-a11y@6.x eslint-plugin-markdown@1.x eslint-plugin-mdx@1.x eslint-plugin-react@7.x eslint-plugin-react-hooks@2.x eslint-plugin-react-native@3.x eslint-plugin-testing-library@2.x eslint-plugin-node@11.x
+npm install --save-dev @typescript-eslint/eslint-plugin@2.x @typescript-eslint/parser@2.x babel-eslint@10.x eslint-plugin-eslint-comments@3.x eslint-plugin-cypress@2.x eslint-plugin-import@2.x eslint-plugin-jest@23.x eslint-plugin-jest-dom@2 eslint-plugin-jsx-a11y@6.x eslint-plugin-markdown@1.x eslint-plugin-mdx@1.x eslint-plugin-react@7.x eslint-plugin-react-hooks@2.x eslint-plugin-react-native@3.x eslint-plugin-testing-library@2.x eslint-plugin-node@11.x
 ```
 
 Alternatively, just install the correct version of a plugin `eslint` complains about

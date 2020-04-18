@@ -10,6 +10,7 @@ module.exports = {
     "./plugins/jsx-a11y.js",
     "./plugins/react-native.js",
     "./plugins/jest.js",
+    "./plugins/jest-dom.js",
     "./plugins/testing-library.js",
     "./plugins/cypress.js",
   ],
