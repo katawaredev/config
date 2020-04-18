@@ -50,6 +50,7 @@ module.exports = (api, _options) => ({
     require("babel-plugin-preval"),
 
     require("@babel/plugin-transform-react-jsx").default,
+    require("babel-plugin-inline-react-svg").default,
     api.env("production") &&
       require("babel-plugin-react-remove-properties").default,
   ].filter(Boolean),

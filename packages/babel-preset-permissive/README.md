@@ -29,6 +29,7 @@ npm install --dev babel-preset-permissive
 - [`@babel/plugin-syntax-dynamic-import`](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import)
 - [`@babel/plugin-transform-runtime`](https://babeljs.io/docs/en/babel-plugin-transform-runtime)
 - [`@babel/plugin-transform-react-jsx`](https://babeljs.io/docs/en/babel-plugin-transform-react-jsx)
+- [`babel-plugin-inline-react-svg`](https://github.com/airbnb/babel-plugin-inline-react-svg)
 - [`babel-plugin-annotate-pure-calls`](https://github.com/Andarist/babel-plugin-annotate-pure-calls)
 - [`babel-plugin-dev-expression`](https://github.com/4Catalyzer/babel-plugin-dev-expression)
 - [`babel-plugin-macros`](https://github.com/kentcdodds/babel-plugin-macros)
