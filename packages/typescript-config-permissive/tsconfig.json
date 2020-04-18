@@ -1,0 +1,377 @@
+{
+  // #region File Inclusion
+
+  // Specifies an allowlist of files to include in the program.
+  // https://www.typescriptlang.org/v2/en/tsconfig#files
+  // "files": [],
+
+  // Specifies an array of filenames or patterns to include in the program.
+  // https://www.typescriptlang.org/v2/en/tsconfig#include
+  "include": ["src"],
+
+  // Specifies an array of filenames or patterns that should be skipped when resolving include.
+  // https://www.typescriptlang.org/v2/en/tsconfig#exclude
+  // "exclude": [],
+
+  // The value of extends is a string which contains a path to another configuration file to inherit from.
+  // https://www.typescriptlang.org/v2/en/tsconfig#extends
+  // "extends": undefined,
+
+  // Automatically load type definitions.
+  // https://www.typescriptlang.org/v2/en/tsconfig#typeAcquisition
+  // "typeAcquisition": true,
+
+  // Structure your TypeScript programs into smaller pieces.
+  // https://www.typescriptlang.org/v2/en/tsconfig#references
+  // "references": [],
+  // #endregion File Inclusion
+
+  // #region Project Options
+  "compilerOptions": {
+    // Tells TypeScript to save information about the project graph from the last compilation to files stored on disk.
+    // https://www.typescriptlang.org/v2/en/tsconfig#incremental
+    // "incremental": false,
+
+    // Specify ECMAScript target version.
+    // https://www.typescriptlang.org/v2/en/tsconfig#target
+    "target": "esnext",
+
+    // Specify module code generation.
+    // https://www.typescriptlang.org/v2/en/tsconfig#module
+    "module": "esnext",
+
+    // Specify library files to be included in the compilation.
+    // https://www.typescriptlang.org/v2/en/tsconfig#lib
+    // "lib": [],
+
+    // Allow javascript files to be compiled.
+    // https://www.typescriptlang.org/v2/en/tsconfig#allowJs
+    "allowJs": true,
+
+    // Report errors in .js files.
+    // https://www.typescriptlang.org/v2/en/tsconfig#checkJs
+    "checkJs": true,
+
+    // Controls how JSX constructs are emitted in JavaScript files.
+    // https://www.typescriptlang.org/v2/en/tsconfig#jsx
+    "jsx": "preserve",
+
+    // Generates corresponding '.d.ts' file.
+    // https://www.typescriptlang.org/v2/en/tsconfig#declaration
+    // "declaration": true,
+
+    // Generates a sourcemap for each corresponding '.d.ts' file.
+    // https://www.typescriptlang.org/v2/en/tsconfig#declarationMap
+    // "declarationMap": false,
+
+    // Generates corresponding '.map' file.
+    // https://www.typescriptlang.org/v2/en/tsconfig#sourceMap
+    // "sourceMap": false,
+
+    // Concatenate and emit output to single file.
+    // https://www.typescriptlang.org/v2/en/tsconfig#outFile
+    // "outFile": undefined,
+
+    // Redirect output structure to the directory.
+    // https://www.typescriptlang.org/v2/en/tsconfig#outDir
+    // "outDir": undefined,
+
+    // Specify the root directory of input files. Use to control the output directory structure with --outDir.
+    // https://www.typescriptlang.org/v2/en/tsconfig#rootDir
+    // "rootDir": undefined,
+
+    // Enable project compilation.
+    // https://www.typescriptlang.org/v2/en/tsconfig#composite
+    // "composite": true,
+
+    // Specify file to store incremental compilation information.
+    // https://www.typescriptlang.org/v2/en/tsconfig#tsBuildInfoFile
+    // "tsBuildInfoFile": ".tsbuildinfo",
+
+    // Strips all comments from TypeScript files when converting into JavaScript.
+    // https://www.typescriptlang.org/v2/en/tsconfig#removeComments
+    // "removeComments": false,
+
+    // Do not emit compiler output files like JavaScript source code, source-maps or declarations.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noEmit
+    "noEmit": true,
+
+    // Import emit helpers from 'tslib'.
+    // https://www.typescriptlang.org/v2/en/tsconfig#importHelpers
+    "importHelpers": true,
+
+    // Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'.
+    // https://www.typescriptlang.org/v2/en/tsconfig#downlevelIteration
+    // "downlevelIteration": false,
+
+    // Transpile each file as a separate module (similar to 'ts.transpileModule').
+    // https://www.typescriptlang.org/v2/en/tsconfig#isolatedModules
+    // "isolatedModules": false,
+
+    // List of language service plugins to run inside the editor.
+    // https://www.typescriptlang.org/v2/en/tsconfig#plugins
+    // "plugins": [],
+    // #endregion Project Options
+
+    // #region Strict Checks
+
+    // Enable all strict type-checking options.
+    // https://www.typescriptlang.org/v2/en/tsconfig#strict
+    // "strict": false,
+
+    // Raise error on expressions and declarations with an implied 'any' type.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noImplicitAny
+    // "noImplicitAny": false,
+
+    // When strictNullChecks is false, null and undefined are effectively ignored by the language. This can lead to unexpected errors at runtime.
+    // https://www.typescriptlang.org/v2/en/tsconfig#strictNullChecks
+    "strictNullChecks": true,
+
+    // When enabled, this flag causes functions parameters to be checked more correctly.
+    // https://www.typescriptlang.org/v2/en/tsconfig#strictFunctionTypes
+    "strictFunctionTypes": true,
+
+    // When set, TypeScript will check that the built-in methods of functions call, bind, and apply are invoked with correct argument for the underlying function.
+    // https://www.typescriptlang.org/v2/en/tsconfig#strictBindCallApply
+    "strictBindCallApply": true,
+
+    // When set to true, TypeScript will raise an error when a class property was declared but not set in the constructor.
+    // https://www.typescriptlang.org/v2/en/tsconfig#strictPropertyInitialization
+    "strictPropertyInitialization": true,
+
+    // Raise error on ‘this’ expressions with an implied ‘any’ type.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noImplicitThis
+    "noImplicitThis": true,
+
+    // Ensures that your files are parsed in the ECMAScript strict mode, and emit “use strict” for each source file.
+    // https://www.typescriptlang.org/v2/en/tsconfig#alwaysStrict
+    "alwaysStrict": true,
+    // #endregion Strict Checks
+
+    // #region Module Resolution
+    // "Specify module resolution strategy": ‘node’ (Node.js) or ‘classic’ (TypeScript pre-1.6).
+    // https://www.typescriptlang.org/v2/en/tsconfig#moduleResolution
+    "moduleResolution": "node",
+
+    // Lets you set a base directory to resolve non-absolute module names.
+    // https://www.typescriptlang.org/v2/en/tsconfig#baseUrl
+    // "baseUrl": "./",
+
+    // A series of entries which re-map imports to lookup locations relative to the baseUrl.
+    // https://www.typescriptlang.org/v2/en/tsconfig#paths
+    // "paths": {},
+
+    // List of root folders whose combined content represents the structure of the project at runtime.
+    // https://www.typescriptlang.org/v2/en/tsconfig#rootDirs
+    // "rootDirs": [],
+
+    // List of folders to include type definitions from.
+    // https://www.typescriptlang.org/v2/en/tsconfig#typeRoots
+    // "typeRoots": ["node_modules/@types/"],
+
+    // Type declaration files to be included in compilation.
+    // https://www.typescriptlang.org/v2/en/tsconfig#types
+    // "types": [],
+
+    // Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+    // https://www.typescriptlang.org/v2/en/tsconfig#allowSyntheticDefaultImports
+    // "allowSyntheticDefaultImports": false,
+
+    // Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports.
+    // https://www.typescriptlang.org/v2/en/tsconfig#esModuleInterop
+    "esModuleInterop": true,
+
+    // Do not resolve the real path of symlinks.
+    // https://www.typescriptlang.org/v2/en/tsconfig#preserveSymlinks
+    // "preserveSymlinks": false,
+
+    // Allow accessing UMD globals from modules.
+    // https://www.typescriptlang.org/v2/en/tsconfig#allowUmdGlobalAccess
+    // "allowUmdGlobalAccess": false,
+    // #endregion Module Resolution
+
+    // #region Source Maps
+    // Specify the location where a debugger should locate TypeScript files instead of relative source locations.
+    // https://www.typescriptlang.org/v2/en/tsconfig#sourceRoot
+    // "sourceRoot": undefined,
+
+    // Specify the location where debugger should locate map files instead of generated locations.
+    // https://www.typescriptlang.org/v2/en/tsconfig#mapRoot
+    // "mapRoot": undefined,
+
+    // Emit a single file with source maps instead of having a separate file.
+    // https://www.typescriptlang.org/v2/en/tsconfig#inlineSourceMap
+    // "inlineSourceMap": false,
+
+    // Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set.
+    // https://www.typescriptlang.org/v2/en/tsconfig#inlineSources
+    // "inlineSources": false,
+    // #endregion Source Maps
+
+    // #region Linter Checks
+    // Report errors on unused local variables.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noUnusedLocals
+    // "noUnusedLocals": false,
+
+    // Report errors on unused parameters in functions.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noUnusedParameters
+    // "noUnusedParameters": false,
+
+    // When enabled, TypeScript will check all code paths in a function to ensure they return a value.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noImplicitReturns
+    // "noImplicitReturns": false,
+
+    // Report errors for fallthrough cases in switch statements. Ensures that any non-empty case inside a switch statement includes either break or return. This means you won’t accidentally ship a case fallthrough bug.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noFallthroughCasesInSwitch
+    // "noFallthroughCasesInSwitch": false,
+    // #endregion Linter Checks
+
+    // #region Experimental
+    // Enables experimental support for decorators, which is in stage 2 of the TC39 standardization process.
+    // https://www.typescriptlang.org/v2/en/tsconfig#experimentalDecorators
+    // "experimentalDecorators": false,
+
+    // Enables experimental support for emitting type metadata for decorators which works with the module reflect-metadata.
+    // https://www.typescriptlang.org/v2/en/tsconfig#emitDecoratorMetadata
+    // ""emitDecoratorMetadata"": false,
+    // #endregion Experimental
+    // #region Advanced
+
+    // Print names of files part of the compilation. This is useful when you are not sure that TypeScript has included a file you expected.
+    // https://www.typescriptlang.org/v2/en/tsconfig#listFiles
+    // "listFiles": false,
+
+    // Print names of generated files part of the compilation to the terminal.
+    // https://www.typescriptlang.org/v2/en/tsconfig#listEmittedFiles
+    // "listEmittedFiles": false,
+
+    // When you are trying to debug why a module isn’t being included.
+    // https://www.typescriptlang.org/v2/en/tsconfig#traceResolution
+    // "traceResolution": false,
+
+    // Used to output diagnostic information for debugging.
+    // https://www.typescriptlang.org/v2/en/tsconfig#diagnostics
+    // "diagnostics": false,
+
+    // You can use this flag to discover where TypeScript is spending it’s time when compiling.
+    // https://www.typescriptlang.org/v2/en/tsconfig#extendedDiagnostics
+    // "extendedDiagnostics": false,
+
+    // This option gives you the chance to have TypeScript emit a v8 CPU profile during the compiler run.
+    // https://www.typescriptlang.org/v2/en/tsconfig#generateCpuProfile
+    // "generateCpuProfile": "profile.cpuprofile",
+
+    // Avoid rechecking/rebuilding all truly possibly-affected files, only recheck/rebuild files that have changed as well as files that directly import them.
+    // https://www.typescriptlang.org/v2/en/tsconfig#assumeChangesOnlyAffectDirectDependencies
+    // "assumeChangesOnlyAffectDirectDependencies": false,
+
+    // Only emit .d.ts files; do not emit .js files.
+    // https://www.typescriptlang.org/v2/en/tsconfig#emitDeclarationOnly
+    // "emitDeclarationOnly": false,
+
+    // This flag controls how import works, there are 3 different options:
+    // https://www.typescriptlang.org/v2/en/tsconfig#importsNotUsedAsValues
+    // "importsNotUsedAsValues": "remove",
+
+    // Changes the function called in .js files when compiling JSX Elements.
+    // https://www.typescriptlang.org/v2/en/tsconfig#jsxFactory
+    // "jsxFactory": "React"",
+
+    // Allows importing modules with a ‘.json’ extension, which is a common practice in node projects.
+    // https://www.typescriptlang.org/v2/en/tsconfig#resolveJsonModule
+    "resolveJsonModule": true,
+
+    // Controls whether TypeScript will emit a byte order mark (BOM) when writing output files.
+    // https://www.typescriptlang.org/v2/en/tsconfig#emitBOM
+    // "emitBOM": false,
+
+    // "Specify the end of line sequence to be used when emitting files": ‘CRLF’ (dos) or ‘LF’ (unix).
+    // https://www.typescriptlang.org/v2/en/tsconfig#newLine
+    // "newLine": undefined,
+
+    // Disables the automatic inclusion of any library files. If this option is set, lib is ignored.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noLib
+    // "noLib": false,
+
+    // By default, TypeScript will examine the initial set of files for import and <reference directives and add these resolved files to your program.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noResolve
+    // "noResolve": false,
+
+    // Do not emit declarations for code that has an @internal annotation in it’s JSDoc comment.
+    // https://www.typescriptlang.org/v2/en/tsconfig#stripInternal
+    // "stripInternal": false,
+
+    // Disable upper limit of the amount of memory TypeScript can allocate.
+    // https://www.typescriptlang.org/v2/en/tsconfig#disableSizeLimit
+    // "disableSizeLimit": false,
+
+    // Use the pre-3.7 behavior where d.ts files were used to as the boundaries between modules.
+    // https://www.typescriptlang.org/v2/en/tsconfig#disableSourceOfProjectReferenceRedirect
+    // "disableSourceOfProjectReferenceRedirect": false,
+
+    // Do not include a project when using features like find all references or jump to definition in an editor.
+    // https://www.typescriptlang.org/v2/en/tsconfig#disableSolutionSearching
+    // "disableSolutionSearching": false,
+
+    // Disable emiting "use strict"; at the top of the file.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noImplicitUseStrict
+    // "noImplicitUseStrict": false,
+
+    // Instead of importing helpers with importHelpers, you can provide implementations in the global scope for the helpers you use.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noEmitHelpers
+    // "noEmitHelpers": false,
+
+    // Do not emit compiler output files like JavaScript source code, source-maps or declarations if any errors were reported.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noEmitOnError
+    // "noEmitOnError": false,
+
+    // Do not erase const enum declarations in generated code.
+    // https://www.typescriptlang.org/v2/en/tsconfig#preserveConstEnums
+    // "preserveConstEnums": false,
+
+    // Offers a way to configure the root directory for where declaration files are emitted.
+    // https://www.typescriptlang.org/v2/en/tsconfig#declarationDir
+    // "declarationDir": undefined,
+
+    // Skip type checking of declaration files.
+    // https://www.typescriptlang.org/v2/en/tsconfig#skipLibCheck
+    "skipLibCheck": true,
+
+    // Set to false to disable warnings about unused labels.
+    // https://www.typescriptlang.org/v2/en/tsconfig#allowUnusedLabels
+    // "allowUnusedLabels": false,
+
+    // Disable warnings about unreachable code.
+    // https://www.typescriptlang.org/v2/en/tsconfig#allowUnreachableCode
+    "allowUnreachableCode": true,
+
+    // This disables reporting of excess property errors
+    // https://www.typescriptlang.org/v2/en/tsconfig#suppressExcessPropertyErrors
+    // "suppressExcessPropertyErrors": false,
+
+    // Suppresses reporting the error about implicit anys when indexing into objects.
+    // https://www.typescriptlang.org/v2/en/tsconfig#suppressImplicitAnyIndexErrors
+    // "suppressImplicitAnyIndexErrors": false,
+
+    // Disallow inconsistently-cased references to the same file.
+    // https://www.typescriptlang.org/v2/en/tsconfig#forceConsistentCasingInFileNames
+    "forceConsistentCasingInFileNames": true
+
+    // The maximum dependency depth to search under node_modules and load JavaScript files.
+    // https://www.typescriptlang.org/v2/en/tsconfig#maxNodeModuleJsDepth
+    // "maxNodeModuleJsDepth": 0,
+
+    // TypeScript will unify type parameters when comparing two generic functions.
+    // https://www.typescriptlang.org/v2/en/tsconfig#noStrictGenericChecks
+    // "noStrictGenericChecks": false,
+
+    // This flag is used as part of migrating to the upcoming standard version of class fields.
+    // https://www.typescriptlang.org/v2/en/tsconfig#useDefineForClassFields
+    // "useDefineForClassFields": false,
+
+    // This flag changes the keyof type operator to return string instead of string | number when applied to a type with a string index signature.
+    // https://www.typescriptlang.org/v2/en/tsconfig#keyofStringsOnly
+    // "keyofStringsOnly": false,
+    // #endregion Advanced
+  }
+}

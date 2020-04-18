@@ -5,7 +5,18 @@ const macros = [
   "styled-jsx",
 ];
 
+/**
+ * @typedef {Object} RestrictedImport
+ * @property {{name: string, message: string}[]} paths
+ * @property {string[]} patterns
+ */
+
 const restrictedImports = macros.reduce(
+  /**
+   * @param {RestrictedImport} options
+   * @param {string} restricted
+   * @returns {RestrictedImport}
+   */
   (options, restricted) => {
     options.paths.push({
       name: restricted,
@@ -14,7 +25,10 @@ const restrictedImports = macros.reduce(
     options.patterns.push(`!${restricted}/macro`);
     return options;
   },
-  { paths: [], patterns: [] }
+  {
+    paths: [],
+    patterns: [],
+  }
 );
 
 module.exports = {

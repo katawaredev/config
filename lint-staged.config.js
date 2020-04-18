@@ -1,4 +1,5 @@
 module.exports = {
+  "**/*.{js,jsx,ts,tsx,mjs}": () => "tsc -p tsconfig.json --noEmit",
   "*.{js,jsx,ts,tsx,mjs,md,mdx}": "eslint --fix",
   "*.{js,jsx,tsx,css,less,scss}": "stylelint --fix",
   "*.{md}": "markdownlint --fix",

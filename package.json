@@ -33,10 +33,11 @@
   },
   "scripts": {
     "postinstall": "npx lerna bootstrap",
+    "lint:types": "tsc --noEmit",
     "lint:code": "eslint --fix --ext js,jsx,ts,tsx,mjs,md,mdx .",
     "lint:styles": "stylelint --fix '**/*.{js,jsx,tsx,css,less,scss}'",
     "lint:markdown": "markdownlint --fix '**/*.md'",
-    "lint": "run-s -c lint:code lint:styles lint:markdown",
+    "lint": "run-s -c lint:types lint:code lint:styles lint:markdown",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,mjs,vue,json,css,less,scss,md,mdx,graphql,yaml}'",
     "test": "jest"
   },
@@ -64,6 +65,8 @@
     "prettier": "^2.0.2",
     "stylelint": "^13.2.1",
     "stylelint-config-permissive": "file:packages/stylelint-config-permissive",
-    "typescript": "^3.8.3"
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3",
+    "typescript-config-permissive": "file:packages/typescript-config-permissive"
   }
 }

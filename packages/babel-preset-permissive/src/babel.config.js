@@ -1,7 +1,7 @@
 module.exports = (api, _options) => ({
   presets: [
     [
-      require("@babel/preset-env").default,
+      require("@babel/preset-env"),
       api.env("test")
         ? { targets: { node: "current", shippedProposals: true } }
         : {

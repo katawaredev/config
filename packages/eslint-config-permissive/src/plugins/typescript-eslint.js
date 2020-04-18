@@ -1,10 +1,14 @@
 module.exports = {
   extends: ["plugin:import/typescript"],
+  plugins: ["@typescript-eslint"],
+
+  rules: {
+    "@typescript-eslint/ban-ts-comment": "warn",
+  },
 
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
-      plugins: ["@typescript-eslint"],
       parser: "@typescript-eslint/parser",
       parserOptions: {
         ecmaVersion: 2020,

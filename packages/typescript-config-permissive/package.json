@@ -1,25 +1,23 @@
 {
-  "name": "browserslist-config-permissive",
+  "name": "typescript-config-permissive",
   "version": "0.1.0",
   "author": "Kataware <contact@kataware.dev>",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/katawaredev/config.git",
-    "directory": "packages/browserslist-config-permissive"
+    "directory": "packages/typescript-config-permissive"
   },
   "type": "commonjs",
   "engines": {
     "node": ">=10.13.0"
   },
-  "main": "src",
+  "main": "tsconfig.json",
   "files": [
-    "src"
+    "tsconfig.json"
   ],
-  "dependencies": {
-    "@types/browserslist": "^4.8.0"
-  },
-  "devDependencies": {
-    "browserslist": "^4.11.1"
+  "peerDependencies": {
+    "tslib": "^1.11.0",
+    "typescript": "^3.8.0"
   }
 }
