@@ -1,5 +1,6 @@
 {
-  "name": "config",
+  "name": "@kataware/config",
+  "private": true,
   "description": "Developer's toolbox",
   "license": "MIT",
   "author": "Kataware <contact@kataware.dev>",
