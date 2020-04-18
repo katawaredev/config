@@ -183,4 +183,13 @@ module.exports = {
     // "import/dynamic-import-chunkname": "off"
     // #endregion Style guide
   },
+
+  overrides: [
+    {
+      files: ["*.d.ts"],
+      rules: {
+        "import/no-unused-modules": "off",
+      },
+    },
+  ],
 };

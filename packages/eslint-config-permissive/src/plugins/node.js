@@ -167,6 +167,15 @@ module.exports = {
         "node/no-extraneous-import": "off",
         "node/no-extraneous-require": "off",
         "node/no-missing-require": "off",
+        "node/no-unsupported-features/es-builtins": "off",
+        "node/no-unsupported-features/es-syntax": "off",
+        "node/no-unsupported-features/node-builtins": "off",
+      },
+    },
+    {
+      files: ["*.d.ts"],
+      rules: {
+        "node/no-unsupported-features/es-syntax": "off",
       },
     },
   ],

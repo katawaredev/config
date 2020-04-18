@@ -1117,7 +1117,7 @@ module.exports = {
 
     // enforce consistent spacing after the `//` or `/*` in a comment [autofix]
     // https://eslint.org/docs/rules/spaced-comment
-    "spaced-comment": "warn",
+    "spaced-comment": ["warn", "always", { markers: ["/"] }],
 
     // enforce spacing around colons of switch statements [autofix] [prettier]
     // https://eslint.org/docs/rules/switch-colon-spacing
