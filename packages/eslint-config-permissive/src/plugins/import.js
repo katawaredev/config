@@ -127,8 +127,7 @@ module.exports = {
 
     // Report repeated import of the same module in multiple places [autofix]
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
-    // FIXME: https://github.com/benmosher/eslint-plugin-import/issues/1504
-    // "import/no-duplicates": "warn",
+    "import/no-duplicates": "warn",
 
     // Forbid namespace (a.k.a. "wildcard" *) imports [autofix]
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
