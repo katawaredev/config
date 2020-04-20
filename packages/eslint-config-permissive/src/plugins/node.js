@@ -1,10 +1,11 @@
-// TODO: Add plugin-node to readme full install for eslint-config-permissive
-
 module.exports = {
   plugins: ["node"],
 
   // https://github.com/mysticatea/eslint-plugin-node#-rules
   rules: {
+    // Console is allowed in NodeJs
+    "no-console": "off",
+
     // #region Possible errors
     // require error handling in callbacks
     // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/handle-callback-err.md
