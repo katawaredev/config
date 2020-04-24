@@ -115,7 +115,7 @@ module.exports = {
 
         // Suggest using toMatchInlineSnapshot() [autofix]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-inline-snapshots.md
-        "jest/prefer-inline-snapshots": "warn",
+        // "jest/prefer-inline-snapshots": "off",
 
         // Suggest using jest.spyOn() [autofix]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-spy-on.md
