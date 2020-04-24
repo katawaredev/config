@@ -4,7 +4,7 @@
 
 - Configuration should require minimum effort with no-frills, out of the box experience.
 
-This configuration is intended for uasage with [babel](https://babeljs.io/), without emitting through TypeScript compiler.
+This configuration is intended to be used with [babel](https://babeljs.io/), without emitting through TypeScript compiler.
 
 ## Install
 
@@ -12,7 +12,7 @@ This configuration is intended for uasage with [babel](https://babeljs.io/), wit
 npx install-peerdeps --dev typescript-config-permissive
 ```
 
-Config:
+### Config
 
 ```json
 // tsconfig.json

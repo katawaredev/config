@@ -6,6 +6,8 @@
 npm install --dev babel-preset-permissive
 ```
 
+### Config
+
 ```json
 // .babelrc
 {

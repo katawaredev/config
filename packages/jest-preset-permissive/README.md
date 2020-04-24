@@ -16,7 +16,7 @@
 npx install-peerdeps --dev jest-preset-permissive
 ```
 
-Config:
+### Config
 
 ```js
 // jest.config.js

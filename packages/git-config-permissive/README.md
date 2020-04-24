@@ -30,7 +30,7 @@
 npx install-peerdeps --dev git-config-permissive
 ```
 
-Config:
+### Config
 
 ```js
 // husky.config.js

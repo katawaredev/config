@@ -34,7 +34,7 @@
 npx install-peerdeps --dev eslint-config-permissive
 ```
 
-Config:
+### Config
 
 ```json
 // .eslintrc.json

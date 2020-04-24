@@ -19,7 +19,7 @@
 npx install-peerdeps --dev stylelint-config-permissive
 ```
 
-Config:
+### Config
 
 ```json
 // .stylelintrc.json
