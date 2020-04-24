@@ -15,6 +15,10 @@ module.exports = {
       { severity: "warning" },
     ],
 
+    // Disallow redundant values in shorthand properties. [autofix]
+    // https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values
+    "shorthand-property-no-redundant-values": [true, { severity: "warning" }],
+
     //  Specify whether or not quotation marks should be used around font family names.
     // https://stylelint.io/user-guide/rules/font-family-name-quotes
     "font-family-name-quotes": [

@@ -169,7 +169,7 @@ module.exports = {
 
     // Disallow redundant values in shorthand properties. [autofix]
     // https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values
-    "shorthand-property-no-redundant-values": [true, { severity: "warning" }],
+    // "shorthand-property-no-redundant-values": [true, { severity: "warning" }],
 
     // Disallow vendor prefixes for values.
     // https://stylelint.io/user-guide/rules/value-no-vendor-prefix
