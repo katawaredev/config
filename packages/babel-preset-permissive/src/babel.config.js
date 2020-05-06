@@ -19,13 +19,6 @@ module.exports = (api, _options) => ({
     require("@babel/preset-typescript").default,
   ],
   plugins: [
-    [
-      require("@babel/plugin-transform-runtime").default,
-      {
-        version: require("@babel/runtime/package.json").version,
-        useESModules: true,
-      },
-    ],
     require("babel-plugin-annotate-pure-calls").default,
     require("babel-plugin-dev-expression"),
     require(`@babel/plugin-syntax-dynamic-import`).default,
