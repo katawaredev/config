@@ -37,10 +37,6 @@ module.exports = {
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-duplicate-hooks.md
         "jest/no-duplicate-hooks": "warn",
 
-        // Disallow using expect().resolves
-        // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-expect-resolves.md
-        // "jest/no-expect-resolves": "off",
-
         // Disallow export from test files [recommended]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
         "jest/no-export": "warn",
@@ -77,6 +73,10 @@ module.exports = {
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-mocks-import.md
         "jest/no-mocks-import": "warn",
 
+        // Disallow specific matchers & modifiers
+        // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-restricted-matchers.md
+        // "jest/no-restricted-matchers": "off",
+
         // Prevents expect statements outside of a test or it block [recommended]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-standalone-expect.md
         "jest/no-standalone-expect": "warn",
@@ -93,10 +93,6 @@ module.exports = {
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-return-statement.md
         "jest/no-test-return-statement": "warn",
 
-        // Disallow using toBeTruthy() & toBeFalsy()
-        // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-truthy-falsy.md
-        // "jest/no-truthy-falsy": "off",
-
         // Prevent catch assertions in tests [recommended]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-try-expect.md
         "jest/no-try-expect": "warn",
@@ -112,10 +108,6 @@ module.exports = {
         // Suggest to have all hooks at top-level before tests
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-hooks-on-top.md
         // "jest/prefer-hooks-on-top": "off",
-
-        // Suggest using toMatchInlineSnapshot() [autofix]
-        // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-inline-snapshots.md
-        // "jest/prefer-inline-snapshots": "off",
 
         // Suggest using jest.spyOn() [autofix]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-spy-on.md

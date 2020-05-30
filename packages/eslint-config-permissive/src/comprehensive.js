@@ -22,15 +22,15 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-base-to-string.md
         "@typescript-eslint/no-base-to-string": "warn",
 
-        // Requires Promise-like values to be handled appropriately [types]
+        // Requires Promise-like values to be handled appropriately [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md
-        // "@typescript-eslint/no-floating-promises": "off"
+        "@typescript-eslint/no-floating-promises": "warn",
 
         // Disallow iterating over an array with a for-in loop [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md
         // "@typescript-eslint/no-for-in-array": "warn",
 
-        // Disallow the use of eval()-like methods [types]
+        // Disallow the use of eval()-like methods [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-implied-eval.md
         "@typescript-eslint/no-implied-eval": "warn",
 
@@ -62,33 +62,29 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md
         "@typescript-eslint/no-unnecessary-type-assertion": "warn",
 
-        // Disallows assigning any to variables and properties [types]
+        // Disallows assigning any to variables and properties [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-assignment.md
         // "@typescript-eslint/no-unsafe-assignment": "off",
 
-        // Disallows calling an any type value [types]
+        // Disallows calling an any type value [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-call.md
         "@typescript-eslint/no-unsafe-call": "warn",
 
-        // Disallows member access on any typed variables [types]
+        // Disallows member access on any typed variables [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-member-access.md
         "@typescript-eslint/no-unsafe-member-access": "warn",
 
-        // Disallows returning any from a function [types]
+        // Disallows returning any from a function [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-return.md
         "@typescript-eslint/no-unsafe-return": "warn",
 
-        // Disallow unused variables and arguments [types]
-        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars-experimental.md
-        "@typescript-eslint/no-unused-vars-experimental": "warn",
-
-        // Enforce includes method over indexOf method [recommended] [autofix] [types]
+        // Enforce includes method over indexOf method [autofix] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-includes.md
         "@typescript-eslint/prefer-includes": "warn",
 
-        // Enforce the usage of the nullish coalescing operator instead of logical chaining [autofix] [types]
+        // Enforce the usage of the nullish coalescing operator instead of logical chaining [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-nullish-coalescing.md
-        "@typescript-eslint/prefer-nullish-coalescing": "warn",
+        // "@typescript-eslint/prefer-nullish-coalescing": "off",
 
         // Requires that private members are marked as readonly if they're never modified outside of the constructor [autofix] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-readonly.md
@@ -106,7 +102,7 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
         // "@typescript-eslint/prefer-regexp-exec": "warn",
 
-        // Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings [recommended] [autofix] [types]
+        // Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings [autofix] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md
         "@typescript-eslint/prefer-string-starts-ends-with": "warn",
 
@@ -118,20 +114,20 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-array-sort-compare.md
         // "@typescript-eslint/require-array-sort-compare": "off",
 
-        // When adding two variables, operands must both be of type number or of type string [types]
+        // When adding two variables, operands must both be of type number or of type string [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands.md
         "@typescript-eslint/restrict-plus-operands": [
           "warn",
           { checkCompoundAssignments: true },
         ],
 
-        // Enforce template literal expressions to be of string type [types]
+        // Enforce template literal expressions to be of string type [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-template-expressions.md
         "@typescript-eslint/restrict-template-expressions": "warn",
 
         // Restricts the types allowed in boolean expressions [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/strict-boolean-expressions.md
-        // "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/strict-boolean-expressions": "warn",
 
         // Exhaustiveness checking in switch with union type [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/switch-exhaustiveness-check.md
@@ -141,10 +137,20 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unbound-method.md
         "@typescript-eslint/unbound-method": "warn",
 
+        // enforce dot notation whenever possible [autofix] [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/dot-notation.md
+        "dot-notation": "off",
+        "@typescript-eslint/dot-notation": "warn",
+
         // Disallow async functions which have no await expression [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
         "require-await": "off",
         "@typescript-eslint/require-await": "warn",
+
+        // Enforces consistent returning of awaited values [autofix] [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
+        "return-await": "off",
+        "@typescript-eslint/return-await": "warn",
       },
     },
   ],

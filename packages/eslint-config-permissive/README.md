@@ -47,7 +47,7 @@ npx install-peerdeps --dev eslint-config-permissive
 // package.json
 {
   "scripts": {
-    "lint": "eslint --ext js,jsx,ts,tsx,mjs,md,mdx --fix ."
+    "lint": "eslint --fix ."
   }
 }
 ```

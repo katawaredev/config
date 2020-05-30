@@ -17,6 +17,10 @@ module.exports = {
         // https://docs.cypress.io/guides/references/best-practices.html#Unnecessary-Waiting
         "cypress/no-unnecessary-waiting": "warn",
 
+        // Prevent using async/await in Cypress test case [recommended]
+        // https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-async-tests.md
+        "cypress/no-async-tests": "warn",
+
         // Disallow using force: true with action commands
         // https://github.com/cypress-io/eslint-plugin-cypress/blob/master/docs/rules/no-force.md
         "cypress/no-force": "warn",

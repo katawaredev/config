@@ -35,7 +35,7 @@
   "scripts": {
     "postinstall": "npx lerna bootstrap",
     "lint:types": "tsc --noEmit",
-    "lint:code": "eslint --fix --ext js,jsx,ts,tsx,mjs,md,mdx .",
+    "lint:code": "eslint --fix .",
     "lint:styles": "stylelint --fix '**/*.{js,jsx,tsx,css,less,scss}'",
     "lint:markdown": "markdownlint --fix '**/*.md'",
     "lint": "run-s -c lint:types lint:code lint:styles lint:markdown",
@@ -50,7 +50,7 @@
     "browserslist-config-permissive": "file:packages/browserslist-config-permissive",
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "^3.1.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.1.0",
     "eslint-config-permissive": "file:packages/eslint-config-permissive",
     "git-config-permissive": "file:packages/git-config-permissive",
     "husky": "^4.2.5",

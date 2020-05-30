@@ -65,7 +65,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-dupe-args
     "no-dupe-args": "warn",
 
-    // disallow duplicate conditions in if-else-if chains
+    // disallow duplicate conditions in if-else-if chains [recommended]
     // https://eslint.org/docs/rules/no-dupe-else-if
     "no-dupe-else-if": "warn",
 
@@ -105,7 +105,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-func-assign
     "no-func-assign": "warn",
 
-    // disallow assigning to imported bindings
+    // disallow assigning to imported bindings [recommended]
     // https://eslint.org/docs/rules/no-import-assign
     "no-import-assign": "warn",
 
@@ -137,7 +137,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-regex-spaces
     "no-regex-spaces": "warn",
 
-    // disallow returning values from setters
+    // disallow returning values from setters [recommended]
     // https://eslint.org/docs/rules/no-setter-return
     "no-setter-return": "warn",
 
@@ -164,6 +164,10 @@ module.exports = {
     // disallow negating the left operand of relational operators [recommended]
     // https://eslint.org/docs/rules/no-unsafe-negation
     "no-unsafe-negation": "warn",
+
+    // disallow useless backreferences in regular expressions
+    // https://eslint.org/docs/rules/no-useless-backreference
+    // "no-useless-backreference": "warn",
 
     // disallow assignments that can lead to race conditions due to usage of `await` or `yield`
     // https://eslint.org/docs/rules/require-atomic-updates
@@ -213,6 +217,10 @@ module.exports = {
     // require `default` cases in `switch` statements
     // https://eslint.org/docs/rules/default-case
     "default-case": ["warn", { commentPattern: "^(no|skip) default" }],
+
+    // enforce default clauses in switch statements to be last
+    // https://eslint.org/docs/rules/default-case-last
+    // "default-case-last": "warn",
 
     // enforce default parameters to be last
     // https://eslint.org/docs/rules/default-param-last
@@ -580,52 +588,6 @@ module.exports = {
     ],
     // #endregion Variables
 
-    // #region Node.js and CommonJS
-    // require `return` statements after callbacks
-    // https://eslint.org/docs/rules/callback-return
-    // "callback-return": "off",
-
-    // require `require()` calls to be placed at top-level module scope
-    // https://eslint.org/docs/rules/global-require
-    // "global-require": "off",
-
-    // require error handling in callbacks
-    // https://eslint.org/docs/rules/handle-callback-err
-    // "handle-callback-err": ["warn", "^.*(e|E)rr"],
-
-    // disallow use of the `Buffer()` constructor
-    // https://eslint.org/docs/rules/no-buffer-constructor
-    "no-buffer-constructor": "warn",
-
-    // disallow `require` calls to be mixed with regular variable declarations
-    // https://eslint.org/docs/rules/no-mixed-requires
-    // "no-mixed-requires": "off",
-
-    // disallow `new` operators with calls to `require`
-    // https://eslint.org/docs/rules/no-new-require
-    // "no-new-require": "off",
-
-    // disallow string concatenation with `__dirname` and `__filename`
-    // https://eslint.org/docs/rules/no-path-concat
-    // "no-path-concat": "off",
-
-    // disallow the use of `process.env`
-    // https://eslint.org/docs/rules/no-process-env
-    // "no-process-env": "off",
-
-    // disallow the use of `process.exit()`
-    // https://eslint.org/docs/rules/no-process-exit
-    // "no-process-exit": "off",
-
-    // disallow specified modules when loaded by `require`
-    // https://eslint.org/docs/rules/no-restricted-modules
-    // "no-restricted-modules": "off",
-
-    // disallow synchronous methods
-    // https://eslint.org/docs/rules/no-sync
-    // "no-sync": "warn",
-    // #endregion Node.js and CommonJS
-
     // #region ECMAScript 6
     // require braces around arrow function bodies [autofix] [prettier]
     // https://eslint.org/docs/rules/arrow-body-style
@@ -670,6 +632,10 @@ module.exports = {
     // disallow `new` operators with the `Symbol` object [recommended]
     // https://eslint.org/docs/rules/no-new-symbol
     "no-new-symbol": "warn",
+
+    // disallow specified names in exports
+    // https://eslint.org/docs/rules/no-restricted-exports
+    // "no-restricted-exports": "off",
 
     // disallow specified modules when loaded by `import`
     // https://eslint.org/docs/rules/no-restricted-imports
@@ -885,7 +851,7 @@ module.exports = {
 
     // require or disallow an empty line between class members [autofix]
     // https://eslint.org/docs/rules/lines-between-class-members
-    // "lines-between-class-members": "off",
+    "lines-between-class-members": "warn",
 
     // enforce a maximum depth that blocks can be nested
     // https://eslint.org/docs/rules/max-depth

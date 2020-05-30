@@ -32,6 +32,10 @@ module.exports = {
     // https://eslint.org/docs/rules/complexity
     complexity: "warn",
 
+    // enforce default clauses in switch statements to be last
+    // https://eslint.org/docs/rules/default-case-last
+    "default-case-last": "warn",
+
     // require grouped accessor pairs in object literals and classes
     // https://eslint.org/docs/rules/grouped-accessor-pairs
     "grouped-accessor-pairs": "warn",
@@ -76,6 +80,10 @@ module.exports = {
     // https://eslint.org/docs/rules/no-return-await
     "no-return-await": "warn",
 
+    // disallow useless backreferences in regular expressions
+    // https://eslint.org/docs/rules/no-useless-backreference
+    "no-useless-backreference": "warn",
+
     // disallow unnecessary `catch` clauses [recommended]
     // https://eslint.org/docs/rules/no-useless-catch
     "no-useless-catch": "warn",
@@ -107,6 +115,9 @@ module.exports = {
     // Enforce stateless components to be written as a pure function
     // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
     "react/prefer-stateless-function": "warn",
+
+    // TODO: Add docs
+    "eslint-comments/require-description": "warn",
   },
   overrides: [
     {
@@ -124,10 +135,6 @@ module.exports = {
         // Require explicit return types on functions and class methods [recommended]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
         "@typescript-eslint/explicit-function-return-type": "warn",
-
-        // Require explicit accessibility modifiers on class properties and methods
-        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md
-        "@typescript-eslint/explicit-member-accessibility": "warn",
 
         // Require a consistent member declaration order
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md
@@ -154,6 +161,17 @@ module.exports = {
         // Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md
         "@typescript-eslint/unified-signatures": "warn",
+
+        // Disallows usage of void type outside of generic or return types
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-invalid-void-type.md
+        "@typescript-eslint/no-invalid-void-type": [
+          "warn",
+          { allowInGenericTypeArguments: false },
+        ],
+
+        // Disallows non-null assertions using the ! postfix operator [recommended]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md
+        "@typescript-eslint/no-non-null-assertion": "warn",
       },
     },
     {

@@ -18,6 +18,7 @@ module.exports = {
         "no-undef": "off",
         "no-unused-expressions": "off",
         "no-unused-vars": "off",
+        "import/no-unresolved": "off",
       },
     },
     {

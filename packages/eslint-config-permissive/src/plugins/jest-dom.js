@@ -32,6 +32,10 @@ module.exports = {
         // prefer toHaveAttribute over checking getAttribute/hasAttribute [recommended] [autofix]
         // https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-attribute.md
         "jest-dom/prefer-to-have-attribute": "warn",
+
+        // Prefer toHaveTextContent over checking element.textContent [recommended] [autofix]
+        // https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-text-content.md
+        "jest-dom/prefer-to-have-text-content": "warn",
       },
     },
   ],
