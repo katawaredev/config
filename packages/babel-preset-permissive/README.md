@@ -32,6 +32,7 @@ npm install --dev babel-preset-permissive
 - [`@babel/plugin-transform-react-jsx`](https://babeljs.io/docs/en/babel-plugin-transform-react-jsx)
 - [`babel-plugin-inline-react-svg`](https://github.com/airbnb/babel-plugin-inline-react-svg)
 - [`babel-plugin-annotate-pure-calls`](https://github.com/Andarist/babel-plugin-annotate-pure-calls)
+- [`babel-plugin-transform-async-to-promises`](https://github.com/rpetrich/babel-plugin-transform-async-to-promises)
 - [`babel-plugin-dev-expression`](https://github.com/4Catalyzer/babel-plugin-dev-expression)
 - [`babel-plugin-macros`](https://github.com/kentcdodds/babel-plugin-macros)
 - [`babel-plugin-preval`](https://github.com/kentcdodds/babel-plugin-preval)

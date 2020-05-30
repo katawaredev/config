@@ -43,7 +43,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.10.1",
     "@commitlint/cli": "^8.3.5",
     "babel-jest": "^25.3.0",
     "babel-preset-permissive": "file:packages/babel-preset-permissive",
