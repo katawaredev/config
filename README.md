@@ -7,6 +7,19 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
+## Packages
+
+- [babel-preset-permissive](packages/babel-preset-permissive)
+- [browserslist-config-permissive](packages/browserslist-config-permissive)
+- [eslint-config-permissive](packages/eslint-config-permissive)
+- [git-config-permissive](packages/git-config-permissive)
+- [jest-preset-permissive](packages/jest-preset-permissive)
+- [markdownlint-config-permissive](packages/markdownlint-config-permissive)
+- [postcss-preset-permissive](packages/postcss-preset-permissive)
+- [rollup-config-permissive](packages/rollup-config-permissive)
+- [stylelint-config-permissive](packages/stylelint-config-permissive)
+- [typescript-config-permissive](packages/typescript-config-permissive)
+
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
