@@ -19,17 +19,17 @@
     "native.js"
   ],
   "dependencies": {
-    "stylelint": "^13.3.2",
+    "stylelint": "^13.5.0",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
-    "stylelint-high-performance-animation": "^1.5.0",
+    "stylelint-high-performance-animation": "^1.5.1",
     "stylelint-no-unsupported-browser-features": "^4.0.0",
     "stylelint-order": "^4.0.0",
     "stylelint-react-native": "^2.2.0"
   },
   "peerDependencies": {
-    "stylelint": ">=13.3.0",
+    "stylelint": ">=13.5.0",
     "prettier": "^2.0.0"
   }
 }

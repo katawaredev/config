@@ -119,6 +119,18 @@ module.exports = {
 
     // # region Limit language features
 
+    // Specify percentage or number notation for alpha-values [autofix]
+    // https://stylelint.io/user-guide/rules/alpha-value-notation
+    "alpha-value-notation": ["percentage", { severity: "warning" }],
+
+    // Specify number or angle notation for degree hues [autofix]
+    // https://stylelint.io/user-guide/rules/hue-degree-notation
+    "hue-degree-notation": ["angle", { severity: "warning" }],
+
+    // Specify modern or legacy notation for applicable color-functions [autofix]
+    // https://stylelint.io/user-guide/rules/color-function-notation
+    "color-function-notation": ["modern", { severity: "warning" }],
+
     // Require (where possible) or disallow named colors.
     // https://stylelint.io/user-guide/rules/color-named
     // "color-named": null,
