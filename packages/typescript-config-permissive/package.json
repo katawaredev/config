@@ -19,7 +19,7 @@
     "types"
   ],
   "peerDependencies": {
-    "tslib": "^1.11.0",
-    "typescript": "^3.8.0"
+    "tslib": "^2.x",
+    "typescript": "^3.9.0"
   }
 }

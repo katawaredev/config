@@ -250,7 +250,7 @@ module.exports = {
 
         // Recommends using // @ts-expect-error over // @ts-ignore [autofix]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-ts-expect-error.md
-        // "@typescript-eslint/prefer-ts-expect-error": "warn", // TODO: Enable for TypeScript 3.9
+        "@typescript-eslint/prefer-ts-expect-error": "warn",
 
         // Requires any function or method that returns a Promise to be marked async [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/promise-function-async.md
