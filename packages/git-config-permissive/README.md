@@ -57,6 +57,8 @@ module.exports = require("git-config-permissive/commitlint");
 }
 ```
 
+## lint-staged
+
 `lint-staged` uses `ESLint` to check typescript, markdown, and mdx files, so the following plugins needs to be installed and enabled:
 
 - [eslint-plugin-markdown](https://github.com/eslint/eslint-plugin-markdown)
@@ -65,6 +67,26 @@ module.exports = require("git-config-permissive/commitlint");
 - [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)
 
 (alternatively you can use [eslint-config-permissive](https://github.com/katawaredev/config/tree/master/packages/eslint-config-permissive))
+
+### Customizing config
+
+Copy this to your config file and modify it according to your needs (by default everything is set to true):
+
+```js
+// lint-staged.config.js
+const createConfig = require("git-config-permissive/lint-staged-config");
+
+module.exports = createConfig({
+  tsc: true, // Run tsc checks
+  eslint: true, // Run eslint checks
+  typescript: true, // Check typescript files with eslint
+  markdown: true, // Check markdown files with eslint
+  stylelint: true, // Run stylelint checks
+  markdownlint: true, // Run markdownlint checks
+  jest: true, // Run jest testing
+  prettier: true, // Format with prettier
+});
+```
 
 ## Editor integration
 

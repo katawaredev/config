@@ -12,12 +12,13 @@
   "engines": {
     "node": ">=10.13.0"
   },
-  "bin": "src/conventional-commit.js",
+  "bin": "./conventional-commit.js",
   "files": [
-    "src",
     "commitlint.js",
+    "conventional-commit.js",
     "husky.js",
-    "lint-staged.js"
+    "lint-staged.js",
+    "lint-staged-config.js"
   ],
   "dependencies": {
     "@commitlint/config-conventional": "^8.3.4",
