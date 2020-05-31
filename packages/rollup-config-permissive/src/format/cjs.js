@@ -18,7 +18,7 @@ const { setPlugins } = require("../utils/plugin");
  * @param {TsConfigJson | null} _tsconfig
  * @param {PostCssConfig | null} _postcss
  * @param {string} _cwd
- * @returns {[Config, "cjs", Environment | undefined][]}
+ * @returns {([Config, "cjs", Environment] | [Config, "cjs"])[]}
  */
 const cjs = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
   if (!pkg.main) return [];
@@ -30,7 +30,7 @@ const cjs = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
   config.output.format = "cjs";
 
   return [
-    [entry(pkg.main, devOutput, prodOutput), "cjs", undefined],
+    [entry(pkg.main, devOutput, prodOutput), "cjs"],
     [development(config, devOutput), "cjs", "development"],
     [production(config, prodOutput), "cjs", "production"],
   ];
@@ -71,7 +71,7 @@ function entry(outputFile, devOutput, prodOutput) {
     ],
   };
 
-  // @ts-ignore
+  // @ts-expect-error TS2322: Type X is not assignable to type Y
   return config;
 }
 

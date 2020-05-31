@@ -16,9 +16,9 @@ const setPlugins = (config, pluginsObj) => {
       if (typeof handler === "boolean") return Boolean(handler);
 
       if (!isFunction(handler)) return true;
-      // @ts-expect-error
+      // @ts-expect-error TS2322: Type X is not assignable to type Y
       if (!plugin.options) plugin.options = {};
-      // @ts-expect-error
+      // @ts-expect-error TS2345: Argument of type X is not assignable to parameter of type Y
       return handler(plugin.options) !== false;
     });
 };
@@ -30,9 +30,9 @@ const setPlugins = (config, pluginsObj) => {
 const executePlugins = (config) => {
   // Execute plugins
   if (Array.isArray(config.plugins))
-    // @ts-expect-error
+    // @ts-expect-error TS2339: Property X does not exist on type Y
     config.plugins = config.plugins.map(({ plugin, options }) =>
-      options !== undefined ? plugin.call(this, options) : plugin()
+      typeof options !== "undefined" ? plugin(options) : plugin()
     );
   else if (config.plugins != null) {
     console.warn(

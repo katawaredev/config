@@ -36,22 +36,7 @@ const umd = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
   config.output.format = "umd";
 
   config.output.globals = Object.keys(pkg.peerDependencies).reduce(
-    (deps, dep) => {
-      // @ts-expect-error
-      if (dep === "jquery") deps.jquery = "$";
-      switch (dep) {
-        case "jquery":
-          deps[dep] = "$";
-          break;
-        case "lodash":
-          deps[dep] = "_";
-          break;
-        default:
-          deps[dep] = _.capitalize(_.camelCase(dep));
-          break;
-      }
-      return deps;
-    },
+    addGlobals,
     {}
   );
 
@@ -131,6 +116,28 @@ function production(defaultConfig, outputFile) {
   });
 
   return config;
+}
+
+/**
+ *
+ * @param {Object<string, string>} deps
+ * @param {string} dep
+ * @returns {Object<string, string>}
+ */
+function addGlobals(deps, dep) {
+  if (dep === "jquery") deps.jquery = "$";
+  switch (dep) {
+    case "jquery":
+      deps[dep] = "$";
+      break;
+    case "lodash":
+      deps[dep] = "_";
+      break;
+    default:
+      deps[dep] = _.capitalize(_.camelCase(dep));
+      break;
+  }
+  return deps;
 }
 
 module.exports = umd;

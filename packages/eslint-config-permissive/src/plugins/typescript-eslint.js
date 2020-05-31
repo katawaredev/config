@@ -37,7 +37,18 @@ module.exports = {
 
         // Bans // @ts-<directive> comments from being used [recommended]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md
-        "@typescript-eslint/ban-ts-comment": "warn",
+        "@typescript-eslint/ban-ts-comment": [
+          "warn",
+          {
+            // TODO: Enable this when typescript-eslint gets new release
+            "ts-expect-error": false, // "allow-with-description",
+            "ts-ignore": true,
+            "ts-nocheck": true,
+            "ts-check": false,
+            // https://github.com/microsoft/TypeScript/blob/master/src/compiler/diagnosticMessages.json
+            // minimumDescriptionLength: 4, // Enough to fit typescript error code TSXXXX
+          },
+        ],
 
         // Bans specific types from being used [recommended] [autofix]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md

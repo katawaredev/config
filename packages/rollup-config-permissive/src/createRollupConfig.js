@@ -11,7 +11,7 @@
  * @callback modifyConfigCallback
  * @param {Config} config
  * @param {ExportFormat | "extra"} format
- * @param {Environment | "entry" | undefined} environment
+ * @param {Environment | undefined} environment
  * @returns {*}
  *
  * @typedef {Object} Options
@@ -62,7 +62,7 @@ const createRollupConfig = async (
   const postcss = await readPostCssConfig(postcssConfigFile, cwd, root);
 
   const defaultConfig = initialize(
-    // @ts-expect-error
+    // @ts-expect-error TS2345: Argument of type X is not assignable to parameter of type Y
     rollupConfig,
     pkg,
     babel,
@@ -155,7 +155,7 @@ function initialize(defaultConfig, pkg, babel, tsconfig, postcss, cwd) {
   });
 
   if (defaultConfig.output)
-    // @ts-expect-error
+    // @ts-expect-error TS2339: Property X does not exist on type Y
     defaultConfig.output.globals = Object.keys(peerDependencies).reduce(
       (deps, dep) => {
         deps[dep] = _.capitalize(_.camelCase(dep));
