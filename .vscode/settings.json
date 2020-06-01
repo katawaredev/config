@@ -4,11 +4,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "javascript.validate.enable": false,
-  "typescript.validate.enable": false,
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
   "files.exclude": {
     "**/.vscode": true,
     "**/.all-contributorsrc": true,
