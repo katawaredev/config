@@ -26,7 +26,12 @@ const restrictedImports = macros.reduce(
     return options;
   },
   {
-    paths: [],
+    paths: [
+      {
+        name: "lodash",
+        message: "Please use lodash-es instead.",
+      },
+    ],
     patterns: [],
   }
 );

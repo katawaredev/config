@@ -20,7 +20,7 @@
     "naming.js",
     "node.js",
     "node-async.js",
-    "prefer-macro.js"
+    "restricted-imports.js"
   ],
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^3.0.2",
