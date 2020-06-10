@@ -23,7 +23,8 @@
  */
 
 const path = require("path");
-const _ = require("lodash");
+const capitalize = require("lodash/capitalize");
+const camelCase = require("lodash/camelCase");
 const rollupConfig = require("./rollup.config");
 const {
   readPackageJson,
@@ -158,7 +159,7 @@ function initialize(defaultConfig, pkg, babel, tsconfig, postcss, cwd) {
     // @ts-expect-error TS2339: Property X does not exist on type Y
     defaultConfig.output.globals = Object.keys(peerDependencies).reduce(
       (deps, dep) => {
-        deps[dep] = _.capitalize(_.camelCase(dep));
+        deps[dep] = capitalize(camelCase(dep));
         return deps;
       },
       {}

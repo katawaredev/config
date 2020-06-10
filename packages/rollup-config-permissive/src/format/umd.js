@@ -8,7 +8,9 @@
  */
 
 const path = require("path");
-const _ = require("lodash");
+const cloneDeep = require("lodash/cloneDeep");
+const capitalize = require("lodash/capitalize");
+const camelCase = require("lodash/camelCase");
 const { getEnvironmentFileName } = require("../utils/file");
 const { setPlugins } = require("../utils/plugin");
 
@@ -31,7 +33,7 @@ const umd = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
   );
   const prodOutput = pkg.unpkg;
 
-  const config = _.cloneDeep(defaultConfig);
+  const config = cloneDeep(defaultConfig);
   delete config.external;
   config.output.format = "umd";
 
@@ -41,7 +43,7 @@ const umd = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
   );
 
   // Generate safe package name
-  config.output.name = _.camelCase(
+  config.output.name = camelCase(
     pkg.name
       .replace(/^@.*\//, "")
       .toLowerCase()
@@ -65,7 +67,7 @@ const umd = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
  * @returns {Config}
  */
 function development(defaultConfig, outputFile) {
-  const config = _.cloneDeep(defaultConfig);
+  const config = cloneDeep(defaultConfig);
   config.output.file = outputFile;
   config.output.sourcemap = "inline";
 
@@ -89,7 +91,7 @@ function development(defaultConfig, outputFile) {
  * @returns {Config}
  */
 function production(defaultConfig, outputFile) {
-  const config = _.cloneDeep(defaultConfig);
+  const config = cloneDeep(defaultConfig);
   config.output.file = outputFile;
 
   const outputDir = path.dirname(outputFile);
@@ -134,7 +136,7 @@ function addGlobals(deps, dep) {
       deps[dep] = "_";
       break;
     default:
-      deps[dep] = _.capitalize(_.camelCase(dep));
+      deps[dep] = capitalize(camelCase(dep));
       break;
   }
   return deps;

@@ -31,7 +31,7 @@ npx install-peerdeps --dev rollup-config-permissive
 
 ```js
 // rollup.config.js
-module.exports = require("rollup-config-permissive");
+module.export = require("rollup-config-permissive").default;
 ```
 
 ## Package configuration
@@ -85,7 +85,7 @@ TypeScript also requires [tslib](https://github.com/Microsoft/tslib) to be insta
 
 ```js
 // rollup.config.js
-import { createConfig } from "rollup-config-permissive";
+const { createConfig } = require("rollup-config-permissive");
 
 /**
  * Rollup configuration handler that is called multiple times, depending on the output formats specified in package.json
@@ -99,7 +99,7 @@ const configHandler = (config, format, environment) => {
   return config;
 };
 
-export default createConfig(configHandler);
+module.exports = createConfig(configHandler);
 ```
 
 The `config` object is a standard Rollup configuration object, with one difference - `plugins` is array of JSON objects with the following structure:
@@ -120,7 +120,7 @@ This is used for easier searching, also to ease modifying of plugin's options.
 ### Customizing config with a helper function
 
 ```js
-import { setPlugins } from "rollup-config-permissive/utils";
+const { setPlugins } = require("rollup-config-permissive/utils");
 
 const configHandler = (config, format, environment) => {
   // Don't want development bundles
@@ -137,13 +137,14 @@ const configHandler = (config, format, environment) => {
   return config;
 };
 
-export default createConfig(configHandler);
+module.exports = createConfig(configHandler);
 ```
 
 ### Adding a plugin
 
 ```js
-import multiEntry from "@rollup/plugin-multi-entry";
+const { createConfig } = require("rollup-config-permissive");
+const multiEntry = require("@rollup/plugin-multi-entry");
 
 const configHandler = (config, format, environment) => {
   config.plugins.push({
@@ -158,13 +159,13 @@ const configHandler = (config, format, environment) => {
   return config;
 };
 
-export default createConfig(configHandler);
+module.exports = createConfig(configHandler);
 ```
 
 ### Changing the input
 
 ```js
-import multiEntry from "@rollup/plugin-multi-entry";
+const { createConfig } = require("rollup-config-permissive");
 
 const configHandler = (config, format, environment) => {
   config.input = "lib";
@@ -172,7 +173,7 @@ const configHandler = (config, format, environment) => {
   return config;
 };
 
-export default createConfig(configHandler);
+module.exports = createConfig(configHandler);
 ```
 
 ## Absolute imports
@@ -196,7 +197,9 @@ Absolute imports from `src` are supported by default (this can break for TypeScr
 Example:
 
 ```js
-export default createConfig(null, {
+const { createConfig } = require("rollup-config-permissive");
+
+module.exports = createConfig(null, {
   cwd: __dirname, // /packages/foo
   root: path.resolve("../../"), // root of the monorepo
   postcssConfigFile: path.join("config", "postcss.js"), // custom location for postcss: /packages/foo/congig/postcss.js

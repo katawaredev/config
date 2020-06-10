@@ -2,7 +2,7 @@
  * @typedef {import("../types").Config} Config
  * @typedef {import("../types").modifyPluginArguments} modifyPluginArguments
  */
-const { isFunction } = require("lodash");
+const isFunction = require("lodash/isFunction");
 
 /**
  * Set plugin arguments by name

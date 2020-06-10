@@ -10,7 +10,7 @@ const fs = require("fs");
 const path = require("path");
 const { promisify } = require("util");
 const JSON5 = require("json5");
-const _ = require("lodash");
+const merge = require("lodash/merge");
 
 const readFileAsync = promisify(fs.readFile);
 const renameAsync = promisify(fs.rename);
@@ -126,8 +126,8 @@ const readTypeScriptConfigFile = async (tsconfigFile) => {
         require.resolve(tsconfig.extends)
       );
       delete tsconfig.extends;
-      _.merge(extended, tsconfig);
-      tsconfig = _.merge(extended, tsconfig);
+      merge(extended, tsconfig);
+      tsconfig = merge(extended, tsconfig);
     }
   }
   return tsconfig;

@@ -7,7 +7,7 @@
  */
 
 const path = require("path");
-const { cloneDeep } = require("lodash");
+const cloneDeep = require("lodash/cloneDeep");
 const { setPlugins } = require("../utils/plugin");
 
 const { renameAsync, unlinkAsync } = require("../utils/file");

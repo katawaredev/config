@@ -7,7 +7,7 @@
  * @typedef {import("../types").Environment} Environment
  */
 
-const { cloneDeep } = require("lodash");
+const cloneDeep = require("lodash/cloneDeep");
 const { setPlugins } = require("../utils/plugin");
 
 /**
