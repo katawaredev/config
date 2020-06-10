@@ -97,7 +97,16 @@ module.exports = {
 
     // enforce the style of file extensions in import declarations [autofix] [import]
     // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/file-extension-in-import.md
-    "node/file-extension-in-import": "warn",
+    "node/file-extension-in-import": [
+      "warn",
+      "always",
+      {
+        tryExtensions: [".js", ".json", ".node", ".ts", ".tsx", ".mjs"],
+        // FIXME: https://github.com/Microsoft/TypeScript/issues/27481
+        ".ts": "never",
+        ".tsx": "never",
+      },
+    ],
 
     // require require() calls to be placed at top-level module scope
     // https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/global-require.md
