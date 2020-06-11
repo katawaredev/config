@@ -9,7 +9,7 @@
 ## Install
 
 ```shell
-npm install --dev postcss-preset-permissive
+npx install-peerdeps --dev postcss-preset-permissive
 ```
 
 ### Config
