@@ -50,9 +50,10 @@ module.exports = require("git-config-permissive/commitlint");
 ```json
 // package.json
 {
-"config": {
-  "commitizen": {
-    "path": "cz-conventional-changelog"
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
 ```
