@@ -72,15 +72,14 @@ Enable fixing on save:
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "javascript.validate.enable": false,
-  "typescript.validate.enable": false
+  "eslint.lintTask.enable": true
 }
 ```
 
 ## Additional configurations
 
-- `permissive/comprehensive` - Checks that might take longer to complete.
-- `permissive/restricted-imports` - Suggests using the macros version of some libraries (see [babel-macros](https://github.com/kentcdodds/babel-plugin-macros)), or better version of some (like `lodash-es` instead of `lodash`)
+- `permissive/comprehensive` - Checks that might take longer to complete. Includes TypeScript checks.
+- `permissive/restricted-imports` - Suggests using the macros version of some libraries (see [babel-macros](https://github.com/kentcdodds/babel-plugin-macros)), or better version of some (like `lodash-es` instead of `lodash`).
 - `permissive/meticulous` - More opinionated. This won't make the code any better, just more consistent.
 - `permissive/naming` - Enforces naming conventions. Could increase the linting time.
 - `permissive/node` - Linting rules for NodeJs projects.
