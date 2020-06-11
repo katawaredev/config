@@ -24,19 +24,10 @@ npx install-peerdeps --dev typescript-config-permissive
 
 ## Handling CSS, SVG, and image files
 
-In a type definition file (either create one, like `global.d.ts`, or append to existing one) insert the following content:
+In a type definition file (either create one, like `global.d.ts` in `src`, or append to existing one) insert the following content:
 
 ```js
 /// <reference types="typescript-config-permissive" />
 ```
 
 NOTE: That file must be in a location where TypeScript can see it. Read more at [`tsconfig.json/include`](https://www.typescriptlang.org/v2/en/tsconfig#include).
-
-Example (in root directory):
-
-```json
-// tsconfig.json
-{
-  "include": ["global.d.ts", "src"]
-}
-```
