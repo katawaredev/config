@@ -1,4 +1,8 @@
 module.exports = {
+  // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#getting-started---linting-with-type-information
+  parserOptions: {
+    project: ["./tsconfig.json"],
+  },
   rules: {
     // Forbid a module from importing a module with a dependency path back to itself
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md

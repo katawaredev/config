@@ -78,7 +78,7 @@ Enable fixing on save:
 
 ## Additional configurations
 
-- `permissive/comprehensive` - Checks that might take longer to complete. Includes TypeScript checks.
+- `permissive/comprehensive` - Checks that might take longer to complete. [Read more](#comprehensive-checks)
 - `permissive/restricted-imports` - Suggests using the macros version of some libraries (see [babel-macros](https://github.com/kentcdodds/babel-plugin-macros)), or better version of some (like `lodash-es` instead of `lodash`).
 - `permissive/meticulous` - More opinionated. This won't make the code any better, just more consistent.
 - `permissive/naming` - Enforces naming conventions. Could increase the linting time.
@@ -100,6 +100,10 @@ Enable fixing on save:
   "extends": ["permissive", "permissive/node", "permissive/node-async"]
 }
 ```
+
+## Comprehensive checks
+
+`permissive/comprehensive` uses `tsc` under the hood, so a `tsconfig.json` file is required. Read more about [typed linting](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md#getting-started---linting-with-type-information).
 
 ## Absolute imports
 
