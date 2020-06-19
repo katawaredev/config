@@ -39,7 +39,7 @@
     "lint:styles": "stylelint --fix '**/*.{js,jsx,tsx,css,less,scss}'",
     "lint:markdown": "markdownlint --fix '**/*.md'",
     "lint": "run-s -c lint:types lint:code lint:styles lint:markdown",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,mjs,vue,json,css,less,scss,md,mdx,graphql,yaml}'",
+    "format": "prettier --loglevel silent --write .",
     "test": "jest"
   },
   "devDependencies": {
