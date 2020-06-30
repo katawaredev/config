@@ -40,15 +40,18 @@ module.exports = {
         "@typescript-eslint/ban-ts-comment": [
           "warn",
           {
-            // TODO: Enable this when typescript-eslint gets new release
-            "ts-expect-error": false, // "allow-with-description",
+            "ts-expect-error": "allow-with-description",
             "ts-ignore": true,
             "ts-nocheck": true,
             "ts-check": false,
             // https://github.com/microsoft/TypeScript/blob/master/src/compiler/diagnosticMessages.json
-            // minimumDescriptionLength: 4, // Enough to fit typescript error code TSXXXX
+            minimumDescriptionLength: 4, // Enough to fit typescript error code TSXXXX
           },
         ],
+
+        // Bans // tslint:<rule-flag> comments from being used [autofix]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-tslint-comment.md
+        // "@typescript-eslint/ban-tslint-comment": "off",
 
         // Bans specific types from being used [recommended] [autofix]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
@@ -98,6 +101,10 @@ module.exports = {
         // Requires that .toString() is only called on objects which provide useful information when stringified [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-base-to-string.md
         // "@typescript-eslint/no-base-to-string": "warn",
+
+        // Disallow non-null assertion in locations that may be confusing [autofix]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-confusing-non-null-assertion.md
+        "@typescript-eslint/no-confusing-non-null-assertion": "warn",
 
         // Disallow the delete operator with computed key expressions [autofix]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md
@@ -396,6 +403,11 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-invalid-this.md
         "no-invalid-this": "off",
         "@typescript-eslint/no-invalid-this": "warn",
+
+        // Disallow literal numbers that lose precision
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loss-of-precision.md
+        "no-loss-of-precision": "off",
+        "@typescript-eslint/no-loss-of-precision": "warn",
 
         // Disallow magic numbers
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md

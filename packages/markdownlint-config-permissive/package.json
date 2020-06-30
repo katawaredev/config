@@ -17,7 +17,7 @@
     "index.json"
   ],
   "dependencies": {
-    "markdownlint": "^0.20.3"
+    "markdownlint": "^0.20.4"
   },
   "peerDependencies": {
     "markdownlint": "^0.20.0",

@@ -48,9 +48,9 @@ module.exports = {
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-unsupported-elements.md
         "jsx-a11y/aria-unsupported-elements": "warn",
 
-        // Enforce that autocomplete attributes are used correctly. [unreleased]
+        // Enforce that autocomplete attributes are used correctly.
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/autocomplete-valid.md
-        // "jsx-a11y/autocomplete-valid": "warn",
+        "jsx-a11y/autocomplete-valid": "warn",
 
         // Enforce a clickable non-interactive element has at least one keyboard event listener.
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/click-events-have-key-events.md

@@ -121,6 +121,10 @@ module.exports = {
     // https://eslint.org/docs/rules/no-irregular-whitespace
     "no-irregular-whitespace": "off",
 
+    // disallow literal numbers that lose precision
+    // https://eslint.org/docs/rules/no-loss-of-precision
+    "no-loss-of-precision": "warn",
+
     // disallow characters which are made with multiple code points in character class syntax [recommended]
     // https://eslint.org/docs/rules/no-misleading-character-class
     "no-misleading-character-class": "warn",
@@ -128,6 +132,10 @@ module.exports = {
     // disallow calling global object properties as functions [recommended]
     // https://eslint.org/docs/rules/no-obj-calls
     "no-obj-calls": "error",
+
+    // disallow returning values from Promise executor functions
+    // https://eslint.org/docs/rules/no-promise-executor-return
+    "no-promise-executor-return": "warn",
 
     // disallow calling some `Object.prototype` methods directly on objects [recommended]
     // https://eslint.org/docs/rules/no-prototype-builtins
@@ -156,6 +164,10 @@ module.exports = {
     // disallow unreachable code after `return`, `throw`, `continue`, and `break` statements [recommended]
     // https://eslint.org/docs/rules/no-unreachable
     "no-unreachable": "warn",
+
+    // disallow loops with a body that allows only one iteration
+    // https://eslint.org/docs/rules/no-unreachable-loop
+    "no-unreachable-loop": "warn",
 
     // disallow control flow statements in `finally` blocks [recommended]
     // https://eslint.org/docs/rules/no-unsafe-finally

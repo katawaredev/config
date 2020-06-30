@@ -19,7 +19,7 @@ module.exports = {
 
         // Disallow capitalized test names [autofix]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/lowercase-name.md
-        "jest/lowercase-name": "warn",
+        // "jest/lowercase-name": "off",
 
         // Disallow alias methods [recommended] [autofix]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-alias-methods.md
@@ -28,6 +28,10 @@ module.exports = {
         // Disallow commented out tests [recommended]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-commented-out-tests.md
         // "jest/no-commented-out-tests": "warn",
+
+        // Prevent calling expect conditionally
+        // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-conditional-expect.md
+        // "jest/no-conditional-expect": "off",
 
         // Disallow disabled tests [recommended]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-disabled-tests.md
@@ -92,10 +96,6 @@ module.exports = {
         // Disallow explicitly returning from tests
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-return-statement.md
         "jest/no-test-return-statement": "warn",
-
-        // Prevent catch assertions in tests [recommended]
-        // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-try-expect.md
-        "jest/no-try-expect": "warn",
 
         // Suggest using toBeCalledWith() OR toHaveBeenCalledWith()
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-called-with.md

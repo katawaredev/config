@@ -46,6 +46,10 @@ module.exports = {
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/prefer-explicit-assert.md
         // "testing-library/prefer-explicit-assert": "off",
 
+        // Suggest using findBy* methods instead of the waitFor + getBy queries [recommended] [autofix]
+        // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/prefer-find-by.md
+        "testing-library/prefer-find-by": "warn",
+
         // Enforce specific queries when checking element is present or not
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/prefer-presence-queries.md
         "testing-library/prefer-presence-queries": "warn",
