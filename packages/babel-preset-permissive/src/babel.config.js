@@ -27,10 +27,7 @@ module.exports = (api, _options) => ({
     // NOTE: This goes before class properties
     // https://babeljs.io/docs/en/babel-plugin-proposal-decorators#note-compatibility-with-babel-plugin-proposal-class-properties
     [require("@babel/plugin-proposal-decorators").default, false],
-    [
-      require("@babel/plugin-proposal-class-properties").default,
-      { loose: true },
-    ],
+    require("@babel/plugin-proposal-class-properties").default,
     require("@babel/plugin-proposal-numeric-separator").default,
     // Optional chaining and nullish coalescing are supported in @babel/preset-env,
     // but not yet supported in webpack due to support missing from acorn.
