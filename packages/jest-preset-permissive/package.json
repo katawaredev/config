@@ -20,7 +20,7 @@
     "pathsToModuleNameMapper.js"
   ],
   "dependencies": {
-    "@babel/core": "^7.10.3",
+    "@babel/core": "^7.10.4",
     "@testing-library/jest-dom": "^5.11.0",
     "babel-jest": "^26.1.0",
     "camelcase": "^6.0.0",

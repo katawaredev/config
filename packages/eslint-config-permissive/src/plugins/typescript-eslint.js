@@ -246,6 +246,10 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-includes.md
         // "@typescript-eslint/prefer-includes": "warn",
 
+        // Require that all enum members be literal values to prevent unintended enum member name shadow issues
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-literal-enum-member.md
+        "@typescript-eslint/prefer-literal-enum-member": "warn",
+
         // Require the use of the namespace keyword instead of the module keyword to declare custom TypeScript modules [recommended] [autofix]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-namespace-keyword.md
         "@typescript-eslint/prefer-namespace-keyword": "warn",

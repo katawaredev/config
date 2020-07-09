@@ -818,8 +818,8 @@ module.exports = {
     "function-paren-newline": "off",
 
     // disallow specified identifiers
-    // https://eslint.org/docs/rules/id-blacklist
-    // "id-blacklist": "off",
+    // https://eslint.org/docs/rules/id-denylist
+    // "id-denylist": "off",
 
     // enforce minimum and maximum identifier lengths
     // https://eslint.org/docs/rules/id-length
