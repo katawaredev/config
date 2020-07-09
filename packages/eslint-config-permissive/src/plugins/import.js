@@ -66,10 +66,11 @@ module.exports = {
 
     // Forbid modules without any export, and exports not imported by any modules.
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
-    "import/no-unused-modules": [
-      "warn",
-      { unusedExports: true, missingExports: false },
-    ],
+    // FIXME: This is disabled because it shows weird errors
+    // "import/no-unused-modules": [
+    //   "warn",
+    //   { unusedExports: true, missingExports: false },
+    // ],
     // #endregion Static analysis
 
     // #region Helpful warnings
