@@ -82,6 +82,7 @@ Enable fixing on save:
 - `permissive/restricted-imports` - Suggests using the macros version of some libraries (see [babel-macros](https://github.com/kentcdodds/babel-plugin-macros)), or better version of some (like `lodash-es` instead of `lodash`).
 - `permissive/meticulous` - More opinionated. This won't make the code any better, just more consistent.
 - `permissive/naming` - Enforces naming conventions. Could increase the linting time.
+- `permissive/native` - Linting rules for native React applications.
 - `permissive/node` - Linting rules for NodeJs projects.
 - `permissive/node-async` - Suggests using async version of some node methods.
 
@@ -141,14 +142,6 @@ For monorepository with absolute imports, placing this configuration in each pac
   }
 }
 ```
-
-## Native
-
-[React Native](https://react-native.org/) has some limitations, that are enforced by rules. ESLint will only check the following files for these rules:
-
-- `*.native.{js,jsx,tsx}`
-- `*.ios.{js,jsx,tsx}`
-- `*.android.{js,jsx,tsx}`
 
 ## Caveats
 

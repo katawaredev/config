@@ -18,6 +18,7 @@
     "comprehensive.js",
     "meticulous.js",
     "naming.js",
+    "native.js",
     "node.js",
     "node-async.js",
     "restricted-imports.js"

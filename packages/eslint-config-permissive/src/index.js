@@ -8,7 +8,6 @@ module.exports = {
     "./plugins/react.js",
     "./plugins/react-hooks.js",
     "./plugins/jsx-a11y.js",
-    "./plugins/react-native.js",
     "./plugins/jest.js",
     "./plugins/jest-dom.js",
     "./plugins/testing-library.js",

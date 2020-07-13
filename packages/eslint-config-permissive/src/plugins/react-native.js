@@ -28,17 +28,6 @@ module.exports = {
         // "react-native/no-color-literals": "off",
 
         // https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/no-raw-text.md
-        // "react-native/no-raw-text": "warn",
-
-        // https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/no-single-element-style-arrays.md
-        // "react-native/no-single-element-style-arrays": "warn"
-      },
-    },
-    {
-      files: ["**/?(*.)+(native|ios|android).[tj]s?(x)"],
-
-      rules: {
-        // https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/no-raw-text.md
         "react-native/no-raw-text": "error",
 
         // https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/no-single-element-style-arrays.md
