@@ -29,7 +29,7 @@
     "jest-config": "^26.1.0",
     "jest-extended": "^0.11.5",
     "jest-watch-typeahead": "^0.6.0",
-    "ts-jest": "^26.1.1"
+    "ts-jest": "^26.1.2"
   },
   "peerDependencies": {
     "@babel/core": "^7.10.0",
