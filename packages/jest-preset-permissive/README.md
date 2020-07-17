@@ -34,6 +34,10 @@ module.exports = {
 }
 ```
 
+## React Native
+
+See [react-native-testing-library](https://github.com/callstack/react-native-testing-library)
+
 ## Setting up your editor
 
 ### Visual Studio Code

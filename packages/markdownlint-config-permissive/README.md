@@ -11,7 +11,7 @@
 ## Install
 
 ```shell
-npx install-peerdeps --dev markdown-config-permissive
+npx install-peerdeps --dev markdownlint-config-permissive
 ```
 
 Config:
