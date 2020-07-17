@@ -2,3 +2,4 @@ node_modules
 .eslintcache
 .stylelintcache
 coverage
+lerna-debug.log
