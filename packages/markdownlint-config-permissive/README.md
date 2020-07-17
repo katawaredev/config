@@ -37,6 +37,17 @@ node_modules
 }
 ```
 
+## Caveats
+
+Markdownlint is unable to set rules level to warning, so by default all rules are disabled. To enable them, use this config:
+
+```json
+// .markdownlint.json
+{
+  "extends": "./node_modules/markdownlint-config-permissive/meticulous.json"
+}
+```
+
 ## Setting up your editor
 
 ### Visual Studio Code

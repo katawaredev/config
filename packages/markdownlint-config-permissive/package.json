@@ -14,7 +14,8 @@
   },
   "main": "index.json",
   "files": [
-    "index.json"
+    "index.json",
+    "meticulous.json"
   ],
   "dependencies": {
     "markdownlint": "^0.20.4"

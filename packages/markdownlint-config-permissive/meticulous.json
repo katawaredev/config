@@ -1,5 +1,5 @@
 {
-  "header-increment": false,
+  "header-increment": true,
 
   "header-style": false,
 
@@ -13,19 +13,19 @@
 
   "no-hard-tabs": false,
 
-  "no-reversed-links": false,
+  "no-reversed-links": true,
 
   "no-multiple-blanks": false,
 
   "line-length": false,
 
-  "commands-show-output": false,
+  "commands-show-output": true,
 
-  "no-missing-space-atx": false,
+  "no-missing-space-atx": true,
 
   "no-multiple-space-atx": false,
 
-  "no-missing-space-closed-atx": false,
+  "no-missing-space-closed-atx": true,
 
   "no-multiple-space-closed-atx": false,
 
@@ -33,17 +33,17 @@
 
   "header-start-left": false,
 
-  "no-duplicate-header": false,
+  "no-duplicate-header": true,
 
-  "single-h1": false,
+  "single-h1": true,
 
-  "no-trailing-punctuation": false,
+  "no-trailing-punctuation": { "punctuation": ".,;:。，；：" },
 
   "no-multiple-space-blockquote": false,
 
-  "no-blanks-blockquote": false,
+  "no-blanks-blockquote": true,
 
-  "ol-prefix": false,
+  "ol-prefix": { "style": "ordered" },
 
   "list-marker-space": false,
 
@@ -53,31 +53,31 @@
 
   "no-inline-html": false,
 
-  "no-bare-urls": false,
+  "no-bare-urls": true,
 
   "hr-style": false,
 
-  "no-emphasis-as-header": false,
+  "no-emphasis-as-header": true,
 
-  "no-space-in-emphasis": false,
+  "no-space-in-emphasis": true,
 
   "no-space-in-code": false,
 
-  "no-space-in-links": false,
+  "no-space-in-links": true,
 
-  "fenced-code-language": false,
+  "fenced-code-language": true,
 
-  "first-line-h1": false,
+  "first-line-h1": true,
 
-  "no-empty-links": false,
+  "no-empty-links": true,
 
   "required-headers": false,
 
   "proper-names": false,
 
-  "no-alt-text": false,
+  "no-alt-text": true,
 
-  "code-block-style": false,
+  "code-block-style": { "style": "fenced" },
 
   "single-trailing-newline": false,
 
