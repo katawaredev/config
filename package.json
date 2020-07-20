@@ -43,7 +43,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.10.5",
     "@commitlint/cli": "^9.1.1",
     "@types/node": "^14.0.23",
     "babel-jest": "^26.1.0",
@@ -51,7 +51,7 @@
     "browserslist-config-permissive": "file:packages/browserslist-config-permissive",
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "^3.2.0",
-    "eslint": "^7.4.0",
+    "eslint": "^7.5.0",
     "eslint-config-permissive": "file:packages/eslint-config-permissive",
     "git-config-permissive": "file:packages/git-config-permissive",
     "husky": "^4.2.5",
@@ -68,7 +68,7 @@
     "stylelint": "^13.6.1",
     "stylelint-config-permissive": "file:packages/stylelint-config-permissive",
     "tslib": "^2.0.0",
-    "typescript": "^3.9.6",
+    "typescript": "^3.9.7",
     "typescript-config-permissive": "file:packages/typescript-config-permissive"
   }
 }
