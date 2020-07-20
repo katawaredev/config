@@ -1,1 +1,1 @@
-module.exports = require("./src/native");
+module.exports = require("./src/plugins/react-native");
