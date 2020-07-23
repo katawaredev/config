@@ -98,3 +98,11 @@ This extension will make it easier to do conventional commits through the interf
 ```shell
 ext install knisterpeter.vscode-commitizen
 ```
+
+## Lerna
+
+If Lerna [hangs on publish](https://github.com/lerna/lerna/issues/2664), try disabling Husky before publishing:
+
+```sh
+HUSKY_SKIP_HOOKS=1 npx lerna publish
+```

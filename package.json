@@ -40,7 +40,8 @@
     "lint:markdown": "markdownlint --fix '**/*.md'",
     "lint": "run-s -c lint:types lint:code lint:styles lint:markdown",
     "format": "prettier --loglevel silent --write .",
-    "test": "jest"
+    "test": "jest",
+    "publish": "cross-env HUSKY_SKIP_HOOKS=1 lerna publish"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
