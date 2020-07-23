@@ -3,6 +3,8 @@ module.exports = {
 
   // https://github.com/kristerkari/stylelint-react-native#list-of-rules
   rules: {
+    "selector-type-no-unknown": null, // FIXME: Gives false positives
+
     // Disallow unknown React Native CSS properties.
     // https://github.com/kristerkari/stylelint-react-native/blob/master/src/rules/css-property-no-unknown/README.md
     "react-native/css-property-no-unknown": [true, { severity: "warning" }],
