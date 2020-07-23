@@ -19,7 +19,7 @@ Config:
 ```json
 // .markdownlint.json
 {
-  "extends": "./node_modules/markdownlint-config-permissive/index.json"
+  "extends": "./node_modules/markdownlint-config-permissive/default.jsonc"
 }
 ```
 
@@ -37,14 +37,14 @@ node_modules
 }
 ```
 
-## Caveats
+## Additional configurations
 
-Markdownlint is unable to set rules level to warning, so by default all rules are disabled. To enable them, use this config:
+More opinionionated version is available. It won't make the code any better, just more consistent.
 
 ```json
 // .markdownlint.json
 {
-  "extends": "./node_modules/markdownlint-config-permissive/meticulous.json"
+  "extends": "./node_modules/markdownlint-config-permissive/meticulous.jsonc"
 }
 ```
 
