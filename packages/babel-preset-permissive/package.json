@@ -10,7 +10,7 @@
   },
   "type": "commonjs",
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=12.18.0"
   },
   "main": "src",
   "files": [
