@@ -1,3 +1,5 @@
+const reactLifecycleMethods = require("../utils/react-lifecycle");
+
 module.exports = {
   overrides: [
     {
@@ -12,6 +14,12 @@ module.exports = {
 
       // https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
       rules: {
+        // https://reactjs.org/docs/react-component.html
+        "class-methods-use-this": [
+          "warn",
+          { exceptMethods: reactLifecycleMethods },
+        ],
+
         // Enforces consistent naming for boolean props
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
         // "react/boolean-prop-naming": "off",

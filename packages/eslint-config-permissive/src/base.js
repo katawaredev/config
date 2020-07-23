@@ -595,7 +595,7 @@ module.exports = {
       {
         functions: false,
         classes: false,
-        variables: true,
+        variables: false,
       },
     ],
     // #endregion Variables

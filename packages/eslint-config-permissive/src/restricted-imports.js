@@ -1,9 +1,4 @@
-const macros = [
-  "@emotion/styled",
-  "@lingui",
-  "styled-components",
-  "styled-jsx",
-];
+const macros = require("./utils/macros");
 
 /**
  * @typedef {Object} RestrictedImport
