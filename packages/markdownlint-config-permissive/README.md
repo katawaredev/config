@@ -48,6 +48,14 @@ More opinionionated version is available. It won't make the code any better, jus
 }
 ```
 
+If you use any tools to autogenerate `CHANGELOG.md` files, this configuration might complain about them. In this case, just disable checking them:
+
+```text
+// .markdownlintignore
+node_modules
+CHANGELOG.md
+```
+
 ## Setting up your editor
 
 ### Visual Studio Code
