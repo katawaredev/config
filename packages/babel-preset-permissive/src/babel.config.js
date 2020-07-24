@@ -29,17 +29,11 @@ module.exports = (api, _options) => ({
     [require("@babel/plugin-proposal-decorators").default, false],
     require("@babel/plugin-proposal-class-properties").default,
     require("@babel/plugin-proposal-numeric-separator").default,
-    // Optional chaining and nullish coalescing are supported in @babel/preset-env,
-    // but not yet supported in webpack due to support missing from acorn.
-    // These can be removed once webpack has support.
-    // See https://github.com/facebook/create-react-app/issues/8445#issuecomment-588512250
-    require("@babel/plugin-proposal-optional-chaining").default,
-    require("@babel/plugin-proposal-nullish-coalescing-operator").default,
 
     require("babel-plugin-macros"),
     require("babel-plugin-preval"),
 
-    require("@babel/plugin-transform-react-jsx").default,
+    require("@babel/plugin-transform-react-jsx").default, // Omit `import React from "react"`
     require("babel-plugin-inline-react-svg").default,
     api.env("production") &&
       require("babel-plugin-react-remove-properties").default,
