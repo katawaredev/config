@@ -1,7 +1,4 @@
-// FIXME: Rewrite when this gets merged: https://github.com/browserslist/browserslist/pull/474
-const env =
-  process.env.NODE_ENV || process.env.BROWSERSLIST_ENV || "development";
-const config = {
+module.exports = {
   production: [
     "defaults",
     "not IE 11",
@@ -23,5 +20,3 @@ const config = {
     "current node",
   ],
 };
-
-module.exports = config[env];
