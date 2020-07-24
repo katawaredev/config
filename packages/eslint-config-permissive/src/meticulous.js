@@ -96,6 +96,10 @@ module.exports = {
     // https://eslint.org/docs/rules/no-useless-constructor
     "no-useless-constructor": "warn",
 
+    // require `const` declarations for variables that are never reassigned after declared [autofix]
+    // https://eslint.org/docs/rules/prefer-const
+    "prefer-const": ["warn", { destructuring: "all" }],
+
     // disallow use of the `RegExp` constructor in favor of regular expression literals
     // https://eslint.org/docs/rules/prefer-regex-literals
     "prefer-regex-literals": "warn",
@@ -116,7 +120,8 @@ module.exports = {
     // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
     "react/prefer-stateless-function": "warn",
 
-    // TODO: Add docs
+    // require include descriptions in ESLint directive-comments
+    // https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/require-description.html
     "eslint-comments/require-description": "warn",
   },
   overrides: [
@@ -127,6 +132,20 @@ module.exports = {
         // Require that member overloads be consecutive [recommended]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md
         "@typescript-eslint/adjacent-overload-signatures": "warn",
+
+        // Bans // @ts-<directive> comments from being used [recommended]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md
+        "@typescript-eslint/ban-ts-comment": [
+          "warn",
+          {
+            "ts-check": false,
+            "ts-nocheck": true,
+            "ts-ignore": true,
+            "ts-expect-error": "allow-with-description",
+            // https://github.com/microsoft/TypeScript/blob/master/src/compiler/diagnosticMessages.json
+            minimumDescriptionLength: 4, // Enough to fit typescript error code TSXXXX
+          },
+        ],
 
         // Enforces consistent usage of type assertions [recommended]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-assertions.md

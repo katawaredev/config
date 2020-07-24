@@ -14,6 +14,7 @@ module.exports = {
     sourceType: "module",
   },
   globals: {
+    __DEV__: "readonly",
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
   },
@@ -683,7 +684,7 @@ module.exports = {
 
     // require `const` declarations for variables that are never reassigned after declared [autofix]
     // https://eslint.org/docs/rules/prefer-const
-    "prefer-const": ["warn", { destructuring: "all" }],
+    // "prefer-const": ["warn", { destructuring: "all" }],
 
     // require destructuring from arrays and/or objects [autofix]
     // https://eslint.org/docs/rules/prefer-destructuring

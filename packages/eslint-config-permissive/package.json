@@ -21,6 +21,7 @@
     "native.js",
     "node.js",
     "node-async.js",
+    "nextjs.js",
     "restricted-imports.js"
   ],
   "dependencies": {

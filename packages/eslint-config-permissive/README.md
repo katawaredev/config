@@ -85,6 +85,7 @@ Enable fixing on save:
 - `permissive/native` - Linting rules for native React applications.
 - `permissive/node` - Linting rules for NodeJs projects.
 - `permissive/node-async` - Suggests using async version of some node methods.
+- `permissive/nextjs` - Rules that complement Next.js.
 
 ### Example usage
 

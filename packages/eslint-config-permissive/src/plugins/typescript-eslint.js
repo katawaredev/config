@@ -3,7 +3,15 @@ module.exports = {
   plugins: ["@typescript-eslint"],
 
   rules: {
-    "@typescript-eslint/ban-ts-comment": "warn",
+    "@typescript-eslint/ban-ts-comment": [
+      "warn",
+      {
+        "ts-check": false,
+        "ts-nocheck": true,
+        "ts-ignore": true,
+        "ts-expect-error": false,
+      },
+    ],
   },
 
   overrides: [
@@ -40,12 +48,10 @@ module.exports = {
         "@typescript-eslint/ban-ts-comment": [
           "warn",
           {
-            "ts-expect-error": "allow-with-description",
-            "ts-ignore": true,
-            "ts-nocheck": true,
             "ts-check": false,
-            // https://github.com/microsoft/TypeScript/blob/master/src/compiler/diagnosticMessages.json
-            minimumDescriptionLength: 4, // Enough to fit typescript error code TSXXXX
+            "ts-nocheck": true,
+            "ts-ignore": true,
+            "ts-expect-error": false,
           },
         ],
 

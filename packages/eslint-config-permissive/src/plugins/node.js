@@ -102,7 +102,7 @@ module.exports = {
       "always",
       {
         tryExtensions: [".js", ".json", ".node", ".ts", ".tsx", ".mjs"],
-        // FIXME: https://github.com/Microsoft/TypeScript/issues/27481
+        // FIXME: https://github.com/microsoft/TypeScript/issues/37582
         ".ts": "never",
         ".tsx": "never",
       },

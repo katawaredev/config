@@ -39,7 +39,11 @@ module.exports = {
 
     // disallow ESLint directive-comments
     // https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/no-use.html
-    // "eslint-comments/no-use": "off"
+    // "eslint-comments/no-use": "off",
+
+    // require include descriptions in ESLint directive-comments
+    // https://mysticatea.github.io/eslint-plugin-eslint-comments/rules/require-description.html
+    // "eslint-comments/require-description": "warn",
     // #endregion Stylistic Issues
   },
 };
