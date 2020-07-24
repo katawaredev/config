@@ -17,8 +17,9 @@
     "commitlint.js",
     "conventional-commit.js",
     "husky.js",
+    "husky.config.js",
     "lint-staged.js",
-    "lint-staged-config.js"
+    "lint-staged.config.js"
   ],
   "dependencies": {
     "@commitlint/config-conventional": "^9.1.1",

@@ -69,13 +69,15 @@ module.exports = require("git-config-permissive/commitlint");
 
 (alternatively you can use [eslint-config-permissive](https://github.com/katawaredev/config/tree/master/packages/eslint-config-permissive))
 
-### Customizing config
+### Customizing configurations
 
-Copy this to your config file and modify it according to your needs (by default everything is set to true):
+#### lint-staged
+
+By default all options are enabled
 
 ```js
 // lint-staged.config.js
-const createConfig = require("git-config-permissive/lint-staged-config");
+const createConfig = require("git-config-permissive/lint-staged.config");
 
 module.exports = createConfig({
   tsc: true, // Run tsc checks
@@ -86,6 +88,20 @@ module.exports = createConfig({
   markdownlint: true, // Run markdownlint checks
   jest: true, // Run jest testing
   prettier: true, // Format with prettier
+});
+```
+
+#### husky
+
+By default all options are enabled
+
+```js
+// husky.config.js
+const createConfig = require("git-config-permissive/husky.config");
+
+module.exports = createConfig({
+  lintStaged: true, // Run lint-staged checks
+  commitlint: true, // Run commitlint checks
 });
 ```
 
