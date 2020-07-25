@@ -36,7 +36,16 @@ module.exports = {
 
 ## React Native
 
-See [react-native-testing-library](https://github.com/callstack/react-native-testing-library)
+**Recommended**: Use [react-native-testing-library](https://github.com/callstack/react-native-testing-library) over [@testing-library/react-native](https://github.com/testing-library/native-testing-library) [[source](https://twitter.com/kentcdodds/status/1283815988496961537)]
+
+```js
+// jest.config.js
+module.exports = {
+  preset: "./node_modules/jest-preset-permissive/native",
+};
+```
+
+This configuration requires a peer dependency of [react-native-web](https://github.com/necolas/react-native-web) and [@testing-library/jest-native](https://github.com/testing-library/jest-native)
 
 ## Setting up your editor
 

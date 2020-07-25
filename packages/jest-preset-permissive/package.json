@@ -17,6 +17,7 @@
     "src",
     "jest-preset.js",
     "jest-preset-permissive.d.ts",
+    "native.js",
     "pathsToModuleNameMapper.js"
   ],
   "dependencies": {
