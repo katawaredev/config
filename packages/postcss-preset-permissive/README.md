@@ -21,6 +21,15 @@ module.exports = {
 };
 ```
 
+#### Next.js
+
+```js
+// postcss.config.js
+module.exports = {
+  plugins: ["postcss-preset-permissive"],
+};
+```
+
 ## What's inside
 
 - [`postcss-import`](https://github.com/postcss/postcss-import)
