@@ -45,7 +45,12 @@ module.exports = {
 };
 ```
 
-This configuration requires a peer dependency of [react-native-web](https://github.com/necolas/react-native-web) and [@testing-library/jest-native](https://github.com/testing-library/jest-native)
+This configuration requires a peer dependency of [react-native-web](https://github.com/necolas/react-native-web) and [@testing-library/jest-native](https://github.com/testing-library/jest-native):
+
+```sh
+npm i react-native-web
+npm i -D @testing-library/jest-native
+```
 
 ## Setting up your editor
 
