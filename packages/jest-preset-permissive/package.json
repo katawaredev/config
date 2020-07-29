@@ -15,9 +15,11 @@
   "main": "src",
   "files": [
     "src",
+    "expo.js",
     "jest-preset.js",
     "jest-preset-permissive.d.ts",
     "native.js",
+    "native-web.js",
     "pathsToModuleNameMapper.js"
   ],
   "dependencies": {

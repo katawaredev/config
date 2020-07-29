@@ -34,9 +34,38 @@ module.exports = {
 }
 ```
 
-## React Native
+## Testing native applications
 
 **Recommended**: Use [react-native-testing-library](https://github.com/callstack/react-native-testing-library) over [@testing-library/react-native](https://github.com/testing-library/native-testing-library) [[source](https://twitter.com/kentcdodds/status/1283815988496961537)]
+
+All configurations require a peer dependency of [@testing-library/jest-native](https://github.com/testing-library/jest-native):
+
+```sh
+npm i -D @testing-library/jest-native
+```
+
+### React Native Web
+
+This configuration requires a peer dependency of [react-native-web](https://github.com/necolas/react-native-web):
+
+```sh
+npm i react-native-web
+```
+
+```js
+// jest.config.js
+module.exports = {
+  preset: "./node_modules/jest-preset-permissive/native-web",
+};
+```
+
+### React Native
+
+This configuration requires a peer dependency of [react-native](https://github.com/facebook/react-native):
+
+```sh
+npm i react-native
+```
 
 ```js
 // jest.config.js
@@ -45,11 +74,20 @@ module.exports = {
 };
 ```
 
-This configuration requires a peer dependency of [react-native-web](https://github.com/necolas/react-native-web) and [@testing-library/jest-native](https://github.com/testing-library/jest-native):
+### Expo
+
+This configuration requires a peer dependency of [jest-expo](https://github.com/expo/expo/tree/master/packages/jest-expo) [react-native](https://github.com/facebook/react-native):
 
 ```sh
-npm i react-native-web
-npm i -D @testing-library/jest-native
+npm i -D jest-expo
+npm i react-native
+```
+
+```js
+// jest.config.js
+module.exports = {
+  preset: "./node_modules/jest-preset-permissive/expo",
+};
 ```
 
 ## Setting up your editor
