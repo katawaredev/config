@@ -11,9 +11,12 @@ jestConfig.transform[
   "^.+\\.(bmp|gif|jpg|jpeg|mp4|png|psd|svg|webp)$"
 ] = require.resolve("react-native/jest/assetFileTransformer.js");
 
-jestConfig.transformIgnorePatterns.push(
-  "node_modules/(?!(jest-)?react-native|@react-native-community)"
-);
+// @ts-expect-error
+jestConfig.transformIgnorePatterns = [
+  // Don't include /node_modules/ from defaults
+  "^.+\\.module\\.(css|sass|scss|less)$",
+  "node_modules/(?!(jest-)?react-native|@react-native-community)",
+];
 
 jestConfig.setupFilesAfterEnv.push(
   require.resolve("@testing-library/jest-native/extend-expect")
