@@ -44,19 +44,19 @@
     "publish": "cross-env HUSKY_SKIP_HOOKS=1 lerna publish"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
+    "@babel/core": "^7.11.1",
     "@commitlint/cli": "^9.1.1",
-    "@types/node": "^14.0.25",
-    "babel-jest": "^26.1.0",
+    "@types/node": "^14.0.27",
+    "babel-jest": "^26.2.2",
     "babel-preset-permissive": "file:packages/babel-preset-permissive",
     "browserslist-config-permissive": "file:packages/browserslist-config-permissive",
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "^3.2.0",
-    "eslint": "^7.5.0",
+    "eslint": "^7.6.0",
     "eslint-config-permissive": "file:packages/eslint-config-permissive",
     "git-config-permissive": "file:packages/git-config-permissive",
     "husky": "^4.2.5",
-    "jest": "^26.1.0",
+    "jest": "^26.2.2",
     "jest-preset-permissive": "file:packages/jest-preset-permissive",
     "lerna": "^3.22.1",
     "lint-staged": "^10.2.11",
@@ -68,7 +68,7 @@
     "prettier": "^2.0.5",
     "stylelint": "^13.6.1",
     "stylelint-config-permissive": "file:packages/stylelint-config-permissive",
-    "tslib": "^2.0.0",
+    "tslib": "^2.0.1",
     "typescript": "^3.9.7",
     "typescript-config-permissive": "file:packages/typescript-config-permissive"
   }

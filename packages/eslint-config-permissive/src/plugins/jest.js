@@ -61,6 +61,10 @@ module.exports = {
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-if.md
         // "jest/no-if": "off",
 
+        // Disallow string interpolation inside snapshots
+        // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-interpolation-in-snapshots.md
+        // "jest/no-interpolation-in-snapshots": "off",
+
         // Disallow Jasmine globals [recommended] [autofix]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-jasmine-globals.md
         "jest/no-jasmine-globals": "warn",
