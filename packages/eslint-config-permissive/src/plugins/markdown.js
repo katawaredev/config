@@ -12,12 +12,15 @@ module.exports = {
 
       // https://github.com/mdx-js/eslint-mdx/tree/master/packages/eslint-plugin-mdx#rules
       rules: {
-        strict: "off",
+        "default-case": "off",
         "eol-last": "off",
-        "unicode-bom": "off",
+        "no-alert": "off",
+        "no-console": "off",
         "no-undef": "off",
         "no-unused-expressions": "off",
         "no-unused-vars": "off",
+        strict: "off",
+        "unicode-bom": "off",
         "import/no-unresolved": "off",
       },
     },
@@ -37,11 +40,14 @@ module.exports = {
 
       // https://github.com/mdx-js/eslint-mdx/tree/master/packages/eslint-plugin-mdx#rules
       rules: {
-        strict: "off",
+        "default-case": "off",
         "eol-last": "off",
-        "unicode-bom": "off",
+        "no-alert": "off",
+        "no-console": "off",
         "no-undef": "off",
         "no-unused-vars": "off",
+        strict: "off",
+        "unicode-bom": "off",
 
         // HTML style comments in jsx block is invalid, this rule will help you to fix it by transforming it to JSX style comments. [autofix]
         "mdx/no-jsx-html-comments": "error",
