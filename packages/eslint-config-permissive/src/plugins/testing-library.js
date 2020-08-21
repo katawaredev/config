@@ -38,6 +38,10 @@ module.exports = {
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-manual-cleanup.md
         // "testing-library/no-manual-cleanup": "off",
 
+        // Disallow the use of render in setup functions
+        // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-render-in-setup.md
+        // "testing-library/no-render-in-setup": "off",
+
         // Disallow empty callbacks for waitFor and waitForElementToBeRemoved
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-wait-for-empty-callback.md
         // "testing-library/no-wait-for-empty-callback": "warn",

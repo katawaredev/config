@@ -14,7 +14,7 @@ module.exports = {
       rules: {
         // For react-native-web
         "import/no-unresolved": ["error", { ignore: ["react-native"] }],
-        // FIXME: THese does not work with native
+        // FIXME: These does not work with native
         "import/namespace": "off",
         "import/no-deprecated": "off",
         "jsx-a11y/accessible-emoji": "off",

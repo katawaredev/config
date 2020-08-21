@@ -159,7 +159,7 @@ const readTypeScriptConfig = async (typescriptConfigFile, cwd, root) => {
  * Read PostCss configuration
  * @property {string} [postcssConfigFile] - custom location for postcss config file
  * @param {string} cwd - current search directory
- * @param {string} root - alternative search directory (for monorepositories)
+ * @param {string | undefined} root - alternative search directory (for monorepositories)
  * @returns {Promise<PostCssConfig | null>} configuration object
  */
 const readPostCssConfig = async (postcssConfigFile, cwd, root) => {
