@@ -75,6 +75,10 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-definitions.md
         "@typescript-eslint/consistent-type-definitions": "warn",
 
+        // Enforces consistent usage of type imports [autofix]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-imports.md
+        "@typescript-eslint/consistent-type-imports": "warn",
+
         // Require explicit return types on functions and class methods
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
         // "@typescript-eslint/explicit-function-return-type": "warn",
@@ -142,6 +146,10 @@ module.exports = {
         // Disallow iterating over an array with a for-in loop [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md
         // "@typescript-eslint/no-for-in-array": "warn",
+
+        // Disallow usage of the implicit any type in catch clauses [autofix]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-implicit-any-catch.md
+        "@typescript-eslint/no-implicit-any-catch": "warn",
 
         // Disallow the use of eval()-like methods [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-implied-eval.md

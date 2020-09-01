@@ -139,25 +139,25 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/color-no-hex
     // "color-no-hex": null,
 
-    // Specify a blacklist of disallowed functions.
-    // https://stylelint.io/user-guide/rules/function-blacklist
-    // "function-blacklist": null,
+    // Specify a list of disallowed functions.
+    // https://stylelint.io/user-guide/rules/function-disallowed-list
+    // "function-disallowed-list": null,
 
     // Disallow scheme-relative urls.
     // https://stylelint.io/user-guide/rules/function-url-no-scheme-relative
     // "function-url-no-scheme-relative": null,
 
-    // Specify a blacklist of disallowed URL schemes.
-    // https://stylelint.io/user-guide/rules/function-url-scheme-blacklist
-    // "function-url-scheme-blacklist": null,
+    // Specify a list of disallowed URL schemes.
+    // https://stylelint.io/user-guide/rules/function-url-scheme-disallowed-list
+    // "function-url-scheme-disallowed-list": null,
 
-    // Specify a whitelist of allowed URL schemes.
-    // https://stylelint.io/user-guide/rules/function-url-scheme-whitelist
-    // "function-url-scheme-whitelist": null,
+    // Specify a list of allowed URL schemes.
+    // https://stylelint.io/user-guide/rules/function-url-scheme-allowed-list
+    // "function-url-scheme-allowed-list": null,
 
-    // Specify a whitelist of allowed functions.
-    // https://stylelint.io/user-guide/rules/function-whitelist
-    // "function-whitelist": null,
+    // Specify a list of allowed functions.
+    // https://stylelint.io/user-guide/rules/function-allowed-list
+    // "function-allowed-list": null,
 
     // Specify a pattern for keyframe names.
     // https://stylelint.io/user-guide/rules/keyframes-name-pattern
@@ -171,19 +171,19 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/time-min-milliseconds
     // "time-min-milliseconds": null,
 
-    // Specify a blacklist of disallowed units.
-    // https://stylelint.io/user-guide/rules/unit-blacklist
-    // "unit-blacklist": null,
+    // Specify a list of disallowed units.
+    // https://stylelint.io/user-guide/rules/unit-disallowed-list
+    // "unit-disallowed-list": null,
 
-    // Specify a whitelist of allowed units.
-    // https://stylelint.io/user-guide/rules/unit-whitelist
-    // "unit-whitelist": null,
+    // Specify a list of allowed units.
+    // https://stylelint.io/user-guide/rules/unit-allowed-list
+    // "unit-allowed-list": null,
 
     // Disallow redundant values in shorthand properties. [autofix]
     // https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values
     // "shorthand-property-no-redundant-values": [true, { severity: "warning" }],
 
-    // Disallow vendor prefixes for values.
+    // Disallow vendor prefixes for values. [autofix]
     // https://stylelint.io/user-guide/rules/value-no-vendor-prefix
     // "value-no-vendor-prefix": null,
 
@@ -191,17 +191,17 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/custom-property-pattern
     // "custom-property-pattern": null,
 
-    // Specify a blacklist of disallowed properties.
-    // https://stylelint.io/user-guide/rules/property-blacklist
-    // "property-blacklist": null,
+    // Specify a list of disallowed properties.
+    // https://stylelint.io/user-guide/rules/property-disallowed-list
+    // "property-disallowed-list": null,
 
-    // Disallow vendor prefixes for properties.
+    // Disallow vendor prefixes for properties. [autofix]
     // https://stylelint.io/user-guide/rules/property-no-vendor-prefix
     // "property-no-vendor-prefix": null,
 
-    // Specify a whitelist of allowed properties.
-    // https://stylelint.io/user-guide/rules/property-whitelist
-    // "property-whitelist": null,
+    // Specify a list of allowed properties.
+    // https://stylelint.io/user-guide/rules/property-allowed-list
+    // "property-allowed-list": null,
 
     // Disallow longhand properties that can be combined into one shorthand property.
     // https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties
@@ -211,50 +211,50 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/declaration-no-important
     "declaration-no-important": [true, { severity: "warning" }],
 
-    // Specify a blacklist of disallowed property and unit pairs within declarations.
-    // https://stylelint.io/user-guide/rules/declaration-property-unit-blacklist
-    // "declaration-property-unit-blacklist": null,
+    // Specify a list of disallowed property and unit pairs within declarations.
+    // https://stylelint.io/user-guide/rules/declaration-property-unit-disallowed-list
+    // "declaration-property-unit-disallowed-list": null,
 
-    // Specify a whitelist of allowed property and unit pairs within declarations.
-    // https://stylelint.io/user-guide/rules/declaration-property-unit-whitelist
-    // "declaration-property-unit-whitelist": null,
+    // Specify a list of allowed property and unit pairs within declarations.
+    // https://stylelint.io/user-guide/rules/declaration-property-unit-allowed-list
+    // "declaration-property-unit-allowed-list": null,
 
-    // Specify a blacklist of disallowed property and value pairs within declarations.
-    // https://stylelint.io/user-guide/rules/declaration-property-value-blacklist
-    "declaration-property-value-blacklist": [
+    // Specify a list of disallowed property and value pairs within declarations.
+    // https://stylelint.io/user-guide/rules/declaration-property-value-disallowed-list
+    "declaration-property-value-disallowed-list": [
       {
         "/^transition/": ["/all/"],
       },
       { severity: "warning" },
     ],
 
-    // Specify a whitelist of allowed property and value pairs within declarations.
-    // https://stylelint.io/user-guide/rules/declaration-property-value-whitelist
-    // "declaration-property-value-whitelist": null,
+    // Specify a list of allowed property and value pairs within declarations.
+    // https://stylelint.io/user-guide/rules/declaration-property-value-allowed-list
+    // "declaration-property-value-allowed-list": null,
 
     // Limit the number of declarations within a single-line declaration block. [prettier]
     // https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations
     "declaration-block-single-line-max-declarations": null,
 
-    // Specify a blacklist of disallowed attribute operators.
-    // https://stylelint.io/user-guide/rules/selector-attribute-operator-blacklist
-    // "selector-attribute-operator-blacklist": null,
+    // Specify a list of disallowed attribute operators.
+    // https://stylelint.io/user-guide/rules/selector-attribute-operator-disallowed-list
+    // "selector-attribute-operator-disallowed-list": null,
 
-    // Specify a whitelist of allowed attribute operators.
-    // https://stylelint.io/user-guide/rules/selector-attribute-operator-whitelist
-    // "selector-attribute-operator-whitelist": null,
+    // Specify a list of allowed attribute operators.
+    // https://stylelint.io/user-guide/rules/selector-attribute-operator-allowed-list
+    // "selector-attribute-operator-allowed-list": null,
 
     // Specify a pattern for class selectors.
     // https://stylelint.io/user-guide/rules/selector-class-pattern
     // "selector-class-pattern": null,
 
-    // Specify a blacklist of disallowed combinators.
-    // https://stylelint.io/user-guide/rules/selector-combinator-blacklist
-    // "selector-combinator-blacklist": null,
+    // Specify a list of disallowed combinators.
+    // https://stylelint.io/user-guide/rules/selector-combinator-disallowed-list
+    // "selector-combinator-disallowed-list": null,
 
-    // Specify a whitelist of allowed combinators.
-    // https://stylelint.io/user-guide/rules/selector-combinator-whitelist
-    // "selector-combinator-whitelist": null,
+    // Specify a list of allowed combinators.
+    // https://stylelint.io/user-guide/rules/selector-combinator-allowed-list
+    // "selector-combinator-allowed-list": null,
 
     // Specify a pattern for ID selectors.
     // https://stylelint.io/user-guide/rules/selector-id-pattern
@@ -308,65 +308,65 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/selector-no-qualifying-type
     // "selector-no-qualifying-type": null,
 
-    // Disallow vendor prefixes for selectors.
+    // Disallow vendor prefixes for selectors. [autofix]
     // https://stylelint.io/user-guide/rules/selector-no-vendor-prefix
     // "selector-no-vendor-prefix": null,
 
-    // Specify a blacklist of disallowed pseudo-class selectors.
-    // https://stylelint.io/user-guide/rules/selector-pseudo-class-blacklist
-    // "selector-pseudo-class-blacklist": null,
+    // Specify a list of disallowed pseudo-class selectors.
+    // https://stylelint.io/user-guide/rules/selector-pseudo-class-disallowed-list
+    // "selector-pseudo-class-disallowed-list": null,
 
-    // Specify a whitelist of allowed pseudo-class selectors.
-    // https://stylelint.io/user-guide/rules/selector-pseudo-class-whitelist
-    // "selector-pseudo-class-whitelist": null,
+    // Specify a list of allowed pseudo-class selectors.
+    // https://stylelint.io/user-guide/rules/selector-pseudo-class-allowed-list
+    // "selector-pseudo-class-allowed-list": null,
 
-    // Specify a blacklist of disallowed pseudo-element selectors.
-    // https://stylelint.io/user-guide/rules/selector-pseudo-element-blacklist
-    // "selector-pseudo-element-blacklist": null,
+    // Specify a list of disallowed pseudo-element selectors.
+    // https://stylelint.io/user-guide/rules/selector-pseudo-element-disallowed-list
+    // "selector-pseudo-element-disallowed-list": null,
 
-    // Specify a whitelist of allowed pseudo-element selectors.
-    // https://stylelint.io/user-guide/rules/selector-pseudo-element-whitelist
-    // "selector-pseudo-element-whitelist": null,
+    // Specify a list of allowed pseudo-element selectors.
+    // https://stylelint.io/user-guide/rules/selector-pseudo-element-allowed-list
+    // "selector-pseudo-element-allowed-list": null,
 
-    // Specify a blacklist of disallowed media feature names.
-    // https://stylelint.io/user-guide/rules/media-feature-name-blacklist
-    // "media-feature-name-blacklist": null,
+    // Specify a list of disallowed media feature names.
+    // https://stylelint.io/user-guide/rules/media-feature-name-disallowed-list
+    // "media-feature-name-disallowed-list": null,
 
-    // Disallow vendor prefixes for media feature names.
+    // Disallow vendor prefixes for media feature names. [autofix]
     // https://stylelint.io/user-guide/rules/media-feature-name-no-vendor-prefix
     // "media-feature-name-no-vendor-prefix": null,
 
-    // Specify a whitelist of allowed media feature name and value pairs.
-    // https://stylelint.io/user-guide/rules/media-feature-name-value-whitelist
-    // "media-feature-name-value-whitelist": null,
+    // Specify a list of allowed media feature name and value pairs.
+    // https://stylelint.io/user-guide/rules/media-feature-name-value-allowed-list
+    // "media-feature-name-value-allowed-list": null,
 
-    // Specify a whitelist of allowed media feature names.
-    // https://stylelint.io/user-guide/rules/media-feature-name-whitelist
-    // "media-feature-name-whitelist": null,
+    // Specify a list of allowed media feature names.
+    // https://stylelint.io/user-guide/rules/media-feature-name-allowed-list
+    // "media-feature-name-allowed-list": null,
 
     // Specify a pattern for custom media query names.
     // https://stylelint.io/user-guide/rules/custom-media-pattern
     // "custom-media-pattern": null,
 
-    // Specify a blacklist of disallowed at-rules.
-    // https://stylelint.io/user-guide/rules/at-rule-blacklist
-    // "at-rule-blacklist": null,
+    // Specify a list of disallowed at-rules.
+    // https://stylelint.io/user-guide/rules/at-rule-disallowed-list
+    // "at-rule-disallowed-list": null,
 
-    // Disallow vendor prefixes for at-rules.
+    // Disallow vendor prefixes for at-rules. [autofix]
     // https://stylelint.io/user-guide/rules/at-rule-no-vendor-prefix
     // "at-rule-no-vendor-prefix": null,
 
     // Specify a requirelist of properties for an at-rule.
-    // https://stylelint.io/user-guide/rules/at-rule-property-requirelist
-    // "at-rule-property-requirelist": null,
+    // https://stylelint.io/user-guide/rules/at-rule-property-required-list
+    // "at-rule-property-required-list": null,
 
-    // Specify a whitelist of allowed at-rules.
-    // https://stylelint.io/user-guide/rules/at-rule-whitelist
-    // "at-rule-whitelist": null,
+    // Specify a list of allowed at-rules.
+    // https://stylelint.io/user-guide/rules/at-rule-allowed-list
+    // "at-rule-allowed-list": null,
 
-    // Specify a blacklist of disallowed words within comments.
-    // https://stylelint.io/user-guide/rules/comment-word-blacklist
-    // "comment-word-blacklist": null,
+    // Specify a list of disallowed words within comments.
+    // https://stylelint.io/user-guide/rules/comment-word-disallowed-list
+    // "comment-word-disallowed-list": null,
 
     // Limit the depth of nesting.
     // https://stylelint.io/user-guide/rules/max-nesting-depth

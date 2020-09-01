@@ -46,6 +46,10 @@ module.exports = {
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-wait-for-empty-callback.md
         // "testing-library/no-wait-for-empty-callback": "warn",
 
+        // Ensures no snapshot is generated inside of a waitFor call
+        // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-wait-for-snapshot.md
+        "testing-library/no-wait-for-snapshot": "warn",
+
         // Suggest using explicit assertions rather than just getBy* queries
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/prefer-explicit-assert.md
         // "testing-library/prefer-explicit-assert": "off",

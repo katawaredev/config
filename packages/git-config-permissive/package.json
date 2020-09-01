@@ -23,16 +23,16 @@
   ],
   "dependencies": {
     "@commitlint/config-conventional": "^9.1.2",
-    "commitizen": "^4.1.2",
-    "cz-conventional-changelog": "^3.2.0"
+    "commitizen": "^4.2.1",
+    "cz-conventional-changelog": "^3.3.0"
   },
   "peerDependencies": {
     "@commitlint/cli": "^9.1.0",
-    "eslint": "^7.7.0",
+    "eslint": "^7.8.0",
     "husky": "^4.2.0",
     "jest": "^26.4.0",
     "lint-staged": "^10.2.0",
-    "prettier": "^2.0.0",
-    "stylelint": "^13.6.0"
+    "prettier": "^2.1.0",
+    "stylelint": "^13.7.0"
   }
 }
