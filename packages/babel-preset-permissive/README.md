@@ -36,6 +36,7 @@ npm install --dev babel-preset-permissive
 - [`babel-plugin-dev-expression`](https://github.com/4Catalyzer/babel-plugin-dev-expression)
 - [`babel-plugin-macros`](https://github.com/kentcdodds/babel-plugin-macros)
 - [`babel-plugin-preval`](https://github.com/kentcdodds/babel-plugin-preval)
+- [`babel-plugin-codegen`](https://github.com/kentcdodds/babel-plugin-codegen)
 - [babel-plugin-react-remove-properties](https://github.com/oliviertassinari/babel-plugin-react-remove-properties)
 
 ## Using with Next.js

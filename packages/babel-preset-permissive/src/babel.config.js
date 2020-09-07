@@ -32,6 +32,7 @@ module.exports = (api, _options) => ({
 
     require("babel-plugin-macros"),
     require("babel-plugin-preval"),
+    require("babel-plugin-codegen"),
 
     require("@babel/plugin-transform-react-jsx").default, // Omit `import React from "react"`
     require("babel-plugin-inline-react-svg").default,

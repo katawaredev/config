@@ -5,6 +5,7 @@ module.exports = (api, _options) => ({
 
     require("babel-plugin-macros"),
     require("babel-plugin-preval"),
+    require("babel-plugin-codegen"),
 
     require("babel-plugin-inline-react-svg").default,
     api.env("production") &&
