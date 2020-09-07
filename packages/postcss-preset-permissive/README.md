@@ -35,6 +35,7 @@ module.exports = {
 - [`postcss-import`](https://github.com/postcss/postcss-import)
 - [`postcss-flexbugs-fixes`](https://github.com/luisrudge/postcss-flexbugs-fixes)
 - [`postcss-preset-env`](https://github.com/csstools/postcss-preset-env)
+- [`postcss-normalize`](https://github.com/csstools/postcss-normalize) (auto import `normalize.css`)
 
 ## Caveats
 

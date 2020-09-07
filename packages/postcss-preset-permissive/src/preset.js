@@ -1,4 +1,8 @@
 const postcss = require("postcss");
+const postcssImport = require("postcss-import");
+const postcssNormalize = require("postcss-normalize");
+const postcssFlexbugsFixes = require("postcss-flexbugs-fixes");
+const postccPresetEnv = require("postcss-preset-env");
 
 /**
  * @template T
@@ -8,10 +12,20 @@ const postcss = require("postcss");
 const plugin = (_initializer) =>
   // @ts-ignore
   postcss()
-    .use(require("postcss-import")())
-    .use(require("postcss-flexbugs-fixes")())
     .use(
-      require("postcss-preset-env")({
+      postcssImport(
+        postcssNormalize(
+          /* pluginOptions (for PostCSS Normalize) */
+          { forceImport: true }
+        )
+          .postcssImport
+          /* pluginOptions (for PostCSS Import) */
+          ()
+      )
+    )
+    .use(postcssFlexbugsFixes())
+    .use(
+      postccPresetEnv({
         autoprefixer: { flexbox: "no-2009" },
         stage: 3,
       })
