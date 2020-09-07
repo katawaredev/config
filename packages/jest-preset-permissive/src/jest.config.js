@@ -231,6 +231,7 @@ module.exports = {
     "/.next/",
     "/build/",
     "/dist/",
+    "/cypress/",
   ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files

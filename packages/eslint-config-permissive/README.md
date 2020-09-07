@@ -26,7 +26,7 @@
   - [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro)
 - [Jest](https://jestjs.io/)
   - [Jest DOM](https://github.com/testing-library/eslint-plugin-jest-dom)
-- [Cypress](https://www.cypress.io/)
+- [Cypress](https://www.cypress.io/) _(only for `.spec.` files in cypress dir)_
 
 ## Install
 

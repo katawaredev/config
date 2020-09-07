@@ -99,7 +99,7 @@ module.exports = {
 
         // Using a callback in asynchronous tests [recommended] [autofix]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-callback.md
-        "jest/no-test-callback": "warn",
+        // "jest/no-test-callback": "warn", // TODO: Unreleased
 
         // Disallow using f & x prefixes to define focused/skipped tests [recommended] [autofix]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-prefixes.md
