@@ -29,13 +29,21 @@ module.exports = {
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-commented-out-tests.md
         // "jest/no-commented-out-tests": "warn",
 
-        // Prevent calling expect conditionally
+        // Prevent calling expect conditionally [recommended]
         // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-conditional-expect.md
-        // "jest/no-conditional-expect": "off",
+        "jest/no-conditional-expect": "warn",
+
+        // Disallow use of deprecated functions [recommended] [autofix]
+        // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-deprecated-functions.md
+        "jest/no-deprecated-functions": "warn",
 
         // Disallow disabled tests [recommended]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-disabled-tests.md
         "jest/no-disabled-tests": "warn",
+
+        // Avoid using a callback in asynchronous tests and hooks [recommended] [suggest]
+        // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-done-callback.md
+        "jest/no-done-callback": "warn",
 
         // Disallow duplicate hooks within a describe block
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-duplicate-hooks.md
@@ -61,7 +69,7 @@ module.exports = {
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-if.md
         // "jest/no-if": "off",
 
-        // Disallow string interpolation inside snapshots
+        // Disallow string interpolation inside snapshots [recommended]
         // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-interpolation-in-snapshots.md
         "jest/no-interpolation-in-snapshots": "warn",
 
@@ -161,7 +169,7 @@ module.exports = {
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-expect.md
         "jest/valid-expect": "warn",
 
-        // Enforce valid titles for jest blocks
+        // Enforce valid titles for jest blocks [recommended]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-title.md
         // "jest/valid-title": "off"
       },

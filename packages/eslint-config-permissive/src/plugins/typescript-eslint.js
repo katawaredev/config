@@ -31,6 +31,8 @@ module.exports = {
 
       // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
       rules: {
+        "import/no-unresolved": "off", // TypeScript already handles it
+
         // Require that member overloads be consecutive [recommended]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md
         // "@typescript-eslint/adjacent-overload-signatures": "warn",
@@ -77,7 +79,10 @@ module.exports = {
 
         // Enforces consistent usage of type imports [autofix]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-imports.md
-        "@typescript-eslint/consistent-type-imports": "warn",
+        "@typescript-eslint/consistent-type-imports": [
+          "warn",
+          { prefer: "no-type-imports" },
+        ],
 
         // Require explicit return types on functions and class methods
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
