@@ -28,7 +28,6 @@ module.exports = (api, _options) => ({
     // https://babeljs.io/docs/en/babel-plugin-proposal-decorators#note-compatibility-with-babel-plugin-proposal-class-properties
     [require("@babel/plugin-proposal-decorators").default, false],
     require("@babel/plugin-proposal-class-properties").default,
-    require("@babel/plugin-proposal-numeric-separator").default,
 
     require("babel-plugin-macros"),
     require("babel-plugin-preval"),
