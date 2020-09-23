@@ -70,7 +70,6 @@ module.exports = {
 
         "lines-between-class-members": "off", // FIXME: See https://github.com/mdx-js/mdx/issues/195
         "react/jsx-no-undef": ["error", { allowGlobals: true }],
-        "react/react-in-jsx-scope": "off",
       },
     },
   ],
