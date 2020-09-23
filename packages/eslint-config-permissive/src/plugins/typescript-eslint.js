@@ -365,6 +365,11 @@ module.exports = {
         "brace-style": "off",
         "@typescript-eslint/brace-style": "off",
 
+        // Require or disallow trailing comma [autofix] [prettier]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-dangle.md
+        "comma-dangle": "off",
+        "@typescript-eslint/comma-dangle": "off",
+
         // Enforces consistent spacing before and after commas [autofix] [prettier]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-spacing.md
         "comma-spacing": "off",

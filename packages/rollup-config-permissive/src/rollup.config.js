@@ -318,6 +318,10 @@ module.exports = {
   // https://rollupjs.org/guide/en/#preservemodules
   // preserveModules: false,
 
+  // A directory path to input modules that should be stripped away from output.dir path while output.preserveModules is true.
+  // https://rollupjs.org/guide/en/#outputpreservemodulesroot
+  // preserveModulesRoot: undefined,
+
   // When this flag is enabled, Rollup will throw an error instead of showing a warning when a deprecated feature is used.
   // https://rollupjs.org/guide/en/#strictdeprecations
   // strictDeprecations: false,

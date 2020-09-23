@@ -20,6 +20,6 @@
     "@types/browserslist": "^4.8.0"
   },
   "devDependencies": {
-    "browserslist": "^4.14.2"
+    "browserslist": "^4.14.4"
   }
 }
