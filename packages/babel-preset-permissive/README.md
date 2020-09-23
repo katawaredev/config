@@ -29,7 +29,6 @@ npm install --dev babel-preset-permissive
 - [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties)
 - [`@babel/plugin-proposal-numeric-separator`](https://babeljs.io/docs/en/babel-plugin-proposal-numeric-separator)
 - [`@babel/plugin-syntax-dynamic-import`](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import)
-- [`@babel/plugin-transform-react-jsx`](https://babeljs.io/docs/en/babel-plugin-transform-react-jsx)
 - [`babel-plugin-inline-react-svg`](https://github.com/airbnb/babel-plugin-inline-react-svg)
 - [`babel-plugin-annotate-pure-calls`](https://github.com/Andarist/babel-plugin-annotate-pure-calls)
 - [`babel-plugin-transform-async-to-promises`](https://github.com/rpetrich/babel-plugin-transform-async-to-promises)
@@ -49,7 +48,3 @@ A special configuration that extends Next.js Babel config if available:
   "presets": ["next/babel", "babel-preset-permissive/nextjs"]
 }
 ```
-
-## Using with eslint
-
-By default importing `React` in every file is not required, but some configurations may complain about it. To fix this, add `"react/react-in-jsx-scope": "off"` rule to your eslint config. This rule is also disabled in `permissive/nextjs` [eslint config](../eslint-config-permissive#additional-configurations)

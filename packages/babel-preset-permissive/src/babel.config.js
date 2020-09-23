@@ -14,7 +14,13 @@ module.exports = (api, _options) => ({
     ],
     [
       require("@babel/preset-react").default,
-      { development: !api.env("production"), useBuiltIns: true },
+      {
+        development: !api.env("production"),
+        useBuiltIns: true,
+        // TODO: This will be default in Babel 8
+        // https://babeljs.io/docs/en/babel-plugin-transform-react-jsx#runtime
+        runtime: "automatic",
+      },
     ],
     require("@babel/preset-typescript").default,
   ],
@@ -33,7 +39,6 @@ module.exports = (api, _options) => ({
     require("babel-plugin-preval"),
     require("babel-plugin-codegen"),
 
-    require("@babel/plugin-transform-react-jsx").default, // Omit `import React from "react"`
     require("babel-plugin-inline-react-svg").default,
     api.env("production") &&
       require("babel-plugin-react-remove-properties").default,
