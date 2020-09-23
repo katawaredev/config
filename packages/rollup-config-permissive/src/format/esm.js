@@ -6,8 +6,9 @@
  * @typedef {import("../types").PostCssConfig} PostCssConfig
  */
 
+const path = require("path");
 const cloneDeep = require("lodash/cloneDeep");
-const { setPlugins } = require("../utils/plugin");
+const { setPlugins, rewriteOutputPlugin } = require("../utils/plugin");
 
 /**
  * @param {Config} defaultConfig
@@ -24,14 +25,19 @@ const esm = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
   const config = cloneDeep(defaultConfig);
   config.output.format = "es";
   config.output.exports = "named";
-  config.output.file = pkg.module;
+  config.output.dir = path.dirname(pkg.module);
 
   setPlugins(config, {
     "@rollup/plugin-replace": false,
+    "@rollup/plugin-typescript": (options) => {
+      options.outDir = config.output.dir;
+    },
     "rollup-plugin-terser": (options) => {
       options.toplevel = true;
     },
   });
+
+  config.plugins.push(rewriteOutputPlugin(pkg.module, true));
 
   return [[config, "esm"]];
 };

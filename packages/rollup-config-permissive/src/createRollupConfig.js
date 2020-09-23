@@ -151,7 +151,7 @@ function initialize(defaultConfig, pkg, babel, tsconfig, postcss, cwd) {
           return false;
         }
         // If styles are not extracted, inject them instead
-        options.inject = !pkg.typings;
+        options.inject = !pkg.style;
       },
   });
 

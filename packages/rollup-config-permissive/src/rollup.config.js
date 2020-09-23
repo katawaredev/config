@@ -191,6 +191,7 @@ module.exports = {
         sourceMap: true,
         declaration: false,
         declarationMap: false,
+        incremental: false,
         jsx: "react",
         exclude: [
           // all test files
@@ -220,10 +221,11 @@ module.exports = {
       },
     },
     // https://github.com/rollup/plugins/tree/master/packages/wasm
-    {
-      name: "@rollup/plugin-wasm",
-      plugin: require("@rollup/plugin-wasm").default,
-    },
+    // FIXME: https://github.com/rollup/plugins/issues/574
+    // {
+    //   name: "@rollup/plugin-wasm",
+    //   plugin: require("@rollup/plugin-wasm").default,
+    // },
     // https://github.com/rollup/plugins/tree/master/packages/replace
     {
       name: "@rollup/plugin-replace",

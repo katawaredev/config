@@ -11,8 +11,8 @@ const path = require("path");
 const cloneDeep = require("lodash/cloneDeep");
 const capitalize = require("lodash/capitalize");
 const camelCase = require("lodash/camelCase");
-const { getEnvironmentFileName } = require("../utils/file");
-const { setPlugins } = require("../utils/plugin");
+const { getEnvironmentFileName, exists } = require("../utils/file");
+const { setPlugins, rewriteOutputPlugin } = require("../utils/plugin");
 
 /**
  * @param {Config} defaultConfig
@@ -20,18 +20,18 @@ const { setPlugins } = require("../utils/plugin");
  * @param {BabelConfig | null} _babel
  * @param {TsConfigJson | null} _tsconfig
  * @param {PostCssConfig | null} _postcss
- * @param {string} _cwd
+ * @param {string} cwd
  * @returns {[Config, "umd", Environment][]}
  */
-const umd = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
-  if (!pkg.unpkg) return [];
+const umd = (defaultConfig, pkg, _babel, _tsconfig, _postcss, cwd) => {
+  if (!pkg["unpkg:main"]) return [];
 
   const devOutput = getEnvironmentFileName(
     pkg["unpkg:main"],
     "umd",
     "development"
   );
-  const prodOutput = pkg.unpkg;
+  const prodOutput = pkg["unpkg:main"];
 
   const config = cloneDeep(defaultConfig);
   delete config.external;
@@ -57,7 +57,7 @@ const umd = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
 
   return [
     [development(config, devOutput), "umd", "development"],
-    [production(config, prodOutput), "umd", "production"],
+    [production(config, prodOutput, cwd), "umd", "production"],
   ];
 };
 
@@ -68,7 +68,7 @@ const umd = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
  */
 function development(defaultConfig, outputFile) {
   const config = cloneDeep(defaultConfig);
-  config.output.file = outputFile;
+  config.output.dir = path.dirname(outputFile);
   config.output.sourcemap = "inline";
 
   setPlugins(config, {
@@ -76,11 +76,16 @@ function development(defaultConfig, outputFile) {
     "@rollup/plugin-replace": (options) => {
       options["process.env.NODE_ENV"] = JSON.stringify("development");
     },
+    "@rollup/plugin-typescript": (options) => {
+      options.outDir = path.dirname(outputFile);
+    },
     "rollup-plugin-postcss": (options) => {
       options.inject = true;
       options.sourcemap = "inline";
     },
   });
+
+  config.plugins.push(rewriteOutputPlugin(outputFile, false));
 
   return config;
 }
@@ -88,25 +93,37 @@ function development(defaultConfig, outputFile) {
 /**
  * @param {Config} defaultConfig
  * @param {string} outputFile
+ * @param {string} cwd
  * @returns {Config}
  */
-function production(defaultConfig, outputFile) {
+function production(defaultConfig, outputFile, cwd) {
   const config = cloneDeep(defaultConfig);
-  config.output.file = outputFile;
+  config.output.dir = path.dirname(outputFile);
 
   const outputDir = path.dirname(outputFile);
+
+  const license = path.join(cwd, "LICENSE");
+  const banner = exists(license)
+    ? {
+        commentStyle: "ignored",
+        content: {
+          file: license,
+        },
+      }
+    : `Bundle of <%= pkg.name %>
+Generated: <%= moment().format('YYYY-MM-DD') %>
+Version: <%= pkg.version %>
+Dependencies:
+<% _.forEach(dependencies, function (dependency) { %>
+  <%= dependency.name %> -- <%= dependency.version %>
+<% }) %>`;
 
   config.plugins.unshift({
     name: "rollup-plugin-license",
     plugin: require("rollup-plugin-license"),
     options: {
       sourcemap: true,
-      banner: {
-        commentStyle: "ignored",
-        content: {
-          file: path.join(outputDir, `${config.output.name}-LICENSE`),
-        },
-      },
+      banner,
       thirdParty: {
         includePrivate: true,
         allow: "(MIT OR Apache-2.0)",
@@ -116,6 +133,14 @@ function production(defaultConfig, outputFile) {
       },
     },
   });
+
+  setPlugins(config, {
+    "@rollup/plugin-typescript": (options) => {
+      options.outDir = config.output.dir;
+    },
+  });
+
+  config.plugins.push(rewriteOutputPlugin(outputFile, true));
 
   return config;
 }

@@ -13,6 +13,7 @@ const JSON5 = require("json5");
 const merge = require("lodash/merge");
 
 const readFileAsync = promisify(fs.readFile);
+const writeFileAsync = promisify(fs.writeFile);
 const renameAsync = promisify(fs.rename);
 const unlinkAsync = promisify(fs.unlink);
 
@@ -173,6 +174,13 @@ const readPostCssConfig = async (postcssConfigFile, cwd, root) => {
   return null;
 };
 
+/**
+ * Check if file or directory exists
+ * @property {string} path - location of file or directory
+ * @returns {boolean} location was found
+ */
+const exists = (path) => fs.existsSync(path); // eslint-disable-line node/no-sync
+
 module.exports = {
   readPackageJson,
   readBabelConfig,
@@ -181,4 +189,7 @@ module.exports = {
   renameAsync,
   unlinkAsync,
   getEnvironmentFileName,
+  exists,
+  readFileAsync,
+  writeFileAsync,
 };

@@ -7,9 +7,10 @@
  * @typedef {import("../types").Environment} Environment
  */
 
+const path = require("path");
 const cloneDeep = require("lodash/cloneDeep");
 const { getEnvironmentFileName } = require("../utils/file");
-const { setPlugins } = require("../utils/plugin");
+const { setPlugins, rewriteOutputPlugin } = require("../utils/plugin");
 
 /**
  * @param {Config} defaultConfig
@@ -82,17 +83,22 @@ function entry(outputFile, devOutput, prodOutput) {
  */
 function development(defaultConfig, outputFile) {
   const config = cloneDeep(defaultConfig);
-  config.output.file = outputFile;
+  config.output.dir = path.dirname(outputFile);
   config.output.sourcemap = "inline";
 
   setPlugins(config, {
     "rollup-plugin-terser": false,
     "@rollup/plugin-replace": false,
+    "@rollup/plugin-typescript": (options) => {
+      options.outDir = config.output.dir;
+    },
     "rollup-plugin-postcss": (options) => {
       options.inject = true;
       options.sourcemap = "inline";
     },
   });
+
+  config.plugins.push(rewriteOutputPlugin(outputFile, false));
 
   return config;
 }
@@ -104,13 +110,18 @@ function development(defaultConfig, outputFile) {
  */
 function production(defaultConfig, outputFile) {
   const config = cloneDeep(defaultConfig);
-  config.output.file = outputFile;
+  config.output.dir = path.dirname(outputFile);
 
   setPlugins(config, {
     "rollup-plugin-terser": (options) => {
       options.toplevel = true;
     },
+    "@rollup/plugin-typescript": (options) => {
+      options.outDir = config.output.dir;
+    },
   });
+
+  config.plugins.push(rewriteOutputPlugin(outputFile, true));
 
   return config;
 }

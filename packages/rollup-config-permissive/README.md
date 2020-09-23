@@ -18,7 +18,7 @@
 - JavaScript
 - [TypeScript](https://www.typescriptlang.org/)
 - [Babel](https://babeljs.io/)
-- [WASM](https://webassembly.org/)
+- ~~[WASM](https://webassembly.org/)~~ [#574](https://github.com/rollup/plugins/issues/574)
 - [PostCSS](https://jestjs.io/)
 
 ## Install
