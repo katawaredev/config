@@ -27,7 +27,14 @@ module.exports = {
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   // https://jestjs.io/docs/en/configuration#collectcoveragefrom-array
-  collectCoverageFrom: ["**/*.{js,jsx,ts,tsx}", "!**/*.d.ts"],
+  collectCoverageFrom: [
+    "**/*.{js,jsx,ts,tsx}",
+    "!**/*.d.ts",
+    "!{coverage,cypress,.next,.storybook,public,build,dist,.out,.pnp}/**/*.*",
+    "!*.config.js",
+    "!*rc.js",
+    "!.pnp.js",
+  ],
 
   // The directory where Jest should output its coverage files
   // https://jestjs.io/docs/en/configuration#coveragedirectory-string
