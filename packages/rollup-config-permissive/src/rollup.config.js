@@ -146,6 +146,16 @@ module.exports = {
   // Change the behaviour of Rollup at key points in the bundling process.
   // https://rollupjs.org/guide/en/#plugins
   plugins: [
+    // https://github.com/rollup/plugins/tree/master/packages/replace
+    {
+      name: "@rollup/plugin-replace",
+      plugin: require("@rollup/plugin-replace"),
+      options: {
+        "process.env.NODE_ENV": JSON.stringify("production"),
+        "process.env.BABEL_ENV": JSON.stringify("production"),
+      },
+    },
+    // https://github.com/pmowrer/rollup-plugin-peer-deps-external
     {
       name: "rollup-plugin-peer-deps-external",
       plugin: require("rollup-plugin-peer-deps-external"),
@@ -192,7 +202,7 @@ module.exports = {
         declaration: false,
         declarationMap: false,
         incremental: false,
-        jsx: "react",
+        jsx: "react-jsx",
         exclude: [
           // all test files
           "**/__tests__/**/*.ts",
@@ -226,14 +236,6 @@ module.exports = {
     //   name: "@rollup/plugin-wasm",
     //   plugin: require("@rollup/plugin-wasm").default,
     // },
-    // https://github.com/rollup/plugins/tree/master/packages/replace
-    {
-      name: "@rollup/plugin-replace",
-      plugin: require("@rollup/plugin-replace"),
-      options: {
-        "process.env.NODE_ENV": JSON.stringify("production"),
-      },
-    },
     // https://github.com/rollup/plugins/tree/master/packages/url
     {
       name: "@rollup/plugin-url",

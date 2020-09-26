@@ -9,8 +9,7 @@
 const path = require("path");
 const cloneDeep = require("lodash/cloneDeep");
 const { setPlugins } = require("../utils/plugin");
-
-const { renameAsync, unlinkAsync, exists } = require("../utils/file");
+const { unlinkAsync, moveFileAsync } = require("../utils/file");
 
 /**
  * Extract typings and css
@@ -61,6 +60,7 @@ const extra = (defaultConfig, pkg, _babel, _tsconfig, postcss, cwd) => {
       plugin: require("rollup-plugin-typescript2"),
       options: {
         cwd,
+        check: false,
         tsconfigDefaults: {
           include: ["*.js+(|x)", "**/*.js+(|x)"],
           exclude: [
@@ -81,14 +81,17 @@ const extra = (defaultConfig, pkg, _babel, _tsconfig, postcss, cwd) => {
           ],
         },
         tsconfigOverride: {
-          // TS -> esnext, then leave the rest to babel-preset-env
-          target: "esnext",
-          module: "esnext",
-          sourceMap: true,
-          jsx: "react",
-          incremental: false,
-          declaration: true,
-          declarationMap: true,
+          compilerOptions: {
+            // TS -> esnext, then leave the rest to babel-preset-env
+            target: "esnext",
+            module: "esnext",
+            sourceMap: true,
+            jsx: "react-jsx",
+            incremental: false,
+            declaration: true,
+            declarationMap: true,
+            strict: false,
+          },
         },
       },
     },
@@ -113,18 +116,11 @@ const extra = (defaultConfig, pkg, _babel, _tsconfig, postcss, cwd) => {
         async () => {
           if (!pkg.typings) return;
 
-          // Move typings to location pointed in package.json (if it doesn't match the default location)
-          const typingsOutput = path.resolve(
-            path.join(config.output.dir, "index.d.ts")
+          await moveFileAsync(
+            path.join(config.output.dir, "index.d.ts"),
+            pkg.typings,
+            true
           );
-          if (typingsOutput !== pkg.typings) {
-            if (exists(typingsOutput))
-              await renameAsync(typingsOutput, pkg.typings);
-            else
-              throw new Error(
-                `Unable to locate typings file at ${typingsOutput}`
-              );
-          }
         },
       ],
     }

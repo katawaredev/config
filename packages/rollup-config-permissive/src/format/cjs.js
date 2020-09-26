@@ -9,8 +9,12 @@
 
 const path = require("path");
 const cloneDeep = require("lodash/cloneDeep");
-const { getEnvironmentFileName } = require("../utils/file");
-const { setPlugins, rewriteOutputPlugin } = require("../utils/plugin");
+const {
+  getEnvironmentFileName,
+  moveFileAsync,
+  getIndexFile,
+} = require("../utils/file");
+const { setPlugins } = require("../utils/plugin");
 
 /**
  * @param {Config} defaultConfig
@@ -91,6 +95,7 @@ function development(defaultConfig, outputFile) {
     "@rollup/plugin-replace": false,
     "@rollup/plugin-typescript": (options) => {
       options.outDir = config.output.dir;
+      options.jsx = "react-jsxdev";
     },
     "rollup-plugin-postcss": (options) => {
       options.inject = true;
@@ -98,7 +103,15 @@ function development(defaultConfig, outputFile) {
     },
   });
 
-  config.plugins.push(rewriteOutputPlugin(outputFile, false));
+  config.plugins.push({
+    name: "rollup-plugin-command",
+    plugin: require("rollup-plugin-command"),
+    options: [
+      async () => {
+        await moveFileAsync(getIndexFile(outputFile), outputFile, false);
+      },
+    ],
+  });
 
   return config;
 }
@@ -121,7 +134,15 @@ function production(defaultConfig, outputFile) {
     },
   });
 
-  config.plugins.push(rewriteOutputPlugin(outputFile, true));
+  config.plugins.push({
+    name: "rollup-plugin-command",
+    plugin: require("rollup-plugin-command"),
+    options: [
+      async () => {
+        await moveFileAsync(getIndexFile(outputFile), outputFile, true);
+      },
+    ],
+  });
 
   return config;
 }

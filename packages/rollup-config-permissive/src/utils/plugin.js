@@ -2,10 +2,7 @@
  * @typedef {import("../types").Config} Config
  * @typedef {import("../types").modifyPluginArguments} modifyPluginArguments
  */
-const path = require("path");
 const isFunction = require("lodash/isFunction");
-
-const { readFileAsync, writeFileAsync, renameAsync } = require("../utils/file");
 
 /**
  * Set plugin arguments by name
@@ -46,35 +43,7 @@ const executePlugins = (config) => {
   return config;
 };
 
-const rewriteOutputPlugin = (outputFile, sourcemap) => ({
-  name: "rollup-plugin-command",
-  plugin: require("rollup-plugin-command"),
-  options: [
-    async () => {
-      const dir = path.dirname(outputFile);
-      const defaultFile = path.join(dir, "index.js");
-
-      if (sourcemap) {
-        const defaultSourceMapFile = path.join(dir, "index.js.map");
-        const outputFileName = path.basename(outputFile);
-
-        await renameAsync(defaultSourceMapFile, `${outputFile}.map`);
-
-        const content = await readFileAsync(defaultFile, "utf8");
-        const replaced = content.replace(
-          `//# sourceMappingURL=index.js.map`,
-          `//# sourceMappingURL=${outputFileName}.map`
-        );
-        await writeFileAsync(defaultFile, replaced);
-      }
-
-      await renameAsync(defaultFile, outputFile);
-    },
-  ],
-});
-
 module.exports = {
   setPlugins,
   executePlugins,
-  rewriteOutputPlugin,
 };

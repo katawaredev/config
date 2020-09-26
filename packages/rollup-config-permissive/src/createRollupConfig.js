@@ -15,12 +15,16 @@
  * @returns {*}
  *
  * @typedef {Object} Options
- * @property {string} [cwd] - current working directory
- * @property {string} [root] - alternative search directory (for monorepositories)
- * @property {string} [babelConfigFile] - custom location for babel config file
- * @property {string} [typescriptConfigFile] - custom location for typescript config file
- * @property {string} [postcssConfigFile] - custom location for postcss config file
+ * @property {string} [cwd] current working directory
+ * @property {string} [root] alternative search directory (for monorepositories)
+ * @property {string} [babelConfigFile] custom location for babel config file
+ * @property {string} [typescriptConfigFile] custom location for typescript config file
+ * @property {string} [postcssConfigFile] custom location for postcss config file
  */
+
+// Do this as the first thing so that any code reading it knows the right env.
+process.env.BABEL_ENV = "production";
+process.env.NODE_ENV = "production";
 
 const path = require("path");
 const capitalize = require("lodash/capitalize");

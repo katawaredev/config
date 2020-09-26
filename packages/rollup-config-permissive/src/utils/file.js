@@ -16,12 +16,13 @@ const readFileAsync = promisify(fs.readFile);
 const writeFileAsync = promisify(fs.writeFile);
 const renameAsync = promisify(fs.rename);
 const unlinkAsync = promisify(fs.unlink);
+const statAsync = promisify(fs.stat);
 
 /**
  * Get proper name for specified environment and output format
- * @param {string} fileName - source file name
- * @param {ExportFormat} type - type of export
- * @param {Environment} env - export environment
+ * @param {string} fileName source file name
+ * @param {ExportFormat} type type of export
+ * @param {Environment} env export environment
  * @returns {string} correct filename for specified type and environemnt
  */
 const getEnvironmentFileName = (fileName, type, env) => {
@@ -42,7 +43,7 @@ const getEnvironmentFileName = (fileName, type, env) => {
 
 /**
  * Load files as json objects
- * @param {string} searchFile - file to be loaded
+ * @param {string} searchFile file to be loaded
  * @returns {Promise<Object.<string, any> | null>} file content
  */
 const loadFile = async (searchFile) => {
@@ -64,7 +65,7 @@ const loadFile = async (searchFile) => {
 
 /**
  * Read package.json configuration
- * @param {string} cwd - current search directory
+ * @param {string} cwd current search directory
  * @returns {Promise<PackageJson | null>} configuration object
  */
 const readPackageJson = async (cwd) =>
@@ -72,9 +73,10 @@ const readPackageJson = async (cwd) =>
 
 /**
  * Read Babel configuration
- * @property {string} [babelConfigFile] - custom location for babel config file
- * @param {string} cwd - current search directory
- * @param {string} [root] - alternative search directory (for monorepositories)
+ * @param {string | undefined} babelConfigFile custom location for babel config file
+ * @param {PackageJson} pkg package.json contents
+ * @param {string} cwd current search directory
+ * @param {string} [root] alternative search directory (for monorepositories)
  * @returns {Promise<BabelConfig | null>} configuration object
  */
 const readBabelConfig = async (babelConfigFile, pkg, cwd, root) => {
@@ -113,8 +115,8 @@ const readBabelConfig = async (babelConfigFile, pkg, cwd, root) => {
 
 /**
  * Recursively load TypeScript configuration (from extends)
- * @param {string} tsconfigFile - TypeScript config file location
- * @returns {Promise<TsConfigJson | null>} - TypeScript configurtion
+ * @param {string} tsconfigFile TypeScript config file location
+ * @returns {Promise<TsConfigJson | null>} TypeScript configurtion
  */
 const readTypeScriptConfigFile = async (tsconfigFile) => {
   let tsconfig = await loadFile(tsconfigFile);
@@ -136,9 +138,9 @@ const readTypeScriptConfigFile = async (tsconfigFile) => {
 
 /**
  * Read TypeScript configuration (merging extends)
- * @property {string} [typescriptConfigFile] - custom location for typescript config file
- * @param {string} cwd - current search directory
- * @param {string} [root] - alternative search directory (for monorepositories)
+ * @param {string | undefined} typescriptConfigFile custom location for typescript config file
+ * @param {string} cwd current search directory
+ * @param {string} [root] alternative search directory (for monorepositories)
  * @returns {Promise<TsConfigJson | null>} configuration object
  */
 const readTypeScriptConfig = async (typescriptConfigFile, cwd, root) => {
@@ -158,9 +160,9 @@ const readTypeScriptConfig = async (typescriptConfigFile, cwd, root) => {
 
 /**
  * Read PostCss configuration
- * @property {string} [postcssConfigFile] - custom location for postcss config file
- * @param {string} cwd - current search directory
- * @param {string | undefined} root - alternative search directory (for monorepositories)
+ * @param {string | undefined} postcssConfigFile custom location for postcss config file
+ * @param {string} cwd current search directory
+ * @param {string} [root] alternative search directory (for monorepositories)
  * @returns {Promise<PostCssConfig | null>} configuration object
  */
 const readPostCssConfig = async (postcssConfigFile, cwd, root) => {
@@ -175,11 +177,69 @@ const readPostCssConfig = async (postcssConfigFile, cwd, root) => {
 };
 
 /**
+ * Get index.js file for the same directory as target file
+ * @param {string} file target file
+ * @returns {string}
+ */
+const getIndexFile = (file) => path.join(path.dirname(file), "index.js");
+
+/**
  * Check if file or directory exists
- * @property {string} path - location of file or directory
+ * @param {string} path location of file or directory
  * @returns {boolean} location was found
  */
-const exists = (path) => fs.existsSync(path); // eslint-disable-line node/no-sync
+const exists = (path) => {
+  try {
+    // eslint-disable-next-line node/no-sync
+    fs.statSync(path);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+
+/**
+ * Check if file or directory exists
+ * @param {string} path location of file or directory
+ * @returns {Promise<boolean>} location was found
+ */
+const existsAsync = async (path) => {
+  try {
+    await statAsync(path);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+
+/**
+ *
+ * @param {string} sourceFile original file location
+ * @param {string} destinationFile destination file location
+ * @param {boolean} includeSourceMap file has sourcemap?
+ */
+const moveFileAsync = async (sourceFile, destinationFile, includeSourceMap) => {
+  if (!existsAsync(sourceFile))
+    throw new Error(`Unable to find file \`${sourceFile}\``);
+
+  if (sourceFile === destinationFile) return;
+
+  if (includeSourceMap) {
+    const sourceFileMap = `${sourceFile}.map`;
+    const destinationFileMap = `${destinationFile}.map`;
+    if (await existsAsync(sourceFileMap)) {
+      const content = await readFileAsync(sourceFile, "utf8");
+      const replaced = content.replace(
+        `//# sourceMappingURL=${path.basename(sourceFileMap)}`,
+        `//# sourceMappingURL=${path.basename(destinationFileMap)}`
+      );
+      await renameAsync(sourceFileMap, destinationFileMap);
+      await writeFileAsync(sourceFile, replaced);
+    }
+  }
+
+  await renameAsync(sourceFile, destinationFile);
+};
 
 module.exports = {
   readPackageJson,
@@ -192,4 +252,6 @@ module.exports = {
   exists,
   readFileAsync,
   writeFileAsync,
+  moveFileAsync,
+  getIndexFile,
 };

@@ -8,7 +8,8 @@
 
 const path = require("path");
 const cloneDeep = require("lodash/cloneDeep");
-const { setPlugins, rewriteOutputPlugin } = require("../utils/plugin");
+const { setPlugins } = require("../utils/plugin");
+const { moveFileAsync, getIndexFile } = require("../utils/file");
 
 /**
  * @param {Config} defaultConfig
@@ -37,7 +38,15 @@ const esm = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
     },
   });
 
-  config.plugins.push(rewriteOutputPlugin(pkg.module, true));
+  config.plugins.push({
+    name: "rollup-plugin-command",
+    plugin: require("rollup-plugin-command"),
+    options: [
+      async () => {
+        await moveFileAsync(getIndexFile(pkg.module), pkg.module, true);
+      },
+    ],
+  });
 
   return [[config, "esm"]];
 };

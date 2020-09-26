@@ -7,8 +7,10 @@
  * @typedef {import("../types").Environment} Environment
  */
 
+const path = require("path");
 const cloneDeep = require("lodash/cloneDeep");
 const { setPlugins } = require("../utils/plugin");
+const { moveFileAsync, getIndexFile } = require("../utils/file");
 
 /**
  * @param {Config} defaultConfig
@@ -23,8 +25,8 @@ const node = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
   if (!pkg.bin) return [];
 
   const config = cloneDeep(defaultConfig);
-  config.output.file = pkg.bin;
   config.output.format = "cjs";
+  config.output.dir = path.dirname(pkg.bin);
 
   setPlugins(config, {
     "@rollup/plugin-url": false,
@@ -51,6 +53,16 @@ const node = (defaultConfig, pkg, _babel, _tsconfig, _postcss, _cwd) => {
   config.plugins.unshift({
     name: "rollup-plugin-node-builtins",
     plugin: require("rollup-plugin-node-builtins"),
+  });
+
+  config.plugins.push({
+    name: "rollup-plugin-command",
+    plugin: require("rollup-plugin-command"),
+    options: [
+      async () => {
+        await moveFileAsync(getIndexFile(pkg.bin), pkg.bin, true);
+      },
+    ],
   });
 
   return [[config, "node"]];
