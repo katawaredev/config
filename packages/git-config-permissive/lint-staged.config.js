@@ -1,13 +1,13 @@
 /**
  * @typedef {Object} LintStagedOptions
- * @property {boolean} tsc - Run tsc checks
- * @property {boolean} eslint - Run eslint checks
- * @property {boolean} typescript - Check typescript files with eslint
- * @property {boolean} markdown - Check markdown files with eslint
- * @property {boolean} stylelint - Run stylelint checks
- * @property {boolean} markdownlint - Run markdownlint checks
- * @property {boolean} jest - Run jest testing
- * @property {boolean} prettier - Format with prettier
+ * @property {boolean} tsc Run tsc checks
+ * @property {boolean} eslint Run eslint checks
+ * @property {boolean} typescript Check typescript files with eslint
+ * @property {boolean} markdown Check markdown files with eslint
+ * @property {boolean} stylelint Run stylelint checks
+ * @property {boolean} markdownlint Run markdownlint checks
+ * @property {boolean} jest Run jest testing
+ * @property {boolean} prettier Format with prettier
  */
 
 /**

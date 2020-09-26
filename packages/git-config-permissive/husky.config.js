@@ -1,7 +1,7 @@
 /**
  * @typedef {Object} HuskyOptions
- * @property {boolean} lintStaged - Run lint-staged checks
- * @property {boolean} commitlint - Run commitlint checks
+ * @property {boolean} lintStaged Run lint-staged checks
+ * @property {boolean} commitlint Run commitlint checks
  */
 
 /**

@@ -19,7 +19,7 @@ const rollup = require("rollup");
  *
  * Callback for modifying plugin arguments
  * @callback modifyPluginArguments
- * @param {PluginArguments} options - plugin options.
+ * @param {PluginArguments} options plugin options.
  *
  * // FIXME: How to extend RollupOptions?
  * @typedef {rollup.RollupOptions} Config

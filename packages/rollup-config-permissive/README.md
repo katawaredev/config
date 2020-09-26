@@ -64,7 +64,7 @@ These dependencies won't be included in the final bundle and will require anyone
 // package.json
 {
   "peerDependencies": {
-    "react": "^16.8.0"
+    "react": "^17.0.0"
   }
 }
 ```
@@ -89,9 +89,9 @@ const { createConfig } = require("rollup-config-permissive");
 
 /**
  * Rollup configuration handler that is called multiple times, depending on the output formats specified in package.json
- * @param {Object} config - Rollup configuration object
- * @param {"cjs" | "esm" | "umd" | "node" | "extra"} format - Type of the bundle. "extra" is used to extract TypeScript typing definitions, css styles, and package info
- * @param {"production" | "development"} [environment] - The type of build that is going to be produced (applicable only for cjs and umd)
+ * @param {Object} config Rollup configuration object
+ * @param {"cjs" | "esm" | "umd" | "node" | "extra"} format Type of the bundle. "extra" is used to extract TypeScript typing definitions, css styles, and package info
+ * @param {"production" | "development"} [environment] The type of build that is going to be produced (applicable only for cjs and umd)
  * @returns {Object | false} When false, that configuration won't be included
  **/
 const configHandler = (config, format, environment) => {
@@ -186,11 +186,11 @@ Absolute imports from `src` are supported by default (this can break for TypeScr
 
 ```js
 /** @typedef {Object} Options
- * @property {string} [cwd] - current working directory where configurations will be searched
- * @property {string} [root] - alternative search directory (for monorepositories)
- * @property {string} [babelConfigFile] - custom location for babel config file
- * @property {string} [typescriptConfigFile] - custom location for typescript config file
- * @property {string} [postcssConfigFile] - custom location for postcss config file
+ * @property {string} [cwd] current working directory where configurations will be searched
+ * @property {string} [root] alternative search directory (for monorepositories)
+ * @property {string} [babelConfigFile] custom location for babel config file
+ * @property {string} [typescriptConfigFile] custom location for typescript config file
+ * @property {string} [postcssConfigFile] custom location for postcss config file
  */
 ```
 
