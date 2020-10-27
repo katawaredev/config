@@ -69,7 +69,7 @@
     "stylelint": "^13.7.1",
     "stylelint-config-permissive": "file:packages/stylelint-config-permissive",
     "tslib": "^2.0.1",
-    "typescript": "^4.1.0-beta",
+    "typescript": "^4.0.5",
     "typescript-config-permissive": "file:packages/typescript-config-permissive"
   }
 }
