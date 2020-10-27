@@ -23,6 +23,7 @@
 - [Commitlint](https://commitlint.js.org/)
 - [Commitizen](https://github.com/commitizen/cz-cli)
 - [Conventional commits](https://www.conventionalcommits.org/)
+- [Semantic release](https://github.com/semantic-release/semantic-release)
 
 ## Install
 
@@ -56,6 +57,14 @@ module.exports = require("git-config-permissive/commitlint");
     }
   }
 }
+```
+
+```js
+// release.config.js
+module.exports = {
+  extends: "git-config-permissive/semantic-release",
+  branch: "master",
+};
 ```
 
 ## lint-staged
@@ -104,6 +113,34 @@ module.exports = createConfig({
   commitlint: true, // Run commitlint checks
 });
 ```
+
+#### Semantic release
+
+##### Plugins
+
+This [shareable configuration](https://semantic-release.gitbook.io/semantic-release/extending/shareable-configurations-list) uses the following plugins:
+
+- [`@semantic-release/commit-analyzer`](https://github.com/semantic-release/commit-analyzer)
+- [`@semantic-release/release-notes-generator`](https://github.com/semantic-release/release-notes-generator)
+- [`@semantic-release/npm`](https://github.com/semantic-release/npm)
+- [`@semantic-release/github`](https://github.com/semantic-release/github)
+- [`@semantic-release/git`](https://github.com/semantic-release/git)
+
+- Provides an informative [git](https://github.com/semantic-release/git) commit message for the release commit that does not trigger continuous integration and conforms to the [conventional commits specification](https://www.conventionalcommits.org/) (e.g., "chore(release): 1.2.3 [skip ci]\n\nnotes").
+- Creates a tarball that gets uploaded with each [GitHub release](https://github.com/semantic-release/github).
+- Publishes the same tarball to [npm](https://github.com/semantic-release/npm).
+- Commits the version change in `package.json`.
+- Creates or updates a [changelog](https://github.com/semantic-release/changelog) file.
+
+##### Configuration
+
+Ensure that your CI configuration has the following **_secret_** environment variables set:
+
+- [`GH_TOKEN`](https://github.com/settings/tokens) with [`public_repo`](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/#available-scopes) access.
+- [`NPM_TOKEN`](https://docs.npmjs.com/cli/token)
+- [`NODE_AUTH_TOKEN`](https://docs.npmjs.com/cli/token)
+
+See each [plugin](https://github.com/semantic-release) documentation for required installation and configuration steps.
 
 ## Editor integration
 
