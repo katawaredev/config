@@ -69,6 +69,10 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/class-literal-property-style.md
         "@typescript-eslint/class-literal-property-style": "warn",
 
+        // Enforce or disallow the use of the record type [autofix]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-indexed-object-style.md
+        "@typescript-eslint/consistent-indexed-object-style": "warn",
+
         // Enforces consistent usage of type assertions
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-assertions.md
         // "@typescript-eslint/consistent-type-assertions": "warn",
@@ -228,6 +232,10 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md
         // "@typescript-eslint/no-unnecessary-type-assertion": "warn",
 
+        // Disallows unnecessary constraints on generic types [autofix]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-constraint.md
+        "@typescript-eslint/no-unnecessary-type-constraint": "warn",
+
         // Disallows assigning any to variables and properties [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-assignment.md
         // "@typescript-eslint/no-unsafe-assignment": "off",
@@ -294,7 +302,7 @@ module.exports = {
 
         // Requires that function parameters are typed as readonly to prevent accidental mutation of inputs [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-readonly-parameter-types.md
-        // "@typescript-eslint/prefer-readonly-parameter-types": "warn",
+        // "@typescript-eslint/prefer-readonly-parameter-types": "off",
 
         // Prefer using type parameter when calling Array#reduce instead of casting [autofix] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-reduce-type-parameter.md
@@ -514,6 +522,11 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-function-paren.md
         "space-before-function-paren": "off",
         "@typescript-eslint/space-before-function-paren": "off",
+
+        // This rule is aimed at ensuring there are spaces around infix operators. [autofix] [prettier]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-infix-ops.md
+        "space-infix-ops": "off",
+        "@typescript-eslint/space-infix-ops": "off",
         // #endregion Extension Rules
       },
     },

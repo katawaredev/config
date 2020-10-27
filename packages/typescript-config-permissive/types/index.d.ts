@@ -3,17 +3,17 @@
 declare const __DEV__: boolean;
 
 declare module "*.module.css" {
-  const classes: { readonly [key: string]: string };
+  const classes: Record<string, string>;
   export default classes;
 }
 
 declare module "*.module.sass" {
-  const classes: { readonly [key: string]: string };
+  const classes: Record<string, string>;
   export default classes;
 }
 
 declare module "*.module.scss" {
-  const classes: { readonly [key: string]: string };
+  const classes: Record<string, string>;
   export default classes;
 }
 
