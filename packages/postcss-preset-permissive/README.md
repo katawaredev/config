@@ -30,6 +30,8 @@ module.exports = {
 };
 ```
 
+**Note**: If you are using [`@zeit/next-css`](https://www.npmjs.com/package/@zeit/next-css) then use `require("postcss-preset-permissive")`
+
 ## What's inside
 
 - [`postcss-import`](https://github.com/postcss/postcss-import)
