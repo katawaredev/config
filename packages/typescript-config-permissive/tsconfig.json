@@ -54,7 +54,7 @@
 
     // Controls how JSX constructs are emitted in JavaScript files.
     // https://www.typescriptlang.org/tsconfig#jsx
-    "jsx": "preserve",
+    "jsx": "react-jsx",
 
     // Generates corresponding '.d.ts' file.
     // https://www.typescriptlang.org/tsconfig#declaration
