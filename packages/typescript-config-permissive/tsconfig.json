@@ -222,6 +222,10 @@
     // https://www.typescriptlang.org/tsconfig#noImplicitReturns
     // "noImplicitReturns": false,
 
+    // Include 'undefined' in index signature results
+    // https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess
+    "noUncheckedIndexedAccess": true,
+
     // Report errors for fallthrough cases in switch statements. Ensures that any non-empty case inside a switch statement includes either break or return. This means you won’t accidentally ship a case fallthrough bug.
     // https://www.typescriptlang.org/tsconfig#noFallthroughCasesInSwitch
     // "noFallthroughCasesInSwitch": false,
@@ -278,6 +282,14 @@
     // https://www.typescriptlang.org/tsconfig#jsxFactory
     // "jsxFactory": "React"",
 
+    // Specify the JSX fragment factory function to use when targeting react JSX emit with jsxFactory compiler option is specified, e.g. Fragment.
+    // https://www.typescriptlang.org/tsconfig#jsxFragmentFactory
+    // "jsxFragmentFactory": "Fragment",
+
+    // Declares the module specifier to be used for importing the jsx and jsxs factory functions when using jsx as "react-jsx" or "react-jsxdev"
+    // https://www.typescriptlang.org/tsconfig#jsxImportSource
+    // "jsxImportSource": "react",
+
     // Allows importing modules with a ‘.json’ extension, which is a common practice in node projects.
     // https://www.typescriptlang.org/tsconfig#resolveJsonModule
     "resolveJsonModule": true,
@@ -301,6 +313,10 @@
     // Do not emit declarations for code that has an @internal annotation in it’s JSDoc comment.
     // https://www.typescriptlang.org/tsconfig#stripInternal
     // "stripInternal": false,
+
+    // Disable the automatic loading of all projects. Instead, projects are loaded dynamically as you open files through your editor.
+    // https://www.typescriptlang.org/tsconfig#disableReferencedProjectLoad
+    // "disableReferencedProjectLoad": null,
 
     // Disable upper limit of the amount of memory TypeScript can allocate.
     // https://www.typescriptlang.org/tsconfig#disableSizeLimit

@@ -240,6 +240,10 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/selector-attribute-operator-disallowed-list
     // "selector-attribute-operator-disallowed-list": null,
 
+    // Specify a list of disallowed attribute names.
+    // https://stylelint.io/user-guide/rules/selector-attribute-name-disallowed-list
+    // "selector-attribute-name-disallowed-list": null,
+
     // Specify a list of allowed attribute operators.
     // https://stylelint.io/user-guide/rules/selector-attribute-operator-allowed-list
     // "selector-attribute-operator-allowed-list": null,
@@ -363,6 +367,10 @@ module.exports = {
     // Specify a list of allowed at-rules.
     // https://stylelint.io/user-guide/rules/at-rule-allowed-list
     // "at-rule-allowed-list": null,
+
+    // Specify a pattern for comments.
+    // https://stylelint.io/user-guide/rules/comment-pattern
+    // "comment-pattern": null,
 
     // Specify a list of disallowed words within comments.
     // https://stylelint.io/user-guide/rules/comment-word-disallowed-list

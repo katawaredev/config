@@ -25,6 +25,10 @@ module.exports = {
         // https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-focus.md
         "jest-dom/prefer-focus": "warn",
 
+        // Prefer .toBeInTheDocument() in favor of checking the length of the result using .toHaveLength(1) [autofix]
+        // https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-in-document.md
+        "jest-dom/prefer-in-document": "warn",
+
         // prefer toBeRequired over checking properties [recommended] [autofix]
         // https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-required.md
         "jest-dom/prefer-required": "warn",

@@ -22,6 +22,10 @@ module.exports = {
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/consistent-data-testid.md
         // "testing-library/consistent-data-testid": "off",
 
+        // Disallow unnecessary await for sync events
+        // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-await-sync-events.md
+        "testing-library/no-await-sync-events": "error",
+
         // Disallow unnecessary await for sync queries [recommended]
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/no-await-sync-query.md
         "testing-library/no-await-sync-query": "error",

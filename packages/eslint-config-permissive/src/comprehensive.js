@@ -26,6 +26,15 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-base-to-string.md
         "@typescript-eslint/no-base-to-string": "warn",
 
+        // Requires expressions of type void to appear in statement position [autofix] [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-confusing-void-expression.md
+        "@typescript-eslint/no-confusing-void-expression": [
+          "warn",
+          {
+            ignoreArrowShorthand: true,
+          },
+        ],
+
         // Requires Promise-like values to be handled appropriately [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md
         "@typescript-eslint/no-floating-promises": "warn",

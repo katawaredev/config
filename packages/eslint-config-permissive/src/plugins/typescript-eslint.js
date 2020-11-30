@@ -128,6 +128,10 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-confusing-non-null-assertion.md
         "@typescript-eslint/no-confusing-non-null-assertion": "warn",
 
+        // Requires expressions of type void to appear in statement position [autofix] [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-confusing-void-expression.md
+        // "@typescript-eslint/no-confusing-void-expression": "off",
+
         // Disallow the delete operator with computed key expressions [autofix]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md
         "@typescript-eslint/no-dynamic-delete": "warn",

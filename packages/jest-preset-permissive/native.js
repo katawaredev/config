@@ -6,12 +6,10 @@ jestConfig.haste = {
   platforms: ["android", "ios", "native"],
 };
 
-// @ts-expect-error
 jestConfig.transform[
   "^.+\\.(bmp|gif|jpg|jpeg|mp4|png|psd|svg|webp)$"
 ] = require.resolve("react-native/jest/assetFileTransformer.js");
 
-// @ts-expect-error
 jestConfig.transformIgnorePatterns = [
   // Don't include /node_modules/ from defaults
   "^.+\\.module\\.(css|sass|scss|less)$",

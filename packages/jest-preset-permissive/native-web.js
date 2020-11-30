@@ -1,7 +1,6 @@
 /* eslint-disable node/no-missing-require */
 const jestConfig = require("./src");
 
-// @ts-expect-error
 jestConfig.moduleNameMapper["^react-native$"] = require.resolve(
   "react-native-web/dist/cjs"
 );

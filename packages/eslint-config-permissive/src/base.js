@@ -383,6 +383,10 @@ module.exports = {
     // https://eslint.org/docs/rules/no-new-wrappers
     "no-new-wrappers": "warn",
 
+    // disallow `\8` and `\9` escape sequences in string literals
+    // https://eslint.org/docs/rules/no-nonoctal-decimal-escape
+    "no-nonoctal-decimal-escape": "warn",
+
     // disallow octal literals [recommended]
     // https://eslint.org/docs/rules/no-octal
     "no-octal": "warn",
