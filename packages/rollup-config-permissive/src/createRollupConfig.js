@@ -133,7 +133,6 @@ function initialize(defaultConfig, pkg, babel, tsconfig, postcss, cwd) {
   setPlugins(defaultConfig, {
     "@rollup/plugin-typescript": (options) => {
       options.baseUrl = compilerOptions.baseUrl;
-      if (__DEV__) options.jsx = "react-jsxdev";
       if (compilerOptions.rootDir) options.rootDir = compilerOptions.rootDir;
       if (compilerOptions.paths) options.paths = compilerOptions.paths;
       if (Array.isArray(compilerOptions.exclude))
