@@ -22,6 +22,19 @@ npx install-peerdeps --dev typescript-config-permissive
 }
 ```
 
+## Setting up your editor
+
+### Visual Studio Code
+
+Use local version of TypeScript:
+
+```json
+// .vscode/settings.json
+{
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
+```
+
 ## Handling CSS, SVG, and image files
 
 In a type definition file (either create one, like `global.d.ts` in `src`, or append to existing one) insert the following content:
