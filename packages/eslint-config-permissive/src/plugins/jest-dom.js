@@ -37,6 +37,10 @@ module.exports = {
         // https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-attribute.md
         "jest-dom/prefer-to-have-attribute": "warn",
 
+        // prefer toHaveClass over checking element className [recommended] [autofix]
+        // https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-class.md
+        "jest-dom/prefer-to-have-class": "warn",
+
         // prefer toHaveStyle over checking element style [recommended] [autofix]
         // https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-style.md
         "jest-dom/prefer-to-have-style": "warn",
@@ -44,6 +48,10 @@ module.exports = {
         // Prefer toHaveTextContent over checking element.textContent [recommended] [autofix]
         // https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-text-content.md
         "jest-dom/prefer-to-have-text-content": "warn",
+
+        // prefer toHaveValue over checking element.value [recommended] [autofix]
+        // https://github.com/testing-library/eslint-plugin-jest-dom/blob/master/docs/rules/prefer-to-have-value.md
+        "jest-dom/prefer-to-have-value": "warn",
       },
     },
   ],

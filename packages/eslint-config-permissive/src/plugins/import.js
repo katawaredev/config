@@ -71,6 +71,10 @@ module.exports = {
     //   "warn",
     //   { unusedExports: true, missingExports: false },
     // ],
+
+    // Prevent importing packages through relative paths.
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-packages.md
+    // "import/no-relative-packages": "off",
     // #endregion Static analysis
 
     // #region Helpful warnings
@@ -104,6 +108,10 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
     // "import/unambiguous": "off",
 
+    // Report CommonJS require calls and module.exports or exports.*
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
+    // "import/no-commonjs": "off",
+
     // Report CommonJS require calls and module.exports or exports.*.
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
     // "import/no-commonjs": "off",
@@ -115,6 +123,10 @@ module.exports = {
     // No Node.js builtin modules.
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
     // "import/no-nodejs-modules": "off",
+
+    // Forbid imports with CommonJS exports
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-import-module-exports.md
+    // "import/no-import-module-exports": "off",
     // #endregion Module systems
 
     // #region Style guide
@@ -185,6 +197,12 @@ module.exports = {
   },
 
   overrides: [
+    {
+      files: ["*.md", "**/*.md/**"],
+      rules: {
+        "import/no-unresolved": "off",
+      },
+    },
     {
       files: ["*.d.ts"],
       rules: {

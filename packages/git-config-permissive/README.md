@@ -21,7 +21,6 @@
 ### Git
 
 - [Commitlint](https://commitlint.js.org/)
-- [Commitizen](https://github.com/commitizen/cz-cli)
 - [Conventional commits](https://www.conventionalcommits.org/)
 - [Semantic release](https://github.com/semantic-release/semantic-release)
 
@@ -34,11 +33,6 @@ npx install-peerdeps --dev git-config-permissive
 ### Config
 
 ```js
-// husky.config.js
-module.exports = require("git-config-permissive/husky");
-```
-
-```js
 // lint-staged.config.js
 module.exports = require("git-config-permissive/lint-staged");
 ```
@@ -48,23 +42,19 @@ module.exports = require("git-config-permissive/lint-staged");
 module.exports = require("git-config-permissive/commitlint");
 ```
 
-```json
-// package.json
-{
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  }
-}
-```
-
 ```js
 // release.config.js
 module.exports = {
   extends: "git-config-permissive/semantic-release",
   branch: "master",
 };
+```
+
+#### Configure husky
+
+```sh
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
+npx husky add .husky/pre-msg 'npx lint-staged'
 ```
 
 ## lint-staged
@@ -97,20 +87,6 @@ module.exports = createConfig({
   markdownlint: true, // Run markdownlint checks
   jest: true, // Run jest testing
   prettier: true, // Format with prettier
-});
-```
-
-#### husky
-
-By default all options are enabled
-
-```js
-// husky.config.js
-const createConfig = require("git-config-permissive/husky.config");
-
-module.exports = createConfig({
-  lintStaged: true, // Run lint-staged checks
-  commitlint: true, // Run commitlint checks
 });
 ```
 

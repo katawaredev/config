@@ -27,11 +27,6 @@
     "stylelint",
     "typescript"
   ],
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "scripts": {
     "postinstall": "npx lerna bootstrap",
     "lint:types": "tsc",
@@ -41,35 +36,36 @@
     "lint": "run-s -c lint:types lint:code lint:styles lint:markdown",
     "format": "prettier --loglevel silent --write .",
     "test": "jest",
-    "publish": "cross-env HUSKY_SKIP_HOOKS=1 lerna publish"
+    "publish": "cross-env HUSKY_SKIP_HOOKS=1 lerna publish",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@commitlint/cli": "^11.0.0",
-    "@types/node": "^14.14.10",
+    "@babel/core": "^7.14.3",
+    "@commitlint/cli": "^12.1.4",
+    "@types/node": "^15.3.0",
     "babel-jest": "^26.6.3",
     "babel-preset-permissive": "file:packages/babel-preset-permissive",
     "browserslist-config-permissive": "file:packages/browserslist-config-permissive",
-    "cross-env": "^7.0.2",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.14.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.26.0",
     "eslint-config-permissive": "file:packages/eslint-config-permissive",
     "git-config-permissive": "file:packages/git-config-permissive",
-    "husky": "^4.3.0",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "jest-preset-permissive": "file:packages/jest-preset-permissive",
-    "lerna": "^3.22.1",
-    "lint-staged": "^10.5.2",
-    "markdownlint": "^0.22.0",
-    "markdownlint-cli": "^0.25.0",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.0.0",
+    "markdownlint": "^0.23.1",
+    "markdownlint-cli": "^0.27.1",
     "markdownlint-config-permissive": "file:packages/markdownlint-config-permissive",
     "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.35",
     "postcss-preset-permissive": "file:packages/postcss-preset-permissive",
-    "prettier": "^2.2.1",
-    "stylelint": "^13.8.0",
+    "prettier": "^2.3.0",
+    "stylelint": "^13.13.1",
     "stylelint-config-permissive": "file:packages/stylelint-config-permissive",
-    "tslib": "^2.0.3",
-    "typescript": "^4.1.2",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4",
     "typescript-config-permissive": "file:packages/typescript-config-permissive"
   }
 }

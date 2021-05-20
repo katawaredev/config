@@ -12,10 +12,6 @@ module.exports = {
 
       // https://github.com/evcohen/eslint-plugin-jsx-a11y#supported-rules
       rules: {
-        // Enforce emojis are wrapped in <span> and provide screenreader access.
-        // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md
-        "jsx-a11y/accessible-emoji": "warn",
-
         // Enforce all elements that require alternative text have meaningful information to relay back to end user.
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md
         "jsx-a11y/alt-text": "warn",

@@ -18,6 +18,10 @@ module.exports = {
       { severity: "warning" },
     ],
 
+    // Disallow invalid named grid areas. [recommended]
+    // https://stylelint.io/user-guide/rules/named-grid-areas-no-invalid
+    "named-grid-areas-no-invalid": [true, { severity: "error" }],
+
     // Disallow an invalid expression within calc functions. [recommended]
     // https://stylelint.io/user-guide/rules/function-calc-no-invalid
     "function-calc-no-invalid": [true, { severity: "error" }],
@@ -49,6 +53,13 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/keyframe-declaration-no-important
     "keyframe-declaration-no-important": [true, { severity: "warning" }],
 
+    // Disallow duplicate custom properties within declaration blocks. [recommended]
+    // https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-custom-properties
+    "declaration-block-no-duplicate-custom-properties": [
+      true,
+      { severity: "warning" },
+    ],
+
     // Disallow duplicate properties within declaration blocks. [recommended]
     // https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties
     "declaration-block-no-duplicate-properties": [
@@ -77,7 +88,10 @@ module.exports = {
 
     // Disallow unknown type selectors. [recommended]
     // https://stylelint.io/user-guide/rules/selector-type-no-unknown
-    "selector-type-no-unknown": [true, { severity: "error" }],
+    "selector-type-no-unknown": [
+      true,
+      { severity: "error", ignore: ["custom-elements"] },
+    ],
 
     // Disallow unknown media feature names.
     // https://stylelint.io/user-guide/rules/media-feature-name-no-unknown [recommended]
@@ -114,6 +128,10 @@ module.exports = {
     // Disallow double-slash comments (//...) which are not supported by CSS. [recommended]
     // https://stylelint.io/user-guide/rules/no-invalid-double-slash-comments
     "no-invalid-double-slash-comments": [true, { severity: "error" }],
+
+    // Disallow invalid position @import rules within a stylesheet. [recommended]
+    // https://stylelint.io/user-guide/rules/no-invalid-position-at-import-rule
+    "no-invalid-position-at-import-rule": [true, { severity: "error" }],
 
     // # endregion Possible errors
 
@@ -259,6 +277,10 @@ module.exports = {
     // Specify a list of allowed combinators.
     // https://stylelint.io/user-guide/rules/selector-combinator-allowed-list
     // "selector-combinator-allowed-list": null,
+
+    // Specify a list of disallowed selectors.
+    // https://stylelint.io/user-guide/rules/selector-disallowed-list
+    // "selector-disallowed-list": null,
 
     // Specify a pattern for ID selectors.
     // https://stylelint.io/user-guide/rules/selector-id-pattern
@@ -594,7 +616,7 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/selector-attribute-operator-space-before
     "selector-attribute-operator-space-before": null,
 
-    // Require or disallow quotes for attribute values. [prettier]
+    // Require or disallow quotes for attribute values. [autofix] [prettier]
     // https://stylelint.io/user-guide/rules/selector-attribute-quotes
     "selector-attribute-quotes": null,
 
@@ -762,5 +784,9 @@ module.exports = {
     // Require or disallow Unicode BOM. [prettier]
     // https://stylelint.io/user-guide/rules/unicode-bom
     "unicode-bom": null,
+
+    // Disallow irregular whitespace. [recommended] [pretier]
+    // https://stylelint.io/user-guide/rules/no-irregular-whitespace
+    "no-irregular-whitespace": null,
   },
 };

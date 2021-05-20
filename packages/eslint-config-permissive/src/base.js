@@ -178,6 +178,10 @@ module.exports = {
     // https://eslint.org/docs/rules/no-unsafe-negation
     "no-unsafe-negation": "warn",
 
+    // disallow use of optional chaining in contexts where the `undefined` value is not allowed
+    // https://eslint.org/docs/rules/no-unsafe-optional-chaining
+    "no-unsafe-optional-chaining": "warn",
+
     // disallow useless backreferences in regular expressions
     // https://eslint.org/docs/rules/no-useless-backreference
     // "no-useless-backreference": "warn",
@@ -405,7 +409,8 @@ module.exports = {
 
     // disallow variable redeclaration [recommended]
     // https://eslint.org/docs/rules/no-redeclare
-    "no-redeclare": "warn",
+    // NOTE: builtinGlobals is false because this config is not intended for browser environment
+    "no-redeclare": ["warn", { builtinGlobals: false }],
 
     // disallow certain properties on certain objects
     // https://eslint.org/docs/rules/no-restricted-properties
@@ -882,7 +887,7 @@ module.exports = {
     // https://eslint.org/docs/rules/max-lines
     // "max-lines": "off",
 
-    // enforce a maximum number of line of code in a function
+    // enforce a maximum number of lines of code in a function
     // https://eslint.org/docs/rules/max-lines-per-function
     // "max-lines-per-function": "off",
 
@@ -906,7 +911,7 @@ module.exports = {
     // https://eslint.org/docs/rules/multiline-comment-style
     // "multiline-comment-style": "off",
 
-    // enforce newlines between operands of ternary expressions [prettier]
+    // enforce newlines between operands of ternary expressions [autofix] [prettier]
     // https://eslint.org/docs/rules/multiline-ternary
     "multiline-ternary": "off",
 

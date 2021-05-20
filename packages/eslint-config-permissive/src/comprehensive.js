@@ -75,6 +75,10 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md
         "@typescript-eslint/no-unnecessary-type-assertion": "warn",
 
+        // Disallows calling an function with an any type value [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-argument.md
+        // "@typescript-eslint/no-unsafe-argument": "warn",
+
         // Disallows assigning any to variables and properties [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-assignment.md
         // "@typescript-eslint/no-unsafe-assignment": "off",
@@ -90,6 +94,10 @@ module.exports = {
         // Disallows returning any from a function [recommended] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-return.md
         "@typescript-eslint/no-unsafe-return": "warn",
+
+        // Prefers a non-null assertion over explicit type cast when possible [autofix] [types]
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/non-nullable-type-assertion-style.md
+        "@typescript-eslint/non-nullable-type-assertion-style": "warn",
 
         // Enforce includes method over indexOf method [autofix] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-includes.md
@@ -111,17 +119,17 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-reduce-type-parameter.md
         "@typescript-eslint/prefer-reduce-type-parameter": "warn",
 
-        // Enforce that RegExp#exec is used instead of String#match if no global flag is provided [recommended] [types]
+        // Enforce that RegExp#exec is used instead of String#match if no global flag is provided [recommended] [autofix] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-regexp-exec.md
-        // "@typescript-eslint/prefer-regexp-exec": "warn",
+        "@typescript-eslint/prefer-regexp-exec": "warn",
 
         // Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings [autofix] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-string-starts-ends-with.md
         "@typescript-eslint/prefer-string-starts-ends-with": "warn",
 
-        // Requires any function or method that returns a Promise to be marked async [types]
+        // Requires any function or method that returns a Promise to be marked async [autofix] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/promise-function-async.md
-        // "@typescript-eslint/promise-function-async": "off",
+        "@typescript-eslint/promise-function-async": "warn",
 
         // Requires Array#sort calls to always provide a compareFunction [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-array-sort-compare.md
@@ -138,7 +146,7 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-template-expressions.md
         "@typescript-eslint/restrict-template-expressions": "warn",
 
-        // Restricts the types allowed in boolean expressions [types]
+        // Restricts the types allowed in boolean expressions [autofix] [types]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/strict-boolean-expressions.md
         "@typescript-eslint/strict-boolean-expressions": "warn",
 
@@ -164,6 +172,15 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
         "return-await": "off",
         "@typescript-eslint/return-await": "warn",
+      },
+    },
+    {
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"],
+      rules: {
+        // Enforces unbound methods are called with their expected scope [types]
+        // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
+        "@typescript-eslint/unbound-method": "off",
+        "jest/unbound-method": "warn",
       },
     },
   ],

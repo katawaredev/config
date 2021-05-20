@@ -172,7 +172,7 @@ module.exports = {
 
   overrides: [
     {
-      files: ["*.md", "*.mdx"],
+      files: ["**/*.md/**", "*.mdx"],
       rules: {
         "node/no-extraneous-import": "off",
         "node/no-extraneous-require": "off",

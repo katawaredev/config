@@ -53,7 +53,7 @@ module.exports = {
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
         "jest/no-export": "warn",
 
-        // Disallow focused tests [recommended]
+        // Disallow focused tests [recommended] [suggest]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-focused-tests.md
         "jest/no-focused-tests": "warn",
 
@@ -97,10 +97,6 @@ module.exports = {
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-standalone-expect.md
         "jest/no-standalone-expect": "warn",
 
-        // Using a callback in asynchronous tests [recommended] [autofix]
-        // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-callback.md
-        // "jest/no-test-callback": "warn", // TODO: Unreleased
-
         // Disallow using f & x prefixes to define focused/skipped tests [recommended] [autofix]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-prefixes.md
         "jest/no-test-prefixes": "warn",
@@ -113,7 +109,7 @@ module.exports = {
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-called-with.md
         // "jest/prefer-called-with": "off",
 
-        // Suggest using expect.assertions() OR expect.hasAssertions()
+        // Suggest using expect.assertions() OR expect.hasAssertions() [suggest]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-expect-assertions.md
         // "jest/prefer-expect-assertions": "off",
 
@@ -125,7 +121,7 @@ module.exports = {
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-spy-on.md
         "jest/prefer-spy-on": "warn",
 
-        // Suggest using toStrictEqual() [autofix]
+        // Suggest using toStrictEqual() [suggest]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-strict-equal.md
         "jest/prefer-strict-equal": "warn",
 
@@ -171,7 +167,11 @@ module.exports = {
 
         // Enforce valid titles for jest blocks [recommended]
         // https://github.com//jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-title.md
-        // "jest/valid-title": "off"
+        // "jest/valid-title": "off",
+
+        // Enforces unbound methods are called with their expected scope [types]
+        // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
+        // "jest/unbound-method": "warn",
       },
     },
   ],

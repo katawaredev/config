@@ -68,6 +68,10 @@ module.exports = {
     // https://eslint.org/docs/rules/no-empty-function
     "no-empty-function": "warn",
 
+    // disallow shorthand type conversions [autofix]
+    // https://eslint.org/docs/rules/no-implicit-coercion
+    "no-implicit-coercion": ["warn", { disallowTemplateShorthand: true }],
+
     // disallow unnecessary nested blocks
     // https://eslint.org/docs/rules/no-lone-blocks
     "no-lone-blocks": "warn",
@@ -159,9 +163,12 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md
         "@typescript-eslint/member-ordering": "warn",
 
+        // Disallow duplicate imports
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-duplicate-imports.md
+        "@typescript-eslint/no-duplicate-imports": "warn",
+
         // Disallow empty functions [recommended]
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md
-        "no-empty-function": "off",
         "@typescript-eslint/no-empty-function": "warn",
 
         // Disallow the declaration of empty interfaces [recommended] [autofix]
@@ -170,7 +177,6 @@ module.exports = {
 
         // Disallow unnecessary constructors
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md
-        "no-useless-constructor": "off",
         "@typescript-eslint/no-useless-constructor": "warn",
 
         // Prefer a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated
@@ -245,6 +251,14 @@ module.exports = {
         // Suggest using explicit assertions rather than just getBy* queries
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/master/docs/rules/prefer-explicit-assert.md
         "testing-library/prefer-explicit-assert": "warn",
+
+        // Suggest using userEvent library instead of fireEvent for simulating user interaction
+        // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-user-event.md
+        "testing-library/prefer-user-event": "warn",
+
+        // Enforce a valid naming for return value from render
+        // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/render-result-naming-convention.md
+        "testing-library/render-result-naming-convention": "warn",
       },
     },
   ],

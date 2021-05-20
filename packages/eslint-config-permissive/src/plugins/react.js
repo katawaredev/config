@@ -152,6 +152,10 @@ module.exports = {
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unsafe.md
         "react/no-unsafe": ["warn", { checkAliases: true }],
 
+        // Prevent creating unstable components inside components
+        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md
+        "react/no-unstable-nested-components": "warn",
+
         // Prevent definitions of unused prop types
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
         // "react/no-unused-prop-types": "warn",
@@ -293,6 +297,10 @@ module.exports = {
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
         "react/jsx-max-props-per-line": "off",
 
+        // Require or prevent a new line after jsx elements and expressions. [autofix]
+        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-newline.md
+        // "react/jsx-newline": "off",
+
         // Prevents usage of Function.prototype.bind and arrow functions in React component props [performance]
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
         "react/jsx-no-bind": "warn",
@@ -300,6 +308,10 @@ module.exports = {
         // Comments inside children section of tag should be placed inside braces [recommended]
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
         "react/jsx-no-comment-textnodes": "warn",
+
+        // Prevents JSX context provider values from taking values that will cause needless rerenders.
+        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-constructed-context-values.md
+        "react/jsx-no-constructed-context-values": "warn",
 
         // Enforce no duplicate props [recommended]
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
@@ -313,7 +325,7 @@ module.exports = {
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-script-url.md
         "react/jsx-no-script-url": ["warn", [{ name: "Link", props: ["to"] }]],
 
-        // Forbid target="_blank" attribute without rel="noopener noreferrer" [recommended]
+        // Forbid target="_blank" attribute without rel="noopener noreferrer" [recommended] [autofix]
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
         "react/jsx-no-target-blank": "warn",
 
@@ -331,7 +343,10 @@ module.exports = {
 
         // Enforce PascalCase for user-defined JSX components
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
-        "react/jsx-pascal-case": ["warn", { allowAllCaps: true, ignore: [] }],
+        "react/jsx-pascal-case": [
+          "warn",
+          { allowAllCaps: true, allowNamespace: true, ignore: [] },
+        ],
 
         // Disallow multiple spaces between inline JSX props [autofix] [prettier]
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-multi-spaces.md
@@ -365,6 +380,12 @@ module.exports = {
         // https://github.com//yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
         "react/jsx-wrap-multilines": "off",
         // #endregion JSX-specific rules
+      },
+    },
+    {
+      files: ["*.mdx", "**/*.md/**"],
+      rules: {
+        "react/jsx-no-undef": ["error", { allowGlobals: true }],
       },
     },
   ],

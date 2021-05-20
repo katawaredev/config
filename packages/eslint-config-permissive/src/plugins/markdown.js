@@ -3,6 +3,11 @@ module.exports = {
     {
       files: ["*.md"],
       plugins: ["markdown"],
+      processor: "markdown/markdown",
+    },
+    {
+      files: ["**/*.md/**"],
+      plugins: ["markdown"],
 
       parserOptions: {
         ecmaFeatures: {
@@ -21,15 +26,22 @@ module.exports = {
         "no-unused-vars": "off",
         strict: "off",
         "unicode-bom": "off",
-        "import/no-unresolved": "off",
       },
     },
     {
       files: ["*.mdx"],
-      plugins: ["markdown", "mdx"],
       parser: "eslint-mdx",
+      plugins: ["mdx"],
+      processor: "mdx/remark",
       globals: {
         React: "false",
+      },
+      // optional, if you want to lint code blocks at the same time
+      settings: {
+        "mdx/code-blocks": true,
+        // optional, if you want to disable language mapper, set it to `false`
+        // if you want to override the default language mapper inside, you can provide your own
+        "mdx/language-mapper": {},
       },
 
       parserOptions: {
@@ -52,9 +64,6 @@ module.exports = {
         // HTML style comments in jsx block is invalid, this rule will help you to fix it by transforming it to JSX style comments. [autofix]
         "mdx/no-jsx-html-comments": "error",
 
-        "react/no-unescaped-entities": "off",
-        "mdx/no-unescaped-entities": "warn",
-
         "no-unused-expressions": "off",
         "mdx/no-unused-expressions": [
           "error",
@@ -67,9 +76,6 @@ module.exports = {
 
         // Integration with remark-lint plugins
         "mdx/remark": "warn",
-
-        "lines-between-class-members": "off", // FIXME: See https://github.com/mdx-js/mdx/issues/195
-        "react/jsx-no-undef": ["error", { allowGlobals: true }],
       },
     },
   ],
