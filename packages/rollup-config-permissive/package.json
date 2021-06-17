@@ -50,7 +50,7 @@
   },
   "optionalDependencies": {
     "@babel/core": "^7.12.9",
-    "postcss": "^7.0.32",
+    "postcss": "^7.0.36",
     "tslib": "^2.0.3",
     "typescript": "^4.1.2"
   }
